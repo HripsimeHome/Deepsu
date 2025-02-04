@@ -1,0 +1,6 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.header {
+  @include setFont(100px, 300, $font-family, $color-white);
+}
