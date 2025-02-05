@@ -2,5 +2,48 @@
 @import "../../../styles/vars";
 
 .header {
-  @include setFont(100px, 300, $font-family, $color-white);
+  margin: 170px 0;
+
+  &__container {
+    width: 100%;;
+    @include flexCol(space-between);
+    margin-top: 98px;
+   
+   // @include setFont(100px, 300, $font-family, $color-white);
+  }
+  
+  &__title {
+    @include setFont(200px, 300, $font-family, $color-white);
+    line-height: 200px;
+    margin-bottom: 67px;
+  }
+
+  &__infoBLock {
+    display: flex;
+    flex-direction: column;
+   
+  }
+
+  &__btn {
+    width: 306px;
+    height: 86px;
+    background-color: #19C690;
+    color: rgba(255, 255, 255, 1);   
+    @include setFont(36px, 600, $font-family, $color-white);
+    border-radius: 15px;  
+    margin-right: 88px;
+  }
+
+  &__infoText {   
+    margin-top: 67px;
+    margin-bottom: 100px;
+  }
+
+  &__btnPosition {
+    display: flex;
+    align-items: center;     
+  }
+  
+ 
+  
 }

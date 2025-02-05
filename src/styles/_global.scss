@@ -68,5 +68,16 @@ a {
     //padding-left: 16px;
     // padding-right: 16px;
   }
-  
+  .titleh2 {
+    @include setFont(100px, 300, $font-family, $color-white);
+  }
+
+  .textlightGreen {
+    color: $color-lightGreen;  
+  }
+
+  .texGreen {
+    color: $color-green;  
+  }
+   
 }
