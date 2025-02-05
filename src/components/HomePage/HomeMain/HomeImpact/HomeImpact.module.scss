@@ -1,0 +1,18 @@
+@import "../../../../styles/mixins";
+@import "../../../../styles/vars";
+
+.homeImpact {   
+  
+  &__title {
+   // @include flexCol();
+    max-width: 1267px;
+    width: 100%;
+    margin: 0 auto;
+    @include setFont(100px, 500, $font-family, $color-white);
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 130px;
+    
+  }
+    //1267px
+}

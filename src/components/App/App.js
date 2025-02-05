@@ -6,8 +6,7 @@ function App() {
   return (
     <>
       <div className="container">
-        <Header />
-        Container
+        <Header />      
         <AppRouter />
       </div>
       <Footer />
