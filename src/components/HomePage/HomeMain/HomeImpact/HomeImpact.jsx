@@ -48,8 +48,7 @@ const HomeImpact = () => {
   return (   
     <section className={styles.homeImpact}>
       <h2 className="titleh2">Impact</h2>
-      <div className={styles.homeImpact__cardContainer}>
-        
+      <div className={styles.homeImpact__cardContainer}>        
         {impactCard.map(({ image, webpIMage, title, text }, index) => (
         <div className={styles.homeImpact__card} key={index}> 
           <div className={styles.homeImpact__cardImgWrapper}>
@@ -66,7 +65,7 @@ const HomeImpact = () => {
               {title}
             </h4>
 
-            <p className={styles.homeImpact__cardDscription}>
+            <p className={styles.homeImpact__cardDеscription}>
               {text}
             </p>
           </div>
