@@ -2,6 +2,46 @@
 @import "../../../../styles/vars";
 
 .homeImpact {   
+
+  &__cardContainer {
+    display: grid;
+   // grid-template-columns: 1fr 1fr 1fr 1fr;       
+   grid-template-columns: repeat(auto-fill,minmax(316px, 316px));   
+   gap: 78px; 
+   margin: 12px 0 88px;;
+  }
+
+  &__card {
+    @include flexCol();
+    flex-direction: column;   
+    text-align: center;     
+  }
+
+  &__cardImgWrapper {
+    @include flexCol();
+    max-width: 316px;
+    width: 100%;;
+    border: 5px solid grey;
+    border-radius: 27px;    
+  }
+
+  &__carTextWrapper {
+    padding: 0 45px;
+  }
+
+  &__cardTitle {
+    @include setFont(32px, 700, $font-family, $color-white);
+    line-height: 35px;
+    margin: 10px 0;
+  }
+
+  &__cardDescription {
+    @include setFont(14px, 300, $font-family, $color-white);
+  }
+  
+  &__cardImg {
+    
+  }
   
   &__title {
    // @include flexCol();
@@ -11,8 +51,7 @@
     @include setFont(100px, 500, $font-family, $color-white);
     text-transform: uppercase;
     text-align: center;
-    line-height: 130px;
-    
+    line-height: 130px;    
   }
     //1267px
 }
