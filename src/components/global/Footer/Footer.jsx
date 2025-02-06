@@ -27,7 +27,7 @@ const Footer = () => {
             src={logoWhiteImage}
             alt="Logo"/>
           <p className={styles.footer__copyright}>
-            ©copy; 2025 Deepsu.ai. All rights reserved.
+            &copy; 2025 Deepsu.ai. All rights reserved.
           </p>
           </div>  
           
