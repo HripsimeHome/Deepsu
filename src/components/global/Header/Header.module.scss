@@ -2,14 +2,20 @@
 @import "../../../styles/vars";
 
 .header {
-  margin: 170px 0;
+  @include bgWebp(
+    "../assets/images/header/headerBg.png",
+    "../assets/images/header/headerBg.webp"
+  );
+  background-repeat: no-repeat;
+  background-position: top right;
+  padding: 170px 0;
 
   &__container {
     width: 100%;;
     @include flexCol(space-between);
-    margin-top: 98px;
-   
+    margin-top: 98px;   
    // @include setFont(100px, 300, $font-family, $color-white);
+  
   }
   
   &__title {
