@@ -4,7 +4,7 @@ import styles from "./Header.module.scss";
 import {
   logoTextImage,  
   aiAgentImage,
-  suiImage,
+  suiImage,  
 } from "../../../assets/images";
 
 import {

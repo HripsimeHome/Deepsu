@@ -20,25 +20,25 @@ import ImageWebp from "../../../layout/ImageWebp/ImageWebp"
  const impactCard = [
   {
     image: empoweringEveryoneImage,
-    webpIMage: empoweringEveryoneWebpImage, 
+    webpImage: empoweringEveryoneWebpImage, 
     title: "Empowering Everyone",
     text: "DeepsuAI simplifies DeFi, making it accessible and profitable for users of all experience.",
   },
   {
     image: boostingSecurityImage,
-    webpIMage: boostingSecurityWebpImage,
+    webpImage: boostingSecurityWebpImage,
     title: "Boosting Security",
     text: "Our anti-scam tools ensure your assets are always protected.",
   },
   {
     image: drivingEfficiencyImage,
-    webpIMage: drivingEfficiencyWebpImage,
+    webpImage: drivingEfficiencyWebpImage,
     title: "Driving Efficiency",
     text: "Automation and real-time insights save time and maximize your returns.",
   },
   {
     image: enhancingTransparencyImage,
-    webpIMage: enhancingTransparencyWebpImage,
+    webpImage: enhancingTransparencyWebpImage,
     title: "Enhancing Transparency",
     text: "Clear metrics and real-time analytics help you make informed, data-driven decisions.",
   },    
@@ -49,12 +49,12 @@ const HomeImpact = () => {
     <section className={styles.homeImpact}>
       <h2 className="titleh2">Impact</h2>
       <div className={styles.homeImpact__cardContainer}>        
-        {impactCard.map(({ image, webpIMage, title, text }, index) => (
+        {impactCard.map(({ image, webpImage, title, text }, index) => (
         <div className={styles.homeImpact__card} key={index}> 
           <div className={styles.homeImpact__cardImgWrapper}>
             <ImageWebp
               src={image}
-              srcSet={webpIMage}              
+              srcSet={webpImage}              
               alt={"Impact"}
               className={styles.homeImpact__cardImg}  
             />

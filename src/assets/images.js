@@ -5,17 +5,18 @@ import suiImage from "./images/header/sui.png"
 import aiAgentImage from "./images/header/aiAgent.png"
 import logoWhiteImage from "./images/logos/logoWhite.png"
 
-// Home Advantages
 import aIInsightsImage from "./images/home/aIInsights.png"
 import aIInsightsWebpImage from "./images/home/aIInsights.webp"
+
+// Home Advantages
+import headerBgImage from "./images/header/headerBg.png"
+import headerBgWebpImage from "./images/header/headerBg.webp"
 
 import instantActionImage from "./images/home/instantAction.png"
 import instantActionWebpImage from "./images/home/instantAction.webp"
 
 import portfolioOptimizationImage from "./images/home/portfolioOptimization.png"
 import portfolioOptimizationWebpImage from "./images/home/portfolioOptimization.webp"
-
-
 
 
 // Home Impact
@@ -38,6 +39,8 @@ export {
   logoTextImage,
   aiAgentImage,
   suiImage,
+  headerBgImage,
+  headerBgWebpImage,
   
   // Home Impact 
 
@@ -62,7 +65,6 @@ export {
 
   portfolioOptimizationImage,
   portfolioOptimizationWebpImage,
-
 
   //Footer
   logoWhiteImage,

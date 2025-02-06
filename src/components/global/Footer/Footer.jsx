@@ -29,7 +29,10 @@ const Footer = () => {
           <p className={styles.footer__copyright}>
             &copy; 2025 Deepsu.ai. All rights reserved.
           </p>
-          </div>  
+        </div>  
+
+
+
           
         <div className={styles.footer__menu}>
         <h3 className={styles.footer__menuTitle}>Resources</h3>
@@ -54,6 +57,10 @@ const Footer = () => {
             <li>info@deepsu.ai</li>       
           </ul>
         </div>
+
+
+
+        
 
       </div>  
     </footer>
