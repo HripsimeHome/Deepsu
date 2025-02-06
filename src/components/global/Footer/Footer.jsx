@@ -43,7 +43,7 @@ const Footer = () => {
         <div className={styles.footer__menu}>
         <ul className={styles.footer__menuList}>
           <h3 className={styles.footer__menuTitle}>Social Media</h3>
-            <li>Twitterert</li>      
+            <li>Twitterer</li>      
             <li>Telegram</li>
           </ul>
         </div>

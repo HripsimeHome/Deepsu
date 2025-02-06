@@ -2,5 +2,47 @@
 @import "../../../../styles/vars";
 
 .homeAdvantages {     
+  &__cardContainer {
+   // display: grid;
+   // grid-template-columns: 1fr 1fr 1fr 1fr;       
+   //grid-template-columns: repeat(auto-fill,minmax(316px, 316px));   
+   //gap: 78px; 
+  // margin: 12px 0 88px;
+  display: flex;
+  gap: 98px;
+  }
+
+  &__card {
+    @include flexCol();
+    flex-direction: column;   
+    //text-align: center;   
+    border: 2px solid $color-white;          
+  }
+
+  &__cardImgWrapper {
+   // @include flexCol();
+    //max-width: 316px;
+   // width: 100%;
+   // border: 2px solid $color-white;  
+   // border-radius: 27px;    
+  }
+
+  &__cardTextWrapper {
+    min-height: 190px;
+    padding: 0 45px;
+  }
+
+  &__cardTitle {
+    @include setFont(60px, 700, $font-family, $color-white);
+    line-height: px;
+    margin-bottom: 10px;
+  }
+
+  &__cardDescription {
+    @include setFont(25px, 400, $font-family, $color-white);
+  }
+  
+  &__cardImg {
     
+  }   
 }
