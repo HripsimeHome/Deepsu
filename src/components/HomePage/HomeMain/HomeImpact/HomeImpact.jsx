@@ -61,7 +61,7 @@ const HomeImpact = () => {
             />
           </div>
 
-          <div className={styles.homeImpact__carTextWrapper}>
+          <div className={styles.homeImpact__cardTextWrapper}>
             <h4 className={styles.homeImpact__cardTitle}>
               {title}
             </h4>
