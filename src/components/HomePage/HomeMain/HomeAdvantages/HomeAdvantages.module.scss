@@ -10,11 +10,18 @@
   // margin: 12px 0 88px;
   display: flex;
   gap: 98px;
+  margin: 45px 0 90px;
+
+  @include lgScreenMedia {
+    flex-wrap: wrap;
+    }
   }
 
   &__card {
-    @include flexCol();
+   // @include flexCol();
+   display: flex;
     flex-direction: column;   
+    position: relative;
     //text-align: center;   
     border: 2px solid $color-white;          
   }
@@ -24,25 +31,47 @@
     //max-width: 316px;
    // width: 100%;
    // border: 2px solid $color-white;  
-   // border-radius: 27px;    
+   // border-radius: 27px;   
+   
   }
 
+    
+
+
+
   &__cardTextWrapper {
-    min-height: 190px;
-    padding: 0 45px;
+   // min-height: 190px;
+    padding: 0 40px;
   }
 
   &__cardTitle {
-    @include setFont(60px, 700, $font-family, $color-white);
-    line-height: px;
-    margin-bottom: 10px;
+    @include setFont(53px, 700, $font-family, $color-white);
+    line-height: 70px;
+    margin-bottom: 10px; 
   }
 
   &__cardDescription {
     @include setFont(25px, 400, $font-family, $color-white);
   }
+
+  &__cardColumn {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  &__portfolioPosition {      
+     position: absolute;
+     top: 20%;
+     //left: 50%;
+    // transform: translate();
+
+  }
   
   &__cardImg {
-    
-  }   
+   // position: absolute;
+   // top: 0;
+   // left: 0;
+  } 
+
 }
