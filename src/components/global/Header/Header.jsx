@@ -63,12 +63,16 @@ const Header = () => {
 
            
               <div className={styles.header__docPosition}>
+             
                 <Svg 
                   id={docIcon} 
                   className={styles.header__docIcon}
                 />
-
-                <span className={styles.header__docText}>Documentation</span>
+                 <a href="/download_doc.pdf" download="download_doc.pdf">
+                  <span className={styles.header__docText}>
+                    Documentation
+                  </span>                                
+                </a>
               </div>
 
             </div> 
