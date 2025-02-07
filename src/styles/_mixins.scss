@@ -48,11 +48,6 @@
   object-fit: contain;
 }
 
-@mixin button($bg: transparent, $border: none) {
-  border: $border;
-  background: $bg;
-  cursor: pointer;
-}
 
 @mixin svg($width, $color: transparent, $height: $width, $stroke: none) {
   width: $width;
@@ -111,29 +106,3 @@
     background-image: url($srcSet);
   }
 }
-// .class {
-//   @include bgWebp("../../assets/images/all/example.png","../../assets/images/all/example.webp")
-// }
-
-@mixin setDistance($distance, $prop: margin-bottom) {
-  @if ($distance == 120) {
-    #{$prop}: 120px;
-
-    @include xxlScreenMedia {
-      #{$prop}: 110px;
-    }
-
-    @include xlScreenMedia {
-      #{$prop}: 100px;
-    }
-
-    @include lgScreenMedia {
-      #{$prop}: 80px;
-    }
-
-    @include smScreenMedia {
-      #{$prop}: 60px;
-    }
-  }
-}
- 
