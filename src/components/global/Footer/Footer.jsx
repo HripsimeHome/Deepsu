@@ -1,11 +1,7 @@
 import styles from "./Footer.module.scss"
-//import Svg from "../../layout/Svg/Svg";
 //import { NavLink } from "react-router-dom";
-//import ImageWebp from "../../layout/ImageWebp/ImageWebp"
 
-import { 
-  //instantActionImage, 
-  //instantActionWebpImage,
+import {   
   logoWhiteImage,
  } from "../../../assets/images";
 
@@ -14,9 +10,10 @@ import {
 } from "../../../router/path";
 
 import {
-  //moneyIcon,
- 
-} from "../../../assets/svg";
+  twitterUrl,
+  telegramUrl, 
+  mailAddress
+} from "../../../constants/contacts";
  
 const Footer = () => {
   return (
@@ -46,15 +43,39 @@ const Footer = () => {
         <div className={styles.footer__menu}>
         <ul className={styles.footer__menuList}>
           <h3 className={styles.footer__menuTitle}>Social Media</h3>
-            <li>Twitterer</li>      
-            <li>Telegram</li>
+          <a
+              target="_blank"
+              rel="noreferrer"
+              href={twitterUrl}            
+            > 
+            <li>Twitter</li>                              
+            </a>                      
+                  
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href={telegramUrl}            
+            > 
+            <li>Telegram</li>                               
+            </a>
           </ul>
         </div>
 
         <div className={styles.footer__menu}>
         <ul className={styles.footer__menuList}>
             <h3 className={styles.footer__menuTitle}>Contact</h3>
-            <li>info@deepsu.ai</li>       
+            
+            <a
+            target="_blank"
+            rel="noreferrer"
+            href={`mailto:${mailAddress}`}
+            className={styles.footer__contactLink}
+           >
+            <li>info@deepsu.ai</li>
+           </a>
+
+            
+                  
           </ul>
         </div>
 

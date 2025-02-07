@@ -20,7 +20,7 @@
 
   &__copyright {
     @include setFont(20px, 400, $font-family, $color-white);
-    //margin-top: 13px;
+    margin-top: 13px;
   }
 
   &__menu {

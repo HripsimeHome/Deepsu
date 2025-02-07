@@ -83,6 +83,11 @@
     @include flexCol();     
   }
 
+  &__docIcon {    
+    @include svg(32px, $color-white);
+    margin-right: 5px;    
+  } 
+
   &__docText {
     @include flexCol(); 
     @include setFont(28px, 300, $font-family, $color-white); 
@@ -98,14 +103,15 @@
     display: flex;
     gap: 25px;
     margin-top: 80px; 
+    a {
+      color: $color-white;
+      &:hover {
+        color: $color-green;
+      }
     }
+    Svg {    
+      @include svg(58px, $color-white);
+    }  
+  } 
   
-  &__docIcon {    
-    @include svg(32px, $color-white);
-    margin-right: 5px;    
-  }  
-
-  &__socIcon {    
-  @include svg(58px, $color-white);
-  }  
 } 

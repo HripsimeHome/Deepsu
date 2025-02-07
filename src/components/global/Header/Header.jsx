@@ -1,5 +1,6 @@
 import styles from "./Header.module.scss";
 import { Link } from "react-router-dom";
+ 
 import Svg from "../../layout/Svg/Svg"
 
 import {
@@ -14,6 +15,13 @@ import {
    arrowPrevIcon,
    telegramIcon
 } from "../../../assets/svg"; 
+
+
+import {
+  twitterUrl,
+  telegramUrl, 
+} from "../../../constants/contacts";
+
 
 const Header = () => {      
   return (
@@ -57,21 +65,33 @@ const Header = () => {
               <div className={styles.header__docPosition}>
                 <Svg 
                   id={docIcon} 
-                  className={styles.header__docIcon}/>
-                  <span className={styles.header__docText}>Documentation</span>
+                  className={styles.header__docIcon}
+                />
 
+                <span className={styles.header__docText}>Documentation</span>
               </div>
 
             </div> 
 
             <div className={styles.header__socIconsPosition}>
-              <Svg
-              id={telegramIcon} 
-              className={styles.header__socIcon}/>
+              
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href={telegramUrl}            
+              >
+                <Svg id={telegramIcon}  />            
+              </a>
 
-              <Svg 
-                id={twitterIcon}
-                className={styles.header__socIcon}/>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href={twitterUrl}            
+              >
+                <Svg id={twitterIcon}  />            
+              </a>
+
+
             </div> {/* /socIconsPosition}*/}
 
         </div> {/* /infoBLock}*/}
