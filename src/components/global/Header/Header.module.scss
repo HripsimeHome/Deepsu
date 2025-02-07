@@ -11,23 +11,58 @@
   padding: 170px 0;
 
   &__container {
-    width: 100%;;
     @include flexCol(space-between);
-    margin-top: 98px;   
-   // @include setFont(100px, 300, $font-family, $color-white);
-  
-  }
-  
-  &__title {
-    @include setFont(200px, 300, $font-family, $color-white);
-    line-height: 200px;
-    margin-bottom: 67px;
+    width: 100%;    // posm
+    margin-top: 98px;     
   }
 
   &__infoBLock {
     display: flex;
-    flex-direction: column;
-   
+   // flex-direction: column;   
+  }
+  
+  &__title {
+    display: flex;
+  //  @include flexCol(); 
+    @include setFont(200px, 300, $font-family, $color-white);
+    line-height: 200px;
+   // margin-bottom: 67px;
+  }
+
+  &__titleGreen {
+    @include setFont(200px, 700, $font-family, $color-green);
+  }
+
+  
+  &__logoSuiPosiiton {
+   display: flex;
+   flex-direction: column;
+   text-align: right;
+   line-height: 4dpx;
+   margin-left: 62px;;
+  }
+
+  &__suiImg {
+    width: 298px;
+    height: 154px;
+
+  }
+
+  &__logoSuiTitle {
+    @include setFont(22px, 300, $font-family, $color-white);
+  }
+
+  &__infoText {   
+    max-width: 730px; 
+    @include setFont(28px, 300, $font-family, $color-white);
+    line-height: 30px;
+    margin-top: 67px;
+    margin-bottom: 100px;
+  }
+  
+  &__btnPosition {
+    display: flex;
+    //align-items: center;     
   }
 
   &__btn {
@@ -42,22 +77,10 @@
       background-color: #00F589; 
       cursor: pointer;
     }
-
   }
 
-  &__infoText {   
-    margin-top: 67px;
-    margin-bottom: 100px;
-  }
-
-  &__btnPosition {
-    display: flex;
-    //align-items: center;     
-  }
- 
   &__docPosition {
-    @include flexCol(); 
-    
+    @include flexCol();     
   }
 
   &__docText {
@@ -79,12 +102,10 @@
   
   &__docIcon {    
     @include svg(32px, $color-white);
-    margin-right: 5px;
-    
-    }  
+    margin-right: 5px;    
+  }  
 
   &__socIcon {    
   @include svg(58px, $color-white);
   }  
-}
- 
+} 

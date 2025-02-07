@@ -19,52 +19,63 @@ const Header = () => {
   return (
     <>
       <header className={styles.header}>
-        <img src={logoTextImage} alt="Logo"/>
+        <img 
+          src={logoTextImage} 
+          alt="Logo"/>
+
         <div className={styles.header__container}>
 
-
-          <div className={styles.header__infoBLock}>
-
-            <div>
+          <div>
+            <div className={styles.header__infoBLock}>
               <h1 className={styles.header__title}>Next
-              {/* <img src={suiImage} alt="SUI"/>*/}
-              Gen  <span className="texGreen">AI</span>
+
+{/*
+                <div className={styles.header__logoSuiPosiiton}>
+                  <img 
+                    src={suiImage} 
+                    alt="SUI"
+                    className={styles.header__suiImg}
+                    /> 
+                  <span className={styles.header__logoSuiTitle}>build on</span>
+                </div>
+*/}
+                 
+               {/* Gen  <span className={styles.header__titleGreen}>AI</span>*/}
               </h1>             
-            </div>
+            </div>  
           
             <div className={styles.header__infoText}>
-            DeFi token management platform on Sui blockchain. Use AI and data analytics to simplify crypto operations, optimize portfolios, and secure assets.        
-            
+              DeFi token management platform on Sui blockchain. Use AI and data analytics to simplify crypto operations, optimize portfolios, and secure assets.      
             </div>
 
             <div className={styles.header__btnPosition}>
-            <button className={styles.header__btn}>Launch App</button>
+              <button className={styles.header__btn}>Launch App</button>
 
            
 
            
-            <div className={styles.header__docPosition}>
-              <Svg 
-                id={docIcon} 
-                className={styles.header__docIcon}/>
-                <span className={styles.header__docText}>Documentation</span>
+              <div className={styles.header__docPosition}>
+                <Svg 
+                  id={docIcon} 
+                  className={styles.header__docIcon}/>
+                  <span className={styles.header__docText}>Documentation</span>
 
-                  </div>
+              </div>
 
-            </div>
+            </div> 
 
-<div className={styles.header__socIconsPosition}>
-            <Svg
-             id={telegramIcon} 
-             className={styles.header__socIcon}/>
-
-            <Svg 
-              id={twitterIcon}
+            <div className={styles.header__socIconsPosition}>
+              <Svg
+              id={telegramIcon} 
               className={styles.header__socIcon}/>
 
-</div>
+              <Svg 
+                id={twitterIcon}
+                className={styles.header__socIcon}/>
+            </div> {/* /socIconsPosition}*/}
 
         </div> {/* /infoBLock}*/}
+
 
 
 
@@ -76,8 +87,7 @@ const Header = () => {
 
 
 
-
-        </div>   
+        </div>  {/* container */} 
       </header>
     </>
   );
