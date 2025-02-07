@@ -38,6 +38,11 @@
     @include setFont(36px, 600, $font-family, $color-white);
     border-radius: 15px;  
     margin-right: 88px;
+    &:hover {     
+      background-color: #00F589; 
+      cursor: pointer;
+    }
+
   }
 
   &__infoText {   
@@ -47,9 +52,39 @@
 
   &__btnPosition {
     display: flex;
-    align-items: center;     
+    //align-items: center;     
+  }
+ 
+  &__docPosition {
+    @include flexCol(); 
+    
+  }
+
+  &__docText {
+    @include flexCol(); 
+    @include setFont(28px, 300, $font-family, $color-white); 
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+      cursor: pointer;
+    }
   }
   
- 
+  &__socIconsPosition {
+    display: flex;
+    gap: 25px;
+    margin-top: 80px; 
+    }
   
+  &__docIcon {    
+    @include svg(32px, $color-white);
+    margin-right: 5px;
+    
+    }  
+
+  &__socIcon {    
+  @include svg(58px, $color-white);
+  }  
 }
+ 
