@@ -45,7 +45,7 @@ const impactCard = [
     webpImage: enhancingTransparencyWebpImage,
     title: "Enhancing Transparency",
     text: "Clear metrics and real-time analytics help you make informed, data-driven decisions.",
-    transitiontype: TransitionStyleTypes.top,
+    transitiontype: TransitionStyleTypes.bottom,
   },
 ];
 
