@@ -70,18 +70,16 @@ const Header = () => {
               <button className={styles.header__btn}>Launch App
               </button>         
            
-              <div className={styles.header__docPosition}>             
-                <Svg 
-                  id={docIcon} 
-                  className={styles.header__docIcon}
-                />
+              <div className={styles.header__docPosition}>    
                 <a 
                   href="https://deepsuai.gitbook.io/whitepaper"
                   target="_blank"
-                > 
-                  <span className={styles.header__docText}>
-                    Documentation
-                  </span>                                
+                  className={styles.header__docText}
+                >          
+                <Svg 
+                  id={docIcon} 
+                  className={styles.header__docIcon}
+                />                Documentation                                             
                 </a>
               </div>
             </div> 

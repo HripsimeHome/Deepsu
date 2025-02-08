@@ -15,105 +15,70 @@ import {
   mailAddress
 } from "../../../constants/contacts";
 
-/*
-const menu = [
+const menuItems = [
   {
     title: "Resources",
-    list: "",
-    link: ""
+    items: [
+      { 
+        text: "Documentation", 
+        link: "https://deepsuai.gitbook.io/whitepaper"       
+      },
+      { text: "Terms of use", link: "#" },
+      { text: "Disclaimer", link: "#" }
+    ]
   },
+  {
+    title: "Social Media",
+    items: [
+      { text: "Twitter", link: twitterUrl},
+      { text: "Telegram", link: telegramUrl}
+    ]
+  },
+  {
+    title: "Contact",
+    items: [
+      { 
+        text: "info@deepsu.ai", 
+        link: `mailto:${mailAddress}`,                
+      }
+    ]
+  }
+];
 
-  {
-    title: "",
-    list: "",
-    link: ""
-  },
-  {
-    title: "",
-    list: "",
-    link: ""
-  },
-  {
-    title: "",
-    list: "",
-    link: ""
-  },
-  {
-    title: "",
-    list: "",
-    link: ""
-  },
-  {
-    title: "",
-    list: "",
-    link: ""
-  },
-]
- */
 const Footer = () => {
   return (
-    <footer className={styles.footer}> 
-      <div className={`${styles.footer__container} container`}>        
-        <div>
-          <img
-              src={logoWhiteImage}
-              alt="Logo"/>
-            <p className={styles.footer__copyright}>
-              &copy; {new Date().getFullYear()} Deepsu.ai. All rights reserved.
-            </p>
+    <footer className={styles.footer}>
+      <div className={`${styles.footer__container} container`}>
+        <div className={styles.footer__logoBlock}>
+          <img src={logoWhiteImage} alt="Logo" />
+          <p className={styles.footer__copyright}>
+            &copy; {new Date().getFullYear()} Deepsu.ai. All rights reserved.
+          </p>
+          <a className={styles.footer__emailAddress}>info@deepsu.ai</a>
         </div>
 
-        <div className={styles.footer__menuContainer}> 
-          <div>
-            <h3 className={styles.footer__menuTitle}>Resources</h3>
-            <ul className={styles.footer__menuList}>              
-              <a 
-                href="https://deepsuai.gitbook.io/whitepaper"
-                target="_blank"
-              > 
-               <li>Documentation</li>
-              </a>
-              <li>Terms of use</li>
-              <li>Disclaimer</li>
-            </ul>          
-          </div>
-
-          <div>
-            <h3 className={styles.footer__menuTitle}>Social Media</h3>
-            <ul className={styles.footer__menuList}>           
-              <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href={twitterUrl}            
-                > 
-                  <li>Twitter</li>                              
-              </a>               
-                  
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href={telegramUrl}            
-              > 
-                <li>Telegram</li>                               
-              </a>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className={styles.footer__menuTitle}>Contact</h3>
-            <ul className={styles.footer__menuList}>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                href={`mailto:${mailAddress}`}
-                className={styles.footer__contactLink}
-              >
-              <li>info@deepsu.ai</li>
-           </a>     
-         </ul>
-        </div>  
-        </div> {/* /menuContainer*/}
-      </div>  
+        <div className={styles.footer__menuContainer}>
+          {menuItems.map((menu, index) => (
+            <div key={index}>
+              <h3 className={styles.footer__menuTitle}>{menu.title}</h3>
+              <ul className={styles.footer__menuList}>
+              {menu.items.map((item, i) => (
+                <li key={i}>
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={item.className ? styles[item.className] : ""}
+                  >
+                      {item.text}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
     </footer>
   );
 };

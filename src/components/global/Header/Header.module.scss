@@ -28,6 +28,11 @@
   &__container {
     @include flexCol(space-between);   
     margin-top: 98px;     
+
+    @include mdScreenMedia {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
   
   &__title {  
@@ -95,6 +100,10 @@
 
   &__docPosition {
     @include flexCol();     
+
+    a {
+      display: inline-flex;
+    }
   }
 
   &__docIcon {    
@@ -117,6 +126,11 @@
     display: flex;
     gap: 25px;
     margin-top: 80px; 
+
+    @include mdScreenMedia {
+      justify-content: center;
+    }
+
     a {
       color: $color-white;
       &:hover {
@@ -127,4 +141,6 @@
       @include svg(58px, $color-white);
     }  
   }   
+
+  
 } 
