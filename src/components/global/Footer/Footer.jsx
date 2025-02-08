@@ -14,7 +14,42 @@ import {
   telegramUrl, 
   mailAddress
 } from "../../../constants/contacts";
- 
+
+/*
+const menu = [
+  {
+    title: "Resources",
+    list: "",
+    link: ""
+  },
+
+  {
+    title: "",
+    list: "",
+    link: ""
+  },
+  {
+    title: "",
+    list: "",
+    link: ""
+  },
+  {
+    title: "",
+    list: "",
+    link: ""
+  },
+  {
+    title: "",
+    list: "",
+    link: ""
+  },
+  {
+    title: "",
+    list: "",
+    link: ""
+  },
+]
+ */
 const Footer = () => {
   return (
     <footer className={styles.footer}> 
@@ -30,7 +65,6 @@ const Footer = () => {
         </div>
 
         <div className={styles.footer__menuContainer}> 
-
 
           <div>
           <h3 className={styles.footer__menuTitle}>Resources</h3>

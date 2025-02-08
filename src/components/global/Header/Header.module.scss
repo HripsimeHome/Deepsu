@@ -2,13 +2,33 @@
 @import "../../../styles/vars";
 
 .header {
-  @include bgWebp(
-    "../assets/images/header/headerBg.png",
-    "../assets/images/header/headerBg.webp"
-  );
-  background-repeat: no-repeat;
-  background-position: top right;
+ position: relative;
+
+  
   padding: 170px 0;
+
+  &__headerBg {
+    width: 1158px;
+    height: 1254px;;
+    position: absolute;
+    top: 50px;
+    right: 0;
+   // right: -198px;
+    z-index: 5;
+    @include bgWebp(
+      "../assets/images/header/headerBg.png",
+      "../assets/images/header/headerBg.webp"
+    );
+
+    @include bgWebp(
+      "../assets/images/header/headerBg.png",
+      "../assets/images/header/headerBg.webp"
+    );
+    background-repeat: no-repeat;
+    background-position: top right;
+    z-index: -2;
+     
+  }
 
   &__container {
     @include flexCol(space-between);
@@ -72,6 +92,9 @@
     color: rgba(255, 255, 255, 1);   
     @include setFont(36px, 600, $font-family, $color-white);
     border-radius: 15px;  
+    box-shadow: 0px 6px 20px 0px $color-green;
+    
+
     margin-right: 88px;
     &:hover {     
       //background-color: #00F589; 

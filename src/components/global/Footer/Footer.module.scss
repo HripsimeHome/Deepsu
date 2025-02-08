@@ -36,6 +36,7 @@
   &__menuList {
     display: flex;
     flex-direction: column;   
+
     li {
       list-style-type: none;
       @include setFont(18px, 300, $font-family, $color-white);
@@ -46,7 +47,5 @@
         cursor: pointer;
       }
     }
-  }
-
-  
+  }  
 }

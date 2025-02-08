@@ -1,6 +1,12 @@
 import styles from "./HomeAdvantages.module.scss";
 import ImageWebp from "../../../layout/ImageWebp/ImageWebp"
 
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../../providers/TransitionProvider";
+
+import { useLazy } from "../../../../hooks/useLazy";
+
 import { 
   aIInsightsImage,
   aIInsightsWebpImage,
@@ -13,11 +19,18 @@ import {
   } from "../../../../assets/images";
   
 const HomeAdvantages = () => {  
+  const { isInView, ref } = useLazy(0.8);
+
   return (    
-    <section className={styles.homeAdvantages}>
-    <h2 className="titleh2">Advantages</h2>
-      <div className={styles.homeAdvantages__cardContainer}>      
-        <div className={styles.homeAdvantages__card}>          
+    <section className={styles.homeAdvantages} ref={ref}>
+      <h2 className="titleh2">Advantages</h2>
+        <div className={styles.homeAdvantages__cardContainer}>    
+          <TransitionProvider
+            inProp={isInView}               
+            style={TransitionStyleTypes.zoomIn}
+            delay={500}
+          >  
+        <div className={styles.homeAdvantages__card} >          
           <ImageWebp
             src={aIInsightsImage}
             srcSet={aIInsightsWebpImage}
@@ -37,8 +50,14 @@ const HomeAdvantages = () => {
             </p>
           </div>          
         </div>  
+        </TransitionProvider>
 
         <div className={styles.homeAdvantages__cardColumn}> 
+          <TransitionProvider
+            inProp={isInView}               
+            style={TransitionStyleTypes.zoomIn}
+            delay={500}
+          >  
           <div className={styles.homeAdvantages__card}>         
             <ImageWebp
               src={instantActionImage}
@@ -58,7 +77,13 @@ const HomeAdvantages = () => {
               </p> 
             </div> 
           </div>
-
+          </TransitionProvider>
+          
+          <TransitionProvider
+            inProp={isInView}               
+            style={TransitionStyleTypes.zoomIn}
+            delay={500}
+          >  
           <div className={styles.homeAdvantages__card}>         
             <ImageWebp
               src={portfolioOptimizationImage}
@@ -78,7 +103,8 @@ const HomeAdvantages = () => {
               AI-driven tools automatically analyze and optimize your portfolio, balancing risk and reward.
               </p> 
             </div>     
-        </div>          
+        </div>   
+        </TransitionProvider>       
     </div>       
 
 

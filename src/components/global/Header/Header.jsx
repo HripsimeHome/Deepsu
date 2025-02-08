@@ -27,6 +27,10 @@ const Header = () => {
   return (
     <>
       <header className={styles.header}>
+      <div className={styles.header__headerBg}>
+      </div>
+
+
         <img 
           src={logoTextImage} 
           alt="Logo"/>
