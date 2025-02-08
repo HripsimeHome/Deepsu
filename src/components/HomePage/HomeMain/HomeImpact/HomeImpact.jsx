@@ -38,14 +38,14 @@ const impactCard = [
     webpImage: drivingEfficiencyWebpImage,
     title: "Driving Efficiency",
     text: "Automation and real-time insights save time and maximize your returns.",
-    transitiontype: TransitionStyleTypes.top,
+    transitiontype: TransitionStyleTypes.bottom,
   },
   {
     image: enhancingTransparencyImage,
     webpImage: enhancingTransparencyWebpImage,
     title: "Enhancing Transparency",
     text: "Clear metrics and real-time analytics help you make informed, data-driven decisions.",
-    transitiontype: TransitionStyleTypes.bottom,
+    transitiontype: TransitionStyleTypes.top,
   },
 ];
 
@@ -74,8 +74,7 @@ const HomeImpact = () => {
                     srcSet={webpImage}
                     alt={"Impact"}
                     className={styles.homeImpact__cardImg}
-                  />
-                  +
+                  />                  
                 </div>
                 <div className={styles.homeImpact__cardTextWrapper}>
                   <h4 className={styles.homeImpact__cardTitle}>{title}</h4>
