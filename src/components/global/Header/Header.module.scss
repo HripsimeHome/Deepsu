@@ -20,14 +20,9 @@
       "../assets/images/header/headerBg.webp"
     );
 
-    @include bgWebp(
-      "../assets/images/header/headerBg.png",
-      "../assets/images/header/headerBg.webp"
-    );
     background-repeat: no-repeat;
     background-position: top right;
-    z-index: -2;
-     
+    z-index: -2;     
   }
 
   &__container {
@@ -40,6 +35,38 @@
     display: flex;
    // flex-direction: column;   
   }
+
+&__titleContainer {
+  //display: flex;
+  //flex-direction: column;
+}
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   &__title {
     display: flex;
@@ -52,7 +79,6 @@
   &__titleGreen {
     @include setFont(200px, 700, $font-family, $color-green);
   }
-
   
   &__logoSuiPosiiton {
    display: flex;
@@ -65,7 +91,6 @@
   &__suiImg {
     width: 298px;
     height: 154px;
-
   }
 
   &__logoSuiTitle {
@@ -92,9 +117,7 @@
     color: rgba(255, 255, 255, 1);   
     @include setFont(36px, 600, $font-family, $color-white);
     border-radius: 15px;  
-    box-shadow: 0px 6px 20px 0px $color-green;
-    
-
+    box-shadow: 0px 6px 20px 0px $color-green;  
     margin-right: 88px;
     &:hover {     
       //background-color: #00F589; 
@@ -136,6 +159,5 @@
     Svg {    
       @include svg(58px, $color-white);
     }  
-  } 
-  
+  }   
 } 
