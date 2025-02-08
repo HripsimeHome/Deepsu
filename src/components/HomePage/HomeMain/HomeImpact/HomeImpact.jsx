@@ -38,7 +38,7 @@ const impactCard = [
     webpImage: drivingEfficiencyWebpImage,
     title: "Driving Efficiency",
     text: "Automation and real-time insights save time and maximize your returns.",
-    transitiontype: TransitionStyleTypes.bottom,
+    transitiontype: TransitionStyleTypes.top,
   },
   {
     image: enhancingTransparencyImage,
