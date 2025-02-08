@@ -2,7 +2,7 @@
 @import "../../../styles/vars";
 
 .header {
- position: relative;
+  position: relative;
 
   
   padding: 170px 0;
@@ -26,57 +26,49 @@
   }
 
   &__container {
-    @include flexCol(space-between);
-    width: 100%;    // posm
+    @include flexCol(space-between);   
     margin-top: 98px;     
   }
   
   &__title {  
     @include setFont(200px, 300, $font-family, $color-white);
-    line-height: 200px;
-   // margin-bottom: 67px;
+    line-height: 200px; 
   }
 
   &__titleGreen {
     @include setFont(200px, 700, $font-family, $color-green);
   }
   
-  &__logoSuiPosiiton {
-   display: flex;
-   flex-direction: column;
-   text-align: right;
-   line-height: 4dpx;
-   margin-left: 62px;;
+  &__suiBlock {
+    display: flex;
+  }
+
+  &__suiPosition {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    margin-left: 62px;
+
+    a {
+      display: inherit;
+    }
   }
 
   &__suiImg {
     width: 298px;
-    height: 154px;
-    margin-left: 62px;
+    height: 154px;    
   }
 
-  &__logoSuiTitle {
+  &__suiTitle {
     @include setFont(22px, 300, $font-family, $color-white);
-    line-height: 10px;     
+    line-height: 5px;     
   }
-
-
-&__testLogoContainer {
-  display: flex;
-}
-
-&__testtitleContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: end;
-}
-
 
   &__text {   
     max-width: 730px; 
     @include setFont(28px, 300, $font-family, $color-white);
-    line-height: 30px;
+    line-height: 40px;
     margin-top: 67px;
     margin-bottom: 100px;
   }
@@ -88,7 +80,7 @@
   &__btn {
     width: 306px;
     height: 86px;
-    background-color: #19C690;
+    background-color:  $color-green;
     color: rgba(255, 255, 255, 1);   
     @include setFont(36px, 600, $font-family, $color-white);
     border-radius: 15px;  
@@ -96,7 +88,7 @@
     margin-right: 88px;
     &:hover {     
       //background-color: #00F589; 
-      background-color: #007f5f;
+     background-color: #128A66;    
       cursor: pointer;
     }
   }
