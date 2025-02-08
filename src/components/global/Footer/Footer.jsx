@@ -66,8 +66,13 @@ const Footer = () => {
         <div className={styles.footer__menuContainer}> 
           <div>
             <h3 className={styles.footer__menuTitle}>Resources</h3>
-            <ul className={styles.footer__menuList}>
-              <li>Documentation</li>
+            <ul className={styles.footer__menuList}>              
+              <a 
+                href="https://deepsuai.gitbook.io/whitepaper"
+                target="_blank"
+              > 
+               <li>Documentation</li>
+              </a>
               <li>Terms of use</li>
               <li>Disclaimer</li>
             </ul>          

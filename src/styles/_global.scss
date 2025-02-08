@@ -19,6 +19,32 @@ body {
   );
   background-repeat: no-repeat;
   background-position: top center;
+
+// Body Scrollbar
+
+   &::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #06221A;       
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $color-green;     
+    }
+    
+    &::-moz-scrollbar {
+      width: 8px;
+    }
+
+    &::-moz-scrollbar-track {
+      background: #06221A;
+    }
+
+    &::-moz-scrollbar-thumb {
+      background: $color-green;
+    }
 }
 
 button,
@@ -32,10 +58,6 @@ a:focus-visible {
 
 a {
   text-decoration: none;
-}
-
-.pointer {
-  cursor: pointer;
 }
 
 #root {
@@ -53,8 +75,7 @@ a {
   //padding-top: 210px;
 
   padding-right: 25px;
-  padding-left: 25px;
-  // border: 1px solid green;
+  padding-left: 25px;  
   /*
   @include xlScreenMedia {
     max-width: 960px;
@@ -83,6 +104,5 @@ a {
 
   .texGreen {
     color: $color-green;  
-  }
-   
+  }   
 }
