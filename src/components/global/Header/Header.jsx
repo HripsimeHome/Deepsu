@@ -35,37 +35,35 @@ const Header = () => {
 
         <div className={styles.header__container}>
 
+          {/* First block */} 
           <div>
-            <div className={styles.header__infoBLock}>
+
+            <div className={styles.header__title}>                              
+              <div>Next 
+              <img 
+                    src={suiImage} 
+                    alt="SUI"
+                    className={styles.header__suiImg}
+                    /> 
+              </div>                  
+                          
+              <div>Gen 
+                <span className={styles.header__titleGreen}>AI</span>
+              </div>               
+            </div>   
 
 
-              <div className={styles.header__titleContainer}>
-                                
-                <div className={styles.header__title}>Next Sui
-
-                </div>
-                  
-                            
-                <div className={styles.header__title}>Gen 
-                  <span className={styles.header__titleGreen}>AI</span>
-                </div>
-                   
-               
- 
-              </div>   
-
-
-
-            </div>  
+  
           
-            <div className={styles.header__infoText}>
+            <div className={styles.header__text}>
               DeFi token management platform on Sui blockchain. Use AI and data analytics to simplify crypto operations, optimize portfolios, and secure assets.      
             </div>
 
             <div className={styles.header__btnPosition}>
               <button className={styles.header__btn}>Launch App</button>         
            
-              <div className={styles.header__docPosition}>             
+              <div className={styles.header__docPosition}>
+             
                 <Svg 
                   id={docIcon} 
                   className={styles.header__docIcon}
@@ -76,11 +74,9 @@ const Header = () => {
                   </span>                                
                 </a>
               </div>
-
             </div> 
 
-            <div className={styles.header__socIconsPosition}>
-              
+            <div className={styles.header__socIconsPosition}>              
               <a
                 target="_blank"
                 rel="noreferrer"
@@ -96,22 +92,18 @@ const Header = () => {
               >
                 <Svg id={twitterIcon}  />            
               </a>
-
-
             </div> {/* /socIconsPosition}*/}
 
-          </div> {/* /infoBLock}*/}
+          </div>{/* /First block */} 
 
 
 
 
 
-
+          {/* Second block */} 
           <div>
             <img src={aiAgentImage} alt="AI Agent"/>
           </div>
-
-
 
         </div>  {/* container */} 
       </header>
