@@ -53,21 +53,19 @@ const menu = [
 const Footer = () => {
   return (
     <footer className={styles.footer}> 
-      <div className={`${styles.footer__container} container`}>    
-       
+      <div className={`${styles.footer__container} container`}>        
         <div>
           <img
               src={logoWhiteImage}
               alt="Logo"/>
             <p className={styles.footer__copyright}>
-              &copy; 2025 Deepsu.ai. All rights reserved.
+              &copy; {new Date().getFullYear()} Deepsu.ai. All rights reserved.
             </p>
         </div>
 
         <div className={styles.footer__menuContainer}> 
-
           <div>
-          <h3 className={styles.footer__menuTitle}>Resources</h3>
+            <h3 className={styles.footer__menuTitle}>Resources</h3>
             <ul className={styles.footer__menuList}>
               <li>Documentation</li>
               <li>Terms of use</li>
@@ -104,18 +102,14 @@ const Footer = () => {
                 rel="noreferrer"
                 href={`mailto:${mailAddress}`}
                 className={styles.footer__contactLink}
-            >
+              >
               <li>info@deepsu.ai</li>
            </a>     
          </ul>
-        </div>    
-
-
-
+        </div>  
         </div> {/* /menuContainer*/}
       </div>  
     </footer>
   );
 };
-
 export default Footer;   

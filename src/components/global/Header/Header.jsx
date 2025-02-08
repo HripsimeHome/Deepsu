@@ -16,19 +16,17 @@ import {
    telegramIcon
 } from "../../../assets/svg"; 
 
-
 import {
   twitterUrl,
   telegramUrl, 
 } from "../../../constants/contacts";
 
-
 const Header = () => {      
   return (
     <>
       <header className={styles.header}>
-      <div className={styles.header__headerBg}>
-      </div>
+        <div className={styles.header__headerBg}>
+        </div>
 
 
         <img 
@@ -39,21 +37,25 @@ const Header = () => {
 
           <div>
             <div className={styles.header__infoBLock}>
-              <h1 className={styles.header__title}>Next
 
-{/*
-                <div className={styles.header__logoSuiPosiiton}>
-                  <img 
-                    src={suiImage} 
-                    alt="SUI"
-                    className={styles.header__suiImg}
-                    /> 
-                  <span className={styles.header__logoSuiTitle}>build on</span>
+
+              <div className={styles.header__titleContainer}>
+                                
+                <div className={styles.header__title}>Next Sui
+
                 </div>
-*/}
-                 
-               {/* Gen  <span className={styles.header__titleGreen}>AI</span>*/}
-              </h1>             
+                  
+                            
+                <div className={styles.header__title}>Gen 
+                  <span className={styles.header__titleGreen}>AI</span>
+                </div>
+                   
+               
+ 
+              </div>   
+
+
+
             </div>  
           
             <div className={styles.header__infoText}>
@@ -61,13 +63,9 @@ const Header = () => {
             </div>
 
             <div className={styles.header__btnPosition}>
-              <button className={styles.header__btn}>Launch App</button>
-
+              <button className={styles.header__btn}>Launch App</button>         
            
-
-           
-              <div className={styles.header__docPosition}>
-             
+              <div className={styles.header__docPosition}>             
                 <Svg 
                   id={docIcon} 
                   className={styles.header__docIcon}
@@ -102,7 +100,7 @@ const Header = () => {
 
             </div> {/* /socIconsPosition}*/}
 
-        </div> {/* /infoBLock}*/}
+          </div> {/* /infoBLock}*/}
 
 
 
