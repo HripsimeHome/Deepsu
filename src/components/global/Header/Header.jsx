@@ -38,13 +38,21 @@ const Header = () => {
           {/* First block */} 
           <div>
 
-            <div className={styles.header__title}>                              
-              <div>Next 
-              <img 
+            <div className={styles.header__title}>    
+
+              <div className={styles.header__testLogoContainer}>
+
+                <div>Next</div> 
+            
+                <div className={styles.header__testtitleContainer}>
+                  <img 
                     src={suiImage} 
                     alt="SUI"
                     className={styles.header__suiImg}
                     /> 
+                  <span className={styles.header__logoSuiTitle}>build on</span>
+                </div>
+
               </div>                  
                           
               <div>Gen 

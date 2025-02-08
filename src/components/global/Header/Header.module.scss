@@ -57,7 +57,21 @@
 
   &__logoSuiTitle {
     @include setFont(22px, 300, $font-family, $color-white);
+    line-height: 10px;     
   }
+
+
+&__testLogoContainer {
+  display: flex;
+}
+
+&__testtitleContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+}
+
 
   &__text {   
     max-width: 730px; 
