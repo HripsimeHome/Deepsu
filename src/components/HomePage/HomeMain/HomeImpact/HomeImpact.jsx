@@ -52,7 +52,6 @@ const impactCard = [
 const HomeImpact = () => {
   const { isInView, ref } = useLazy(0.8);
 
-
   return (
     <section className={styles.homeImpact}>
       <h2 className="titleh2">Impact</h2>
@@ -63,7 +62,7 @@ const HomeImpact = () => {
               inProp={isInView}
               style={transitiontype}
               key={index}
-              delay={index*300}
+              delay={index*400}
             >
               <div className={styles.homeImpact__card}>
                 {" "}
@@ -86,12 +85,21 @@ const HomeImpact = () => {
         )}
       </div>
 
+
+      <TransitionProvider
+        inProp={isInView}
+        style={TransitionStyleTypes.bottom}
+        delay={1800}
+      >
       <h2 className={styles.homeImpact__title}>
         <span className="textlightGreen">start </span>
         your smart journey to
         <span className="textlightGreen"> profitable defi </span>
         decisions today
       </h2>
+      </TransitionProvider>
+
+
     </section>
   );
 };

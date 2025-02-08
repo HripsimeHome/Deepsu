@@ -13,7 +13,12 @@ body {
   color: $color-white;
   background-color: #010c10;
   font-family: $font-family;  
- 
+  @include bgWebp(
+    "../assets/images/bodyBg.png",
+    "../assets/images/bodyBg.webp"
+  );
+  background-repeat: no-repeat;
+  background-position: top center;
 }
 
 button,

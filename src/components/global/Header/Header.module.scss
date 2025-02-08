@@ -2,13 +2,32 @@
 @import "../../../styles/vars";
 
 .header {
-  @include bgWebp(
-    "../assets/images/header/headerBg.png",
-    "../assets/images/header/headerBg.webp"
-  );
-  background-repeat: no-repeat;
-  background-position: top right;
+ position: relative;
+
+  
   padding: 170px 0;
+
+  &__headerBg {
+    width: 1158px;
+    height: 1254px;;
+    position: absolute;
+    top: 50px;
+    right: 0;
+   // right: -198px;
+    z-index: 5;
+    @include bgWebp(
+      "../assets/images/header/headerBg.png",
+      "../assets/images/header/headerBg.webp"
+    );
+
+    @include bgWebp(
+      "../assets/images/header/headerBg.png",
+      "../assets/images/header/headerBg.webp"
+    );
+    background-repeat: no-repeat;
+    background-position: top right;
+     
+  }
 
   &__container {
     @include flexCol(space-between);
