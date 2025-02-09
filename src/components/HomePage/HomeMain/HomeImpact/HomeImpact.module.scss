@@ -20,6 +20,8 @@
 
     @include mdScreenMedia { 
       grid-template-columns: repeat(2, 1fr);  
+     // gap: 20px; 
+     
     }
 
     @include smScreenMedia { 
@@ -31,9 +33,10 @@
   &__card {
     @include flexCol();
     flex-direction: column;   
+    justify-content: flex-start;
     text-align: center;     
     width: 100%;
-    min-height: 360px;  
+    min-height: 260px;  
    // padding: 20px;   
   }
 
@@ -47,17 +50,14 @@
   }
 
   &__cardTextWrapper {
-    max-width: 316px;
-    min-height: 200px;
-    padding: 0 45px; 
-
-    padding: 0 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    max-width: 316px;
+    //min-height: 200px; 
+    padding: 0 20px;   
    // width: 100%;
-   // max-width: 250px;       
-    
+   // max-width: 250px;   
   }
 
   &__cardTitle {

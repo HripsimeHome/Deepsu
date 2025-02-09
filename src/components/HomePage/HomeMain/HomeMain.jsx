@@ -5,7 +5,7 @@ import HomeAdvantages from "./HomeAdvantages/HomeAdvantages"
 const HomeMain = () => {
   return (
     <>
-      <section className={styles.homeMain}>     
+      <section>     
         <HomeAdvantages />
         <HomeImpact /> 
       </section>

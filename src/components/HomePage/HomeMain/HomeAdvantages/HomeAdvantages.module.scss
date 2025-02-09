@@ -2,17 +2,20 @@
 @import "../../../../styles/vars";
 
 .homeAdvantages {     
-  &__cardContainer {
-   // display: grid;    
-   //grid-template-columns: repeat(auto-fill,minmax(316px, 316px));   
+  &__cardContainer {   
     display: flex;
     width: 100%;
    // justify-self: center;
     gap: 98px;
     margin: 30px 0 100px;
 
-  @include lgScreenMedia {
+  @include smScreenMedia {
     flex-wrap: wrap;
+    }
+
+    @include mdScreenMedia {     
+      gap: 50px;
+      margin: 20px 0 100px;
     }
   }
 
@@ -20,40 +23,58 @@
     width: 100%;
   }
 
-  &__card {
-   // @include flexCol();
+  &__card {   
     display: flex;
     width: 100%;        
     flex-direction: column;   
-    position: relative;
-    //text-align: center;   
-    border: 2px solid $color-white;  
-   
+    position: relative;    
+    border: 2px solid $color-white;     
   }
+
+  &__cardImg {
+    /* position: absolute;
+     top: 0;
+     left: 0;*/
+     max-width: 100%;     
+     //width: 100%;
+   } 
 
   &__cardImgWrapper {
  /*  @include flexCol();
    max-width: 316px;
     width: 100%;
    border: 2px solid $color-white;  
-    border-radius: 27px;   */   
-    
+    border-radius: 27px;   */       
   }
   
   &__cardTextWrapper {
    // min-height: 190px;
-    padding: 0 40px;
+    padding: 30px;
+
+    @include mdScreenMedia {     
+      padding: 20px 15px;
+    }
   }
 
   &__cardTitle {
     @include setFont(45px, 700, $font-family, $color-white);
     line-height: 60px;
     margin-bottom: 15px; 
+
+    @include mdScreenMedia {     
+      @include setFont(30px, 600, $font-family, $color-white);
+      margin-bottom: 5px; 
+    }
   }
 
   &__cardDescription {
     @include setFont(20px, 400, $font-family, $color-white);
     line-height: 28px;
+
+    @include mdScreenMedia {     
+      @include setFont(16px, 400, $font-family, $color-white);
+      line-height: 20px;
+    }
   }
 
   &__cardColumn {
@@ -63,16 +84,11 @@
     gap: 50px;
   }
 
-  &__cardNestedColumn {
-    display: flex;
-    //flex-direction: column;    
-  }  
-
   &__actionPosition {      
     position: absolute;
     top: 15%;
-    left: 55%;
-    width: 300px;
+   // left: 55%;
+   // width: 300px;
    // transform: translate();
  }
 
@@ -82,13 +98,4 @@
      //left: 50%;
     // transform: translate();
   }
-  
-  &__cardImg {
-   /* position: absolute;
-    top: 0;
-    left: 0;*/
-    max-width: 100%;
-    
-    //width: 100%;
-  } 
 }
