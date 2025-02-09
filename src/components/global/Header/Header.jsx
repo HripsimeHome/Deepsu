@@ -11,30 +11,32 @@ import {
 
 import {
    docIcon,
-   twitterIcon,
-   arrowPrevIcon,
+   twitterIcon,   
    telegramIcon
 } from "../../../assets/svg"; 
 
 import {
   twitterUrl,
   telegramUrl, 
+  documentation,
 } from "../../../constants/contacts";
 
 const Header = () => {      
   return (
     <>
       <header className={styles.header}>
-        <div className={styles.header__headerBg}>
-        </div>
+        {/* <div className={styles.header__headerBg}>
+        </div>*/}
 
         <img 
           src={logoTextImage} 
-          alt="Logo" />
+          alt="Logo" 
+          className={styles.header__logoImg}
+          />
 
         <div className={styles.header__container}>
           {/* First block */} 
-          <div>
+          <div className={styles.header__testContainer}>
             <div className={styles.header__title}>    
 
               <div className={styles.header__suiBlock}>
@@ -57,7 +59,7 @@ const Header = () => {
                 </div>
               </div>                  
                           
-              <div>Gen 
+              <div>Gen&nbsp;
                 <span className={styles.header__titleGreen}>AI</span>
               </div>               
             </div>   
@@ -65,14 +67,16 @@ const Header = () => {
             <div className={styles.header__text}>
               DeFi token management platform on Sui blockchain. Use AI and data analytics to simplify crypto operations, optimize portfolios, and secure assets.      
             </div>
-
+ 
             <div className={styles.header__btnPosition}>
               <button className={styles.header__btn}>Launch App
               </button>         
            
+
+
               <div className={styles.header__docPosition}>    
                 <a 
-                  href="https://deepsuai.gitbook.io/whitepaper"
+                  href={documentation}
                   target="_blank"
                   className={styles.header__docText}
                 >          
@@ -82,7 +86,7 @@ const Header = () => {
                 />                Documentation                                             
                 </a>
               </div>
-            </div> 
+            </div>           
 
             <div className={styles.header__socIconsPosition}>              
               <a
@@ -104,8 +108,12 @@ const Header = () => {
           </div>{/* /First block */} 
 
           {/* Second block */} 
-          <div>
-            <img src={aiAgentImage} alt="AI Agent"/>
+          <div className={styles.header__aiAgent}> 
+            <img 
+            src={aiAgentImage} 
+            alt="AI Agent"
+            className={styles.header__aiAgent_img}
+            />
           </div>
 
         </div> 

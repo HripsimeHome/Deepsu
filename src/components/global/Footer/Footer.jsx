@@ -1,48 +1,46 @@
-import styles from "./Footer.module.scss"
+import styles from "./Footer.module.scss";
 //import { NavLink } from "react-router-dom";
 
-import {   
-  logoWhiteImage,
- } from "../../../assets/images";
+import { logoWhiteImage } from "../../../assets/images";
 
-import {    
-  //homePagePath
-} from "../../../router/path";
+import //homePagePath
+"../../../router/path";
 
 import {
   twitterUrl,
-  telegramUrl, 
-  mailAddress
+  telegramUrl,
+  emailAddress,
+  documentation,
 } from "../../../constants/contacts";
 
 const menuItems = [
   {
     title: "Resources",
     items: [
-      { 
-        text: "Documentation", 
-        link: "https://deepsuai.gitbook.io/whitepaper"       
+      {
+        text: "Documentation",
+        link: documentation,
       },
       { text: "Terms of use", link: "#" },
-      { text: "Disclaimer", link: "#" }
-    ]
+      { text: "Disclaimer", link: "#" },
+    ],
   },
   {
     title: "Social Media",
     items: [
-      { text: "Twitter", link: twitterUrl},
-      { text: "Telegram", link: telegramUrl}
-    ]
+      { text: "Twitter", link: twitterUrl },
+      { text: "Telegram", link: telegramUrl },
+    ],
   },
   {
     title: "Contact",
     items: [
-      { 
-        text: "info@deepsu.ai", 
-        link: `mailto:${mailAddress}`,                
-      }
-    ]
-  }
+      {
+        text:  emailAddress,
+        link: `mailto:${emailAddress}`,
+      },
+    ],
+  },
 ];
 
 const Footer = () => {
@@ -54,7 +52,10 @@ const Footer = () => {
           <p className={styles.footer__copyright}>
             &copy; {new Date().getFullYear()} Deepsu.ai. All rights reserved.
           </p>
-          <a className={styles.footer__emailAddress}>info@deepsu.ai</a>
+          <a 
+            href={`mailto:${emailAddress}`}
+            className={styles.footer__emailAddress}>{emailAddress}
+            </a>
         </div>
 
         <div className={styles.footer__menuContainer}>
@@ -62,14 +63,14 @@ const Footer = () => {
             <div key={index}>
               <h3 className={styles.footer__menuTitle}>{menu.title}</h3>
               <ul className={styles.footer__menuList}>
-              {menu.items.map((item, i) => (
-                <li key={i}>
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className={item.className ? styles[item.className] : ""}
-                  >
+                {menu.items.map((item, i) => (
+                  <li key={i}>
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={item.className ? styles[item.className] : ""}
+                    >
                       {item.text}
                     </a>
                   </li>
@@ -82,4 +83,4 @@ const Footer = () => {
     </footer>
   );
 };
-export default Footer;   
+export default Footer;
