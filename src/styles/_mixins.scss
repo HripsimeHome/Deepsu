@@ -48,7 +48,6 @@
   object-fit: contain;
 }
 
-
 @mixin svg($width, $color: transparent, $height: $width, $stroke: none) {
   width: $width;
   height: $height;
@@ -59,8 +58,8 @@
 @mixin setFont(
   $size,
   $weight,
-  $family: $font-fam-primary,
-  $color: $color-text,
+  $color: $color-white,
+  $family: $font-family,
   $useMedia: true
 ) {
   font-size: $size;

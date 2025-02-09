@@ -36,14 +36,14 @@
 
     @include mdScreenMedia {
       display: block;
-      @include setFont(15px, 300, $font-family, $color-white);
+      @include setFont(15px, 300);
       line-height: 15px;
       margin-top: 8px;
     }
   }
 
   &__copyright {
-    @include setFont(20px, 400, $font-family, $color-white);
+    @include setFont(20px, 400);
     margin-top: 13px;
   }
 
@@ -61,7 +61,7 @@
   }
 
   &__menuTitle {
-    @include setFont(24px, 700, $font-family, $color-white);
+    @include setFont(24px, 700);
   }
 
   &__menuList {
@@ -73,7 +73,7 @@
       margin-top: 10px;
 
       a {
-        @include setFont(18px, 300, $font-family, $color-white);
+        @include setFont(18px, 300);
         &:hover {
           color: #19c690;
           cursor: pointer;
