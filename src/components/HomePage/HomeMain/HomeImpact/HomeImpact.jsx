@@ -56,31 +56,29 @@ const HomeImpact = () => {
     <section className={styles.homeImpact}>
       <h2 className="titleh2">Impact</h2>
       <div className={styles.homeImpact__cardContainer} ref={ref}>
-        {impactCard.map(
-        ({ image, webpImage, title, text, transitiontype }, index) => (
+        {impactCard.map(({ image, webpImage, title, text, transitiontype }, index) => (
           <TransitionProvider
             inProp={isInView}
             style={transitiontype}
             key={index}
-            delay={index*400}
+            delay={index * 400}
           >
             <div className={styles.homeImpact__card}>                            
               <div className={styles.homeImpact__cardImgWrapper}>
                 <ImageWebp
                   src={image}
                   srcSet={webpImage}
-                  alt={"Impact"}
+                  alt="Impact"
                   className={styles.homeImpact__cardImg}
                 />                  
               </div>
               <div className={styles.homeImpact__cardTextWrapper}>
                 <h4 className={styles.homeImpact__cardTitle}>{title}</h4>
-                <p className={styles.homeImpact__cardDеscription}>{text}</p>
+                <p className={styles.homeImpact__cardDescription}>{text}</p>
               </div>
             </div>
           </TransitionProvider>
-        )
-        )}
+        ))}
       </div>
 
       <TransitionProvider

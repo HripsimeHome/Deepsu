@@ -93,7 +93,7 @@ a {
     // padding-right: 16px;
   }
   .titleh2 {
-    @include setFont(100px, 300, $font-family, $color-white);
+    @include setFont(55px, 300, $font-family, $color-white);   
   }
 
   .textlightGreen {

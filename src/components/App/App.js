@@ -7,7 +7,7 @@ function App() {
     <>
       <div className="container">
         <Header />    
-       <AppRouter />
+        <AppRouter />
       </div>
       <Footer />
     </>
