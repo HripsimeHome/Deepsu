@@ -23,7 +23,7 @@ body {
 // Body Scrollbar
 
    &::-webkit-scrollbar {
-      width: 8px;
+      width: 10px;
     }
 
     &::-webkit-scrollbar-track {
@@ -69,16 +69,11 @@ a {
 }
 
 .container {
- // max-width: 1500px;
-  max-width: 1550px;
- // max-width: 1170px;
+  max-width: 1170px;
   width: 100%;
-  //margin: 190px auto 50px;
-  margin: 0 auto 20px;
-  //padding-top: 210px;
-
-  padding-right: 25px;
-  padding-left: 25px;  
+  margin: 0 auto;  
+  padding-right: 30px;
+  padding-left: 30px;  
   /*
   @include xlScreenMedia {
     max-width: 960px;
@@ -93,12 +88,12 @@ a {
   }*/
 
   @include smScreenMedia {
-    max-width: 360px;
+    //max-width: 360px;
     //padding-left: 16px;
     // padding-right: 16px;
   }
   .titleh2 {
-    @include setFont(100px, 300, $font-family, $color-white);
+    @include setFont(55px, 300, $font-family, $color-white);   
   }
 
   .textlightGreen {

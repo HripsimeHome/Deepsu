@@ -5,53 +5,109 @@
 
   &__cardContainer {
     display: grid;
-   // grid-template-columns: 1fr 1fr 1fr 1fr;       
-   grid-template-columns: repeat(auto-fill,minmax(316px, 316px));   
-   gap: 78px; 
-   margin: 45px 0 90px;
+    width: 100%; 
+    grid-template-columns: repeat(4, 1fr);         
+    gap: 60px; 
+    margin: 30px 0 80px;
+
+    @include xlScreenMedia { 
+      grid-template-columns: repeat(4, 1fr); 
+    }
+    
+    @include lgScreenMedia { 
+      grid-template-columns: repeat(2, 1fr);  
+    }
+
+    @include mdScreenMedia { 
+      grid-template-columns: repeat(2, 1fr);  
+    }
+
+    @include smScreenMedia { 
+      grid-template-columns: repeat(1, 1fr);  
+      justify-content: center;
+    }
   }
 
   &__card {
     @include flexCol();
     flex-direction: column;   
     text-align: center;     
+    width: 100%;
+    min-height: 360px;  
+   // padding: 20px;   
   }
 
   &__cardImgWrapper {
     @include flexCol();
-    max-width: 316px;
+    max-width: 300px;
     width: 100%;
     border: 5px solid #959595; 
-    border-radius: 27px;    
+    border-radius: 27px; 
+     //overflow: hidden;
   }
 
   &__cardTextWrapper {
-    min-height: 190px;
-    padding: 0 45px;
+    max-width: 316px;
+    min-height: 200px;
+    padding: 0 45px; 
+
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   // width: 100%;
+   // max-width: 250px;       
+    
   }
 
   &__cardTitle {
-    @include setFont(32px, 700, $font-family, $color-white);
+    @include setFont(30px, 700, $font-family, $color-white);
     line-height: 35px;
     margin: 10px 0;
+   // white-space: normal;
+    //max-width: 316px;
+
+    @include setFont(24px, 700, $font-family, $color-white);
+      line-height: 28px;
+      margin: 10px 0;
+     // white-space: normal;
+
+    @include lgScreenMedia {           
+      @include setFont(27px, 700, $font-family, $color-white);
+      line-height: 28px;  
+    }
+
+    @include mdScreenMedia {           
+      @include setFont(22px, 700, $font-family, $color-white);
+      line-height: 25px;  
+    }
   }
 
   &__cardDescription {
     @include setFont(14px, 300, $font-family, $color-white);
-  }
-  
-  &__cardImg {
-    
+    word-wrap: break-word;     
   }
   
   &__title {
    // @include flexCol();
-    max-width: 1267px;
+    max-width: 850px;
     width: 100%;
     margin: 0 auto;
-    @include setFont(100px, 500, $font-family, $color-white);
+    @include setFont(60px, 500, $font-family, $color-white);
     text-transform: uppercase;
     text-align: center;
-    line-height: 125px;    
+    line-height: 85px;    
+   
+    @include lgScreenMedia {  
+      max-width: 600px;    
+      @include setFont(45px, 500, $font-family, $color-white);
+      line-height: 65px;  
+    }
+
+    @include mdScreenMedia {
+      max-width: 400px;
+      @include setFont(30px, 500, $font-family, $color-white);
+      line-height: 45px;  
+    }
   }   
 }

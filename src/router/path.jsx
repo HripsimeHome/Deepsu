@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import HomePage from "../pages/HomePage";
-import AboutPage from "../pages/AboutPage";
+import TermsPage from "../pages/TermsPage";
  
 import ErrorPage from "../pages/ErrorPage";
 import { Navigate } from "react-router-dom";
@@ -8,7 +8,7 @@ import { Navigate } from "react-router-dom";
 // Paths
 
 export const homePagePath = "/";
-export const aboutPagePath = "/about";
+export const termsPagePath = "/about";
  
 // Routes
 
@@ -19,8 +19,8 @@ export const routes = [
   },
 
   {
-    path: aboutPagePath,
-    component: <AboutPage />,
+    path: termsPagePath,
+    component: <TermsPage />,
   },
   {
     path: "*",

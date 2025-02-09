@@ -75,7 +75,7 @@ const HomeImpact = () => {
               </div>
               <div className={styles.homeImpact__cardTextWrapper}>
                 <h4 className={styles.homeImpact__cardTitle}>{title}</h4>
-                <p className={styles.homeImpact__cardDеscription}>{text}</p>
+                <p className={styles.homeImpact__cardDescription}>{text}</p>
               </div>
             </div>
           </TransitionProvider>

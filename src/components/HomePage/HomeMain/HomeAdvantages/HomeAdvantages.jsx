@@ -29,6 +29,7 @@ const HomeAdvantages = () => {
           inProp={isInView}               
           style={TransitionStyleTypes.zoomIn}
           delay={500}
+          className={styles.homeAdvantages__animationContainer}
         >  
           <div className={styles.homeAdvantages__card} >          
             <ImageWebp

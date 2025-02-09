@@ -2,19 +2,24 @@
 @import "../../../styles/vars";
 
 .header {
-  position: relative;
-
   
-  padding: 170px 0;
-
+  position: relative;
+  padding-top: 70px;
+  margin-bottom: 100px;;
+  
+  @include mdScreenMedia {
+    text-align: center;
+    padding-top: 60px;
+   }
+ 
   &__headerBg {
     width: 1158px;
-    height: 1254px;;
+    height: 1254px;
     position: absolute;
     top: 50px;
     right: 0;
    // right: -198px;
-    z-index: 5;
+    
     @include bgWebp(
       "../assets/images/header/headerBg.png",
       "../assets/images/header/headerBg.webp"
@@ -25,35 +30,59 @@
     z-index: -2;     
   }
 
+  &__logoImg {
+    max-width: 100%;
+    @include mdScreenMedia {
+      max-width: 70%;
+     }    
+  }  
+
   &__container {
-    @include flexCol(space-between);   
-    margin-top: 98px;     
+    @include flexCol(space-between);  
+    gap: 80px;       
 
     @include mdScreenMedia {
       flex-wrap: wrap;
-      justify-content: center;
+      gap: 20px;   
+     justify-content: center;
+     text-align: center;
     }
   }
   
+
+&__testContainer {
+ // background-color: green;
+
+}
+   
+
+
+
   &__title {  
-    @include setFont(200px, 300, $font-family, $color-white);
-    line-height: 200px; 
+    @include setFont(88px, 300, $font-family, $color-white);
+    line-height: 88px; 
   }
 
   &__titleGreen {
-    @include setFont(200px, 700, $font-family, $color-green);
+    @include setFont(90px, 700, $font-family, $color-green);
   }
   
   &__suiBlock {
     display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 50px 0 5px;
+    
+
+    @include mdScreenMedia {
+     // justify-content: center;
+     }
   }
 
   &__suiPosition {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: end;
-    margin-left: 62px;
+    @include flexCol(center, end);
+    flex-direction: column;    
+    margin-left: 12px;
 
     a {
       display: inherit;
@@ -61,71 +90,88 @@
   }
 
   &__suiImg {
-    width: 298px;
-    height: 154px;    
+    max-width: 150px;
+    //height: 154px;    
   }
 
   &__suiTitle {
-    @include setFont(22px, 300, $font-family, $color-white);
+    @include setFont(15px, 300, $font-family, $color-white);
     line-height: 5px;     
   }
 
   &__text {   
-    max-width: 730px; 
-    @include setFont(28px, 300, $font-family, $color-white);
-    line-height: 40px;
-    margin-top: 67px;
-    margin-bottom: 100px;
+    max-width: 600px; 
+    @include setFont(22px, 300, $font-family, $color-white);
+    line-height: 32px;
+    margin-top: 40px;
+    margin-bottom: 55px;
+
+    @include mdScreenMedia {
+      //max-width:  350px;
+      @include setFont(16px, 400, $font-family, $color-white);
+      line-height: 20px;
+     }
   }
   
   &__btnPosition {
-    display: flex;        
+    display: flex;       
+    justify-content: center; 
   }
 
   &__btn {
-    width: 306px;
-    height: 86px;
+    width: 285px;
+    height: 65px;
     background-color:  $color-green;
     color: rgba(255, 255, 255, 1);   
-    @include setFont(36px, 600, $font-family, $color-white);
+    @include setFont(28px, 500, $font-family, $color-white);
     border-radius: 15px;  
     box-shadow: 0px 6px 20px 0px $color-green;  
     margin-right: 88px;
-    &:hover {     
-      //background-color: #00F589; 
+
+    &:hover { 
      background-color: #128A66;    
       cursor: pointer;
     }
+
+    @include mdScreenMedia {
+      max-width: 153px;
+      height: 43px;
+      @include setFont(20px, 600, $font-family, $color-white);
+      line-height: 30px;
+      border-radius: 5px;
+      margin-right: 20px;
+    }    
   }
 
   &__docPosition {
-    @include flexCol();     
-
-    a {
-      display: inline-flex;
-    }
-  }
+    @include flexCol();  
+   }
 
   &__docIcon {    
-    @include svg(32px, $color-white);
-    margin-right: 5px;    
+    @include svg(28px, $color-white);
+    margin-right: 7px;    
   } 
 
   &__docText {
     @include flexCol(); 
-    @include setFont(28px, 300, $font-family, $color-white); 
+    @include setFont(22px, 300, $font-family, $color-white); 
     text-decoration: underline;
 
     &:hover {
       text-decoration: none;
       cursor: pointer;
     }
+
+    
+    @include mdScreenMedia {
+      @include setFont(15px, 300, $font-family, $color-white); 
+    }
   }
   
   &__socIconsPosition {
     display: flex;
     gap: 25px;
-    margin-top: 80px; 
+    margin-top: 45px; 
 
     @include mdScreenMedia {
       justify-content: center;
@@ -138,9 +184,19 @@
       }
     }
     Svg {    
-      @include svg(58px, $color-white);
+      @include svg(40px, $color-white);
     }  
-  }   
-
+  }  
   
+  &__aiAgent {
+    align-self: baseline;
+
+    &_img {
+      max-width: 100%;
+
+      @include mdScreenMedia {
+        max-width: 70%;
+      }
+    }
+  }  
 } 
