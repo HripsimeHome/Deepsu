@@ -94,7 +94,11 @@ a {
   }
   .titleh2 {
     @include setFont(55px, 300, $font-family, $color-white);   
-  }
+
+    @include mdScreenMedia {           
+      @include setFont(30px, 700, $font-family, $color-white);    
+    }
+  }  
 
   .textlightGreen {
     color: $color-lightGreen;  
