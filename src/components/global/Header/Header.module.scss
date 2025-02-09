@@ -75,7 +75,7 @@
     
 
     @include mdScreenMedia {
-     // justify-content: center;
+      justify-content: center;
      }
   }
 
@@ -183,9 +183,10 @@
         color: $color-green;
       }
     }
-    Svg {    
-      @include svg(40px, $color-white);
-    }  
+ 
+  }  
+  &__socIcon {    
+    @include svg(40px, $color-white);
   }  
   
   &__aiAgent {
