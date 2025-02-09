@@ -3,12 +3,11 @@
 
 .homeAdvantages {     
   &__cardContainer {
-   // display: grid;
-   // grid-template-columns: 1fr 1fr 1fr 1fr;       
+   // display: grid;    
    //grid-template-columns: repeat(auto-fill,minmax(316px, 316px));   
-   //gap: 78px; 
-  // margin: 12px 0 88px;
     display: flex;
+    width: 100%;
+   // justify-self: center;
     gap: 98px;
     margin: 30px 0 100px;
 
@@ -17,13 +16,19 @@
     }
   }
 
+  &__animationContainer {
+    width: 100%;
+  }
+
   &__card {
    // @include flexCol();
     display: flex;
+    width: 100%;        
     flex-direction: column;   
     position: relative;
     //text-align: center;   
-    border: 2px solid $color-white;          
+    border: 2px solid $color-white;  
+   
   }
 
   &__cardImgWrapper {
@@ -32,6 +37,7 @@
     width: 100%;
    border: 2px solid $color-white;  
     border-radius: 27px;   */   
+    
   }
   
   &__cardTextWrapper {
@@ -40,18 +46,19 @@
   }
 
   &__cardTitle {
-    @include setFont(53px, 700, $font-family, $color-white);
+    @include setFont(45px, 700, $font-family, $color-white);
     line-height: 60px;
     margin-bottom: 15px; 
   }
 
   &__cardDescription {
-    @include setFont(25px, 400, $font-family, $color-white);
-    line-height: 28px;;
+    @include setFont(20px, 400, $font-family, $color-white);
+    line-height: 28px;
   }
 
   &__cardColumn {
     display: flex;
+    width: 100%;
     flex-direction: column;
     gap: 50px;
   }
@@ -80,6 +87,8 @@
    /* position: absolute;
     top: 0;
     left: 0;*/
+    max-width: 100%;
+    
+    //width: 100%;
   } 
-
 }

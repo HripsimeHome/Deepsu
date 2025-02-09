@@ -5,11 +5,10 @@
 
   &__cardContainer {
     display: grid;
-    width: 100%;
-    grid-template-columns: 1fr 1fr 1fr 1fr;       
-     
-   gap: 60px; 
-   margin: 30px 0 80px;
+    width: 100%; 
+    grid-template-columns: repeat(4, 1fr);         
+    gap: 60px; 
+    margin: 30px 0 80px;
 
     @include xlScreenMedia { 
       grid-template-columns: repeat(4, 1fr); 

@@ -23,12 +23,13 @@ const HomeAdvantages = () => {
 
   return (    
     <section className={styles.homeAdvantages} ref={ref}>
-    {/*  <h2 className="titleh2">Advantages</h2>
+      <h2 className="titleh2">Advantages</h2>
       <div className={styles.homeAdvantages__cardContainer}>    
         <TransitionProvider
           inProp={isInView}               
           style={TransitionStyleTypes.zoomIn}
           delay={500}
+          className={styles.homeAdvantages__animationContainer}
         >  
           <div className={styles.homeAdvantages__card} >          
             <ImageWebp
@@ -106,7 +107,7 @@ const HomeAdvantages = () => {
             </div>   
           </TransitionProvider>       
         </div>      
-      </div> */}
+      </div> 
     </section>    
   );
 };
