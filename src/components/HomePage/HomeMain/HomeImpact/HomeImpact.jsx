@@ -85,7 +85,7 @@ const HomeImpact = () => {
 
       <TransitionProvider
         inProp={isInView}
-        style={TransitionStyleTypes.bottom}
+        style={TransitionStyleTypes.top}
         delay={1800}
       >
         <h2 className={styles.homeImpact__title}>

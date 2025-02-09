@@ -2,25 +2,27 @@
 @import "../../../styles/vars";
 
 .header {
-  position: relative;
-  margin-bottom: 100px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top right;
+  position: relative;   
   @include bgWebp(
     "../assets/images/header/headerBg.png",
     "../assets/images/header/headerBg.webp"
   );
-
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: contain;
+  margin-bottom: 100px;
 
   @include mdScreenMedia {
     background-position: bottom right;
     padding-top: 60px;
   }
 
-  &__wrapper {
-    padding-top: 70px;
-    text-align: center;
+  &__wrapper {   
+    padding-top: 70px;    
+
+    @include mdScreenMedia {
+     text-align: center;
+    }
   }
 
   &__headerBg {
@@ -28,12 +30,13 @@
     height: 100%;
     position: absolute;
     top: 50px;
-    z-index: -2;
     right: 0;
+    z-index: -2;    
   }
 
   &__logoImg {
     max-width: 100%;
+
     @include mdScreenMedia {
       max-width: 70%;
     }
@@ -51,10 +54,6 @@
     }
   }
 
-  &__testContainer {
-    // background-color: green;
-  }
-
   &__title {
     @include setFont(88px, 300);
     line-height: 88px;
@@ -65,9 +64,8 @@
   }
 
   &__suiBlock {
+    //@include flexCol();
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 15px;
     margin: 50px 0 5px;
 
@@ -87,8 +85,7 @@
   }
 
   &__suiImg {
-    max-width: 150px;
-    //height: 154px;
+    max-width: 150px;   
   }
 
   &__suiTitle {
@@ -114,6 +111,10 @@
     display: flex;
     justify-content: space-between;
     gap: 20px;
+
+    @include mdScreenMedia {
+     justify-content: center;
+    }
   }
 
   &__btn {
@@ -121,7 +122,7 @@
     max-width: 285px;
     height: 65px;
     background-color: $color-green;
-    color: rgba(255, 255, 255, 1);
+    color: $color-white;
     @include setFont(28px, 500);
     border-radius: 15px;
     box-shadow: 0px 6px 20px 0px $color-green;
