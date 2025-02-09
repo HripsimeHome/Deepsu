@@ -94,7 +94,10 @@ const Header = () => {
                 rel="noreferrer"
                 href={telegramUrl}            
               >
-                <Svg id={telegramIcon}  />            
+                <Svg 
+                  id={telegramIcon}
+                  className={styles.header__socIcon}
+                    />            
               </a>
 
               <a
@@ -102,7 +105,9 @@ const Header = () => {
                 rel="noreferrer"
                 href={twitterUrl}            
               >
-                <Svg id={twitterIcon}  />            
+                <Svg 
+                 id={twitterIcon} 
+                 className={styles.header__socIcon} />            
               </a>
             </div>
           </div>{/* /First block */} 
