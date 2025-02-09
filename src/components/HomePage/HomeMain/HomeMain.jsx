@@ -1,4 +1,3 @@
-import styles from "./HomeMain.module.scss";
 import HomeImpact from "./HomeImpact/HomeImpact";
 import HomeAdvantages from "./HomeAdvantages/HomeAdvantages"
 

@@ -1,19 +1,19 @@
 @import "../../../../styles/mixins";
 @import "../../../../styles/vars";
 
-.homeAdvantages {     
-  &__cardContainer {   
+.homeAdvantages {
+  &__cardContainer {
     display: flex;
     width: 100%;
-   // justify-self: center;
+    // justify-self: center;
     gap: 98px;
     margin: 30px 0 100px;
 
-  @include smScreenMedia {
-    flex-wrap: wrap;
+    @include smScreenMedia {
+      flex-wrap: wrap;
     }
 
-    @include mdScreenMedia {     
+    @include mdScreenMedia {
       gap: 50px;
       margin: 20px 0 100px;
     }
@@ -23,56 +23,73 @@
     width: 100%;
   }
 
-  &__card {   
+  &__card {
     display: flex;
-    width: 100%;        
-    flex-direction: column;   
-    position: relative;    
-    border: 2px solid $color-white;     
+    width: 100%;
+    position: relative;
+    border: 2px solid $color-white;
+    flex-direction: column;
+    height: 100%;
+    // 2 cardin flex direction@ menak mobilum
+    // @include smScreenMedia {
+    //   flex-direction: column;
+    // }
   }
 
+  &__cardPicture {
+    // margin-right: -15%;
+    flex: 2;
+
+    @include smScreenMedia {
+      margin-right: auto;
+      margin-left: auto;
+      max-width: 70%;
+      margin-bottom: -50px;
+    }
+  }
   &__cardImg {
     /* position: absolute;
      top: 0;
      left: 0;*/
-     max-width: 100%;     
-     //width: 100%;
-   } 
+    object-fit: contain;
+    max-width: 100%;
+    width: 100%;
+  }
 
   &__cardImgWrapper {
- /*  @include flexCol();
+    /*  @include flexCol();
    max-width: 316px;
     width: 100%;
    border: 2px solid $color-white;  
-    border-radius: 27px;   */       
+    border-radius: 27px;   */
   }
-  
+
   &__cardTextWrapper {
-   // min-height: 190px;
+    // min-height: 190px;
     padding: 30px;
 
-    @include mdScreenMedia {     
+    @include mdScreenMedia {
       padding: 20px 15px;
     }
   }
 
   &__cardTitle {
-    @include setFont(45px, 700, $font-family, $color-white);
+    @include setFont(45px, 700);
     line-height: 60px;
-    margin-bottom: 15px; 
+    margin-bottom: 15px;
 
-    @include mdScreenMedia {     
-      @include setFont(30px, 600, $font-family, $color-white);
-      margin-bottom: 5px; 
+    @include mdScreenMedia {
+      @include setFont(30px, 600);
+      margin-bottom: 5px;
     }
   }
 
   &__cardDescription {
-    @include setFont(20px, 400, $font-family, $color-white);
+    @include setFont(20px, 400);
     line-height: 28px;
 
-    @include mdScreenMedia {     
-      @include setFont(16px, 400, $font-family, $color-white);
+    @include mdScreenMedia {
+      @include setFont(16px, 400);
       line-height: 20px;
     }
   }
@@ -84,18 +101,14 @@
     gap: 50px;
   }
 
-  &__actionPosition {      
-    position: absolute;
-    top: 15%;
-   // left: 55%;
-   // width: 300px;
-   // transform: translate();
- }
+  &__actionPosition {
+    flex: 1;
+  }
 
-  &__portfolioPosition {      
-     position: absolute;
-     top: 30%;
-     //left: 50%;
+  &__portfolioPosition {
+    position: absolute;
+    top: 30%;
+    //left: 50%;
     // transform: translate();
   }
 }

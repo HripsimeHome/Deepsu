@@ -12,41 +12,43 @@
 body {
   color: $color-white;
   background-color: #010c10;
-  font-family: $font-family;  
+  font-family: $font-family;
   @include bgWebp(
     "../assets/images/bodyBg.png",
     "../assets/images/bodyBg.webp"
   );
   background-repeat: no-repeat;
   background-position: top center;
+  max-width: 2000px;
+  margin: 0 auto;
 
-// Body Scrollbar
+  // Body Scrollbar
 
-   &::-webkit-scrollbar {
-      width: 10px;
-    }
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
 
-    &::-webkit-scrollbar-track {
-      background: #06221A;       
-      border-radius: 10px;
-    }
+  &::-webkit-scrollbar-track {
+    background: #06221a;
+    border-radius: 10px;
+  }
 
-    &::-webkit-scrollbar-thumb {
-      background: $color-green;   
-      border-radius: 10px;  
-    }
-    
-    &::-moz-scrollbar {
-      width: 10px;
-    }
+  &::-webkit-scrollbar-thumb {
+    background: $color-green;
+    border-radius: 10px;
+  }
 
-    &::-moz-scrollbar-track {
-      background: #06221A;
-    }
+  &::-moz-scrollbar {
+    width: 10px;
+  }
 
-    &::-moz-scrollbar-thumb {
-      background: $color-green;
-    }
+  &::-moz-scrollbar-track {
+    background: #06221a;
+  }
+
+  &::-moz-scrollbar-thumb {
+    background: $color-green;
+  }
 }
 
 button,
@@ -71,9 +73,9 @@ a {
 .container {
   max-width: 1170px;
   width: 100%;
-  margin: 0 auto;  
+  margin: 0 auto;
   padding-right: 30px;
-  padding-left: 30px;  
+  padding-left: 30px;
   /*
   @include xlScreenMedia {
     max-width: 960px;
@@ -93,18 +95,18 @@ a {
     // padding-right: 16px;
   }
   .titleh2 {
-    @include setFont(55px, 300, $font-family, $color-white);   
+    @include setFont(55px, 300);
 
-    @include mdScreenMedia {           
-      @include setFont(30px, 700, $font-family, $color-white);    
+    @include mdScreenMedia {
+      @include setFont(40px, 300);
     }
-  }  
+  }
 
   .textlightGreen {
-    color: $color-lightGreen;  
+    color: $color-lightGreen;
   }
 
   .texGreen {
-    color: $color-green;  
-  }   
+    color: $color-green;
+  }
 }

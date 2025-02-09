@@ -61,30 +61,30 @@
   }
 
   &__cardTitle {
-    @include setFont(30px, 700, $font-family, $color-white);
+    @include setFont(30px, 700);
     line-height: 35px;
     margin: 10px 0;
    // white-space: normal;
     //max-width: 316px;
 
-    @include setFont(24px, 700, $font-family, $color-white);
+    @include setFont(24px, 700);
       line-height: 28px;
       margin: 10px 0;
      // white-space: normal;
 
     @include lgScreenMedia {           
-      @include setFont(27px, 700, $font-family, $color-white);
+      @include setFont(27px, 700);
       line-height: 28px;  
     }
 
     @include mdScreenMedia {           
-      @include setFont(22px, 700, $font-family, $color-white);
+      @include setFont(22px, 700);
       line-height: 25px;  
     }
   }
 
   &__cardDescription {
-    @include setFont(14px, 300, $font-family, $color-white);
+    @include setFont(14px, 300);
     word-wrap: break-word;     
   }
   
@@ -93,20 +93,20 @@
     max-width: 850px;
     width: 100%;
     margin: 0 auto;
-    @include setFont(60px, 500, $font-family, $color-white);
+    @include setFont(60px, 500);
     text-transform: uppercase;
     text-align: center;
     line-height: 85px;    
    
     @include lgScreenMedia {  
       max-width: 600px;    
-      @include setFont(45px, 500, $font-family, $color-white);
+      @include setFont(45px, 500);
       line-height: 65px;  
     }
 
     @include mdScreenMedia {
       max-width: 400px;
-      @include setFont(30px, 500, $font-family, $color-white);
+      @include setFont(30px, 500);
       line-height: 45px;  
     }
   }   
