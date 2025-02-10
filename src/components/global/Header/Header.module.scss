@@ -3,22 +3,25 @@
 
 .header {
   position: relative;   
-  @include bgWebp(
-    "../assets/images/header/headerBg.png",
-    "../assets/images/header/headerBg.webp"
-  );
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: contain;
   margin-bottom: 100px;
 
   @include mdScreenMedia {
     background-position: bottom right;
+    margin-bottom: 50px;
     padding-top: 60px;
   }
 
   &__wrapper {   
     padding-top: 70px;    
+
+    @include bgWebp(
+      "../assets/images/header/headerBg.png",
+      "../assets/images/header/headerBg.webp"
+    );
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+    margin-bottom: 100px;
 
     @include mdScreenMedia {
      text-align: center;
@@ -48,7 +51,7 @@
 
     @include mdScreenMedia {
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 40px;
       justify-content: center;
       text-align: center;
     }
@@ -57,14 +60,23 @@
   &__title {
     @include setFont(88px, 300);
     line-height: 88px;
+
+    @include mdScreenMedia {     
+      @include setFont(64px, 300);
+      line-height: 65px;
+    }
   }
 
   &__titleGreen {
     @include setFont(90px, 700,  $color-green);
+    
+    @include mdScreenMedia {     
+      @include setFont(64px, 300,  $color-green);
+      line-height: 65px;
+    }    
   }
 
-  &__suiBlock {
-    //@include flexCol();
+  &__suiBlock {    
     display: flex;
     gap: 15px;
     margin: 50px 0 5px;
@@ -85,7 +97,10 @@
   }
 
   &__suiImg {
-    max-width: 150px;   
+    max-width: 150px;  
+    
+    @include setFont(18px, 400);
+    max-width: 110px;  
   }
 
   &__suiTitle {
@@ -104,16 +119,19 @@
       //max-width:  350px;
       @include setFont(18px, 400);
       line-height: 22px;
+      margin-top: 20px;
+      margin-bottom: 35px;  
     }
   }
 
   &__btnPosition {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    gap: 50px;
 
     @include mdScreenMedia {
      justify-content: center;
+     gap: 10px;
     }
   }
 
@@ -168,6 +186,7 @@
 
   &__socIconsPosition {
     display: flex;
+    width: 100%;;
     gap: 25px;
     margin-top: 45px;
 
@@ -188,6 +207,10 @@
 
   &__aiAgent {
     width: 30%;
+
+    @include mdScreenMedia {
+      width: 40%;
+    }
 
     &_img {
       width: 100%;

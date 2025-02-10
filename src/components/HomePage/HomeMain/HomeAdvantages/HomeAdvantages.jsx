@@ -26,7 +26,7 @@ const HomeAdvantages = () => {
         <TransitionProvider
           inProp={isInView}
           style={TransitionStyleTypes.zoomIn}
-          delay={500}
+          delay={4000}
           className={styles.homeAdvantages__animationContainer}
         >
           <div className={styles.homeAdvantages__card}>
@@ -34,7 +34,10 @@ const HomeAdvantages = () => {
               src={aIInsightsImage}
               srcSet={aIInsightsWebpImage}
               alt="AI Insights"
-              className={styles.homeAdvantages__cardImg}
+              className={`
+                ${styles.homeAdvantages__insightsPosition}
+                ${styles.homeAdvantages__cardImg}
+                `}
             />
 
             <div className={styles.homeAdvantages__cardTextWrapper}>
@@ -59,14 +62,19 @@ const HomeAdvantages = () => {
           <TransitionProvider
             inProp={isInView}
             style={TransitionStyleTypes.zoomIn}
-            delay={500}
+            delay={4000}
           >
-            <div className={styles.homeAdvantages__card}>
+            <div className={styles.homeAdvantages__cardRow}>
               <ImageWebp
                 src={instantActionImage}
                 srcSet={instantActionWebpImage}
                 alt="Instant Action"
-                className={styles.homeAdvantages__cardImg}
+               // className={styles.homeAdvantages__cardImg}
+
+               className={`
+                ${styles.homeAdvantages__actionsImg}
+                ${styles.homeAdvantages__cardImg}
+                `}
                 pictureClass={styles.homeAdvantages__cardPicture}
               />
 
@@ -89,7 +97,7 @@ const HomeAdvantages = () => {
           <TransitionProvider
             inProp={isInView}
             style={TransitionStyleTypes.zoomIn}
-            delay={500}
+            delay={4000}
           >
             <div className={styles.homeAdvantages__card}>
               <ImageWebp
