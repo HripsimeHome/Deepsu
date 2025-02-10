@@ -5,10 +5,6 @@
   position: relative;   
   margin-bottom: 100px;
 
-  @include xsmScreenMedia {     
-    margin-bottom: 10px;
-   }
-
   @include mdScreenMedia {
     //background-position: bottom right;
     background-position: top 200opx right;
@@ -32,30 +28,20 @@
      text-align: center;
     // background-position: bottom center;
     background-position: top 350px right;
-      min-height: 1160px; 
-     // height: 100%;
+     // min-height: 1100px;          
     }
+
+   
 
     @include smScreenMedia {     
-       min-height: 958px;        
+      // min-height: 950px;  
      }
 
-     @include xsmScreenMedia {
-     
-     // min-height: 750px;  
-     // min-height: clamp(450px, 50vh, 400px);
-    }
-
+     @include xsmScreenMedia {     
+     // min-height: 300px;  
+    }  
   }
 
-  &__headerBg {
-    width: 70%;
-    height: 100%;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    z-index: -2;    
-  }
 
   &__logoImg {
     max-width: 100%;
