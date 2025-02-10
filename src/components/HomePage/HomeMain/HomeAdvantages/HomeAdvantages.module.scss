@@ -69,7 +69,10 @@
   }
 
   &__insightsPosition {
-    margin-bottom: -130px;    
+    
+   @include mdScreenMedia {
+    margin-bottom: -120px;
+  }  
   }
 
   &__actionImg {
@@ -96,11 +99,12 @@
 
   &__cardTitle {
     @include setFont(45px, 700);
-    line-height: 60px;
+    line-height: 50px;
     margin-bottom: 15px;
 
     @include mdScreenMedia {
       @include setFont(30px, 600);
+      line-height: 32px;
       margin-bottom: 5px;
     }
   }
@@ -131,7 +135,7 @@
     //top: 30%;
     //left: 50%;
     // transform: translate();
-    margin-top: -270px;  
+    margin-top: -190px;  
   }
 
 }
