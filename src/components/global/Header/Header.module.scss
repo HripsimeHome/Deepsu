@@ -99,8 +99,9 @@
   &__suiImg {
     max-width: 150px;  
     
-    @include setFont(18px, 400);
-    max-width: 110px;  
+    @include mdScreenMedia {
+      max-width: 110px
+    }
   }
 
   &__suiTitle {
@@ -186,7 +187,7 @@
 
   &__socIconsPosition {
     display: flex;
-    width: 100%;;
+    width: 100%;
     gap: 25px;
     margin-top: 45px;
 
@@ -196,6 +197,7 @@
 
     a {
       color: $color-white;
+      
       &:hover {
         color: $color-green;
       }

@@ -106,23 +106,20 @@ const Header = () => {
                 </div>
                 </TransitionProvider>
 
-               
-              <div className={styles.header__socIconsPosition}>
                 <TransitionProvider
                   inProp={isInView}
                   style={TransitionStyleTypes.left}              
-                  delay={2500}
-                  className={styles.header__aiAgent}
+                  delay={2500}                  
                 >  
-                  <a target="_blank" rel="noreferrer" href={telegramUrl}>
-                    <Svg id={telegramIcon} className={styles.header__socIcon} />
-                  </a>
-
-                  <a target="_blank" rel="noreferrer" href={twitterUrl}>
-                    <Svg id={twitterIcon} className={styles.header__socIcon} />
-                  </a>
-                </TransitionProvider>
-              </div>              
+                  <div className={styles.header__socIconsPosition}>               
+                    <a target="_blank" rel="noreferrer" href={telegramUrl}>
+                      <Svg id={telegramIcon} className={styles.header__socIcon} />
+                    </a>
+                    <a target="_blank" rel="noreferrer" href={twitterUrl}>
+                      <Svg id={twitterIcon} className={styles.header__socIcon} />
+                    </a>               
+                </div>   
+              </TransitionProvider>            
             </div>
             
             {/* /First block */}
@@ -134,7 +131,7 @@ const Header = () => {
                 delay={1000}
                 className={styles.header__aiAgent}
               >    
-            <div >
+            <div>
               <img
                 src={aiAgentImage}
                 alt="AI Agent"
@@ -142,7 +139,6 @@ const Header = () => {
               />
             </div> 
             </TransitionProvider>
-
           </div>
         </div>
       </header>
