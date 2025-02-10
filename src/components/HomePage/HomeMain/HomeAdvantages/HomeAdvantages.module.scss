@@ -49,8 +49,8 @@
   }
 
   &__cardPicture {
-     margin-right: -15%;
-    flex: 2;
+     margin-right: -10%;
+     flex: 2;
 
     @include smScreenMedia {
       margin-right: auto;
