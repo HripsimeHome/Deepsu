@@ -66,30 +66,6 @@
   font-weight: $weight;
   font-family: $family;
   color: $color;
-
-  @if ($useMedia) {
-    @if ($size == 16px) {
-      @include lgScreenMedia {
-        font-size: 14px;
-      }
-    } @else if ($size == 20px) {
-      @include xlScreenMedia {
-        font-size: 18px;
-      }
-
-      @include lgScreenMedia {
-        font-size: 16px;
-      }
-    } @else if ($size == 24px) {
-      @include xlScreenMedia {
-        font-size: 22px;
-      }
-
-      @include lgScreenMedia {
-        font-size: 20px;
-      }
-    }
-  }
 }
 
 @mixin flexCol($layout: center, $align: center) {

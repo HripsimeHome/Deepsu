@@ -102,9 +102,7 @@ const HomeAdvantages = () => {
               <ImageWebp
                 src={portfolioOptimizationImage}
                 srcSet={portfolioOptimizationWebpImage}
-                alt="Automated Portfolio"
-                
-
+                alt="Automated Portfolio"          
                 className={`
                   ${styles.homeAdvantages__portfolioPosition}
                   ${styles.homeAdvantages__cardImg}

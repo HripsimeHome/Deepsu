@@ -5,8 +5,13 @@
   position: relative;   
   margin-bottom: 100px;
 
+  @include xsmScreenMedia {     
+    margin-bottom: 10px;
+   }
+
   @include mdScreenMedia {
-    background-position: bottom right;
+    //background-position: bottom right;
+    background-position: top 200opx right;
     margin-bottom: 50px;
   //  padding-top: 60px;
   }
@@ -25,7 +30,22 @@
 
     @include mdScreenMedia {
      text-align: center;
+    // background-position: bottom center;
+    background-position: top 350px right;
+      min-height: 1160px; 
+     // height: 100%;
     }
+
+    @include smScreenMedia {     
+       min-height: 958px;        
+     }
+
+     @include xsmScreenMedia {
+     
+     // min-height: 750px;  
+     // min-height: clamp(450px, 50vh, 400px);
+    }
+
   }
 
   &__headerBg {
@@ -57,12 +77,17 @@
     }
   }
 
+  &__orderContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__title {
     @include setFont(88px, 300);
     line-height: 88px;
 
     @include mdScreenMedia {     
-      @include setFont(64px, 300);
+      @include setFont(62px, 300);
       line-height: 65px;
     }
   }
@@ -83,6 +108,7 @@
 
     @include mdScreenMedia {
       justify-content: center;
+      margin: 40px 0 5px;
     }
   }
 
@@ -133,6 +159,7 @@
     @include mdScreenMedia {
      justify-content: center;
      gap: 10px;
+     order: 1;
     }
   }
 
@@ -193,6 +220,7 @@
 
     @include mdScreenMedia {
       justify-content: center;
+      order: 2;
     }
 
     a {
@@ -203,19 +231,23 @@
       }
     }
   }
+
   &__socIcon {
     @include svg(40px, $color-white);
   }
 
   &__aiAgent {
     width: 30%;
-
+  
     @include mdScreenMedia {
       width: 40%;
+      order: 0;
     }
-
+  
     &_img {
       width: 100%;
+      order: 0;
     }
   }
+  
 }

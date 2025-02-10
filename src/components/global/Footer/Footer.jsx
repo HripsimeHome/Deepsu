@@ -68,8 +68,7 @@ const Footer = () => {
                     <a
                       href={item.link}
                       target="_blank"
-                      rel="noreferrer"
-                      className={item.className ? styles[item.className] : ""}
+                      rel="noreferrer"                     
                     >
                       {item.text}
                     </a>
