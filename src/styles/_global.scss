@@ -80,24 +80,7 @@ a {
   margin: 0 auto;
   padding-right: 30px;
   padding-left: 30px;
-  /*
-  @include xlScreenMedia {
-    max-width: 960px;
-  }
-
-  @include lgScreenMedia {
-    max-width: 820px;
-  }
-
-  @include mdScreenMedia {
-    max-width: 640px;
-  }*/
-
-  @include smScreenMedia {
-    //max-width: 360px;
-    //padding-left: 16px;
-    // padding-right: 16px;
-  }
+ 
   .titleh2 {
     @include setFont(55px, 300);
 

@@ -27,23 +27,15 @@
     display: flex;
     width: 100%;
     flex-direction: column;
-    height: 100%;
-    position: relative;
-    border: 2px solid $color-white;
-    
-    // 2 cardin flex direction@ menak mobilum
-    // @include smScreenMedia {
-    //   flex-direction: column;
-    // }
+    height: 100%;    
+    border: 2px solid $color-white;   
   }
 
   &__cardRow {
     display: flex;
-    width: 100%;
-    position: relative;
-    border: 2px solid $color-white;    
-    height: 100%;
-    
+    width: 100%;   
+    border: 2px solid $color-white;   
+       
      @include lgScreenMedia {
       flex-direction: column;
      }
@@ -74,9 +66,9 @@
       @include setFont(18px, 400);
       line-height: 28px;
 
-    @include mdScreenMedia {
-      @include setFont(16px, 400);
-      line-height: 20px;
+      @include mdScreenMedia {
+        @include setFont(16px, 400);
+        line-height: 20px;
     }
   }
 
@@ -87,17 +79,15 @@
     width: 100%;
   }
 
-  &__cardImg {
-    /* position: absolute;
-     top: 0;
-     left: 0;*/
+  &__cardImg {    
     object-fit: contain;
     max-width: 100%;
     width: 100%;
   }
 
-  &__insightsPosition {    
-    @include mdScreenMedia {
+  &__insightsPosition {   
+     
+    @include smScreenMedia {
       margin-bottom: -90px;
     }  
   }
@@ -113,21 +103,19 @@
   &__actionPicture {
     margin-right: -10%;
     flex: 2;
+    max-width: 100%;
+    display: flex;
+  
 
    @include smScreenMedia {
      margin-right: auto;
      margin-left: auto;
      max-width: 70%;
      margin-bottom: -30px;
-   }
+   }     
  }
   
-  &__portfolioPosition {
-   // position: absolute;
-    //top: 30%;
-    //left: 50%;
-    // transform: translate();
-    //margin-top: -170px;  
+  &__portfolioPosition {  
     margin-bottom: -135px;
   }
 }
