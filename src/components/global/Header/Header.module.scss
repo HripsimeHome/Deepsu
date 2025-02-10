@@ -8,7 +8,7 @@
   @include mdScreenMedia {
     background-position: bottom right;
     margin-bottom: 50px;
-    padding-top: 60px;
+  //  padding-top: 60px;
   }
 
   &__wrapper {   
@@ -152,12 +152,12 @@
     }
 
     @include mdScreenMedia {
-      max-width: 153px;
+      max-width: 163px;
       height: 43px;
       @include setFont(20px, 600);
       line-height: 30px;
       border-radius: 5px;
-      margin-right: 20px;
+      margin-right: 10px;
     }
   }
 

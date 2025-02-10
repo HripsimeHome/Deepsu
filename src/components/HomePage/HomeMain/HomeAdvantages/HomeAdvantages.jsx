@@ -37,7 +37,7 @@ const HomeAdvantages = () => {
               className={`
                 ${styles.homeAdvantages__insightsPosition}
                 ${styles.homeAdvantages__cardImg}
-                `}
+              `}
             />
 
             <div className={styles.homeAdvantages__cardTextWrapper}>
@@ -68,14 +68,13 @@ const HomeAdvantages = () => {
               <ImageWebp
                 src={instantActionImage}
                 srcSet={instantActionWebpImage}
-                alt="Instant Action"
-               // className={styles.homeAdvantages__cardImg}
+                alt="Instant Action"               
 
                className={`
                 ${styles.homeAdvantages__actionsImg}
                 ${styles.homeAdvantages__cardImg}
                 `}
-                pictureClass={styles.homeAdvantages__cardPicture}
+                pictureClass={styles.homeAdvantages__actionPicture}
               />
 
               <div
@@ -103,13 +102,16 @@ const HomeAdvantages = () => {
               <ImageWebp
                 src={portfolioOptimizationImage}
                 srcSet={portfolioOptimizationWebpImage}
-                alt="Instant Action"
-                className={styles.homeAdvantages__cardImg}
+                alt="Automated Portfolio"
+                
+
+                className={`
+                  ${styles.homeAdvantages__portfolioPosition}
+                  ${styles.homeAdvantages__cardImg}
+                  `}
               />
               <div
-                className={`${styles.homeAdvantages__cardTextWrapper} 
-              ${styles.homeAdvantages__portfolioPosition}
-              `}
+                className={styles.homeAdvantages__cardTextWrapper}
               >
                 <h4 className={styles.homeAdvantages__cardTitle}>
                   Automated Portfolio
