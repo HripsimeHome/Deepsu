@@ -4,8 +4,7 @@
 .homeAdvantages {
   &__cardContainer {
     display: flex;
-    width: 100%;
-    // justify-self: center;
+    width: 100%;    
     gap: 98px;
     margin: 30px 0 100px;
 
@@ -15,7 +14,7 @@
 
     @include mdScreenMedia {
       gap: 50px;
-      margin: 20px 0 100px;
+      margin: 20px 0 50px;
     }
   }
 
@@ -98,8 +97,8 @@
   }
 
   &__cardTitle {
-    @include setFont(45px, 700);
-    line-height: 50px;
+    @include setFont(40px, 600);
+    line-height: 45px;
     margin-bottom: 15px;
 
     @include mdScreenMedia {
