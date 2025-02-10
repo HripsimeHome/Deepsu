@@ -62,7 +62,7 @@ const HomeAdvantages = () => {
           <TransitionProvider
             inProp={isInView}
             style={TransitionStyleTypes.zoomIn}
-            delay={4000}
+            delay={4200}
           >
             <div className={styles.homeAdvantages__cardRow}>
               <ImageWebp
@@ -97,7 +97,7 @@ const HomeAdvantages = () => {
           <TransitionProvider
             inProp={isInView}
             style={TransitionStyleTypes.zoomIn}
-            delay={4000}
+            delay={4400}
           >
             <div className={styles.homeAdvantages__card}>
               <ImageWebp
