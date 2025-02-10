@@ -22,6 +22,10 @@ body {
   max-width: 2000px;
   margin: 0 auto;
 
+  @include mdScreenMedia {
+    background-image: none;
+   }
+
   // Body Scrollbar
 
   &::-webkit-scrollbar {

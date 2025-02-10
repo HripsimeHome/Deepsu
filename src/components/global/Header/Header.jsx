@@ -29,8 +29,8 @@ const Header = () => {
 
   return (
     <>
-      <header className={styles.header}>       
-        <div className={`${styles.header__wrapper} container`} ref={ref}>   
+      <header className={styles.header} ref={ref}>       
+        <div className={`${styles.header__wrapper} container`}>   
           <TransitionProvider
             inProp={isInView}
             style={TransitionStyleTypes.left}              
@@ -106,22 +106,23 @@ const Header = () => {
                 </div>
                 </TransitionProvider>
 
-                <TransitionProvider
-                inProp={isInView}
-                style={TransitionStyleTypes.left}              
-                delay={2500}
-                className={styles.header__aiAgent}
-              >  
+               
               <div className={styles.header__socIconsPosition}>
-                <a target="_blank" rel="noreferrer" href={telegramUrl}>
-                  <Svg id={telegramIcon} className={styles.header__socIcon} />
-                </a>
+                <TransitionProvider
+                  inProp={isInView}
+                  style={TransitionStyleTypes.left}              
+                  delay={2500}
+                  className={styles.header__aiAgent}
+                >  
+                  <a target="_blank" rel="noreferrer" href={telegramUrl}>
+                    <Svg id={telegramIcon} className={styles.header__socIcon} />
+                  </a>
 
-                <a target="_blank" rel="noreferrer" href={twitterUrl}>
-                  <Svg id={twitterIcon} className={styles.header__socIcon} />
-                </a>
-              </div>
-              </TransitionProvider>
+                  <a target="_blank" rel="noreferrer" href={twitterUrl}>
+                    <Svg id={twitterIcon} className={styles.header__socIcon} />
+                  </a>
+                </TransitionProvider>
+              </div>              
             </div>
             
             {/* /First block */}
@@ -130,7 +131,7 @@ const Header = () => {
             <TransitionProvider
                 inProp={isInView}
                 style={TransitionStyleTypes.top}              
-                delay={3000}
+                delay={1000}
                 className={styles.header__aiAgent}
               >    
             <div >

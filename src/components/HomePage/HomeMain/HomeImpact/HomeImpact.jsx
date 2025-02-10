@@ -62,7 +62,8 @@ const HomeImpact = () => {
             inProp={isInView}
             style={transitiontype}
             key={index}
-            delay={index*400}
+            // delay={index*3500}
+            delay={6400}
           >
             <div className={styles.homeImpact__card}>                            
               <div className={styles.homeImpact__cardImgWrapper}>
@@ -86,7 +87,7 @@ const HomeImpact = () => {
       <TransitionProvider
         inProp={isInView}
         style={TransitionStyleTypes.top}
-        delay={1800}
+        delay={8100}
       >
         <h2 className={styles.homeImpact__title}>
           <span className="textlightGreen">start </span>
