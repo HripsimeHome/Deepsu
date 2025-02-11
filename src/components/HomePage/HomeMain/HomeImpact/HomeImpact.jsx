@@ -58,33 +58,37 @@ const HomeImpact = () => {
       <h2 className="titleh2">Impact</h2>
       <div className={styles.homeImpact__cardContainer} ref={ref1}>
         {impactCard.map(
-          ({ image, webpImage, title, text, transitiontype }, index) => (
-            <TransitionProvider
-              inProp={isInView1}
-              style={transitiontype}
-              key={index}
-              delay={index * 500}
-            >
-              <div className={styles.homeImpact__card}>
-                <div className={styles.homeImpact__cardImgWrapper}>
-                  <ImageWebp
-                    src={image}
-                    srcSet={webpImage}
-                    alt={"Impact"}
-                    className={styles.homeImpact__cardImg}
-                  />
-                </div>
-                <div className={styles.homeImpact__cardTextWrapper}>
-                  <h4 className={styles.homeImpact__cardTitle}>{title}</h4>
-                  <p className={styles.homeImpact__cardDescription}>{text}</p>
-                </div>
-              </div>
-            </TransitionProvider>
-          )
+        ({ image, webpImage, title, text, transitiontype }, index) => (
+        <TransitionProvider
+          inProp={isInView1}
+          style={transitiontype}
+          key={index}
+          delay={index * 500}
+        >
+          <div className={styles.homeImpact__card}>
+            <div className={styles.homeImpact__cardImgWrapper}>
+              <ImageWebp
+                src={image}
+                srcSet={webpImage}
+                alt={"Impact"}
+                className={styles.homeImpact__cardImg}
+              />
+            </div>
+            <div className={styles.homeImpact__cardTextWrapper}>
+              <h4 className={styles.homeImpact__cardTitle}>{title}</h4>
+              <p className={styles.homeImpact__cardDescription}>{text}</p>
+            </div>
+          </div>
+        </TransitionProvider>
+        )
         )}
       </div>
       <div ref={ref2}>
-        <TransitionProvider inProp={isInView2} style={TransitionStyleTypes.top}>
+        <TransitionProvider
+         inProp={isInView2}
+         style={TransitionStyleTypes.bottom}
+         delay={900}
+         >        
           <h2 className={styles.homeImpact__title}>
             <span className="textlightGreen">start </span>
             your smart journey to

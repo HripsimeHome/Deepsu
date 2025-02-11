@@ -31,21 +31,21 @@ body {
   // Body Scrollbar
 
   &::-webkit-scrollbar {
-    width: 10px;
+    width: 11px;
   }
 
   &::-webkit-scrollbar-track {
     background: #06221a;
-    border-radius: 10px;
+    border-radius: 9px;
   }
 
   &::-webkit-scrollbar-thumb {
     background: $color-green;
-    border-radius: 10px;
+    border-radius: 9px;
   }
 
   &::-moz-scrollbar {
-    width: 10px;
+    width: 11px;
   }
 
   &::-moz-scrollbar-track {
@@ -97,37 +97,5 @@ a {
 
   .texGreen {
     color: $color-green;
-  }
-
-
-  .bgContainer {
-    @include bgWebp(
-      "../assets/images/header/headerBg.png",
-      "../assets/images/header/headerBg.webp"
-    );
-    background-repeat: no-repeat;
-    background-position: top right;
-    background-size: contain;   
-    padding-top: 70px;  
-    width: 800px;;
-    background-color: green;;
-    width: 100%;
-    height: 800px;
-
-     @include mdScreenMedia {
-     text-align: center;    
-    // background-position: bottom center;
-    background-position: top 400px right;   
-    // padding-top: 100px;
-    height: 1100px;
-    }  
-
-    @include smScreenMedia {     
-      min-height: 950px;  
-     }
-     
-     @include xsmScreenMedia {     
-       //min-height: 750px;      
-     }
   }
 }

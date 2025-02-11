@@ -1,5 +1,4 @@
 import Header from "../global/Header/Header";
-import HeaderBg from "../global/HeaderBg/HeaderBg"
 import Footer from "../global/Footer/Footer";
 import AppRouter from "./../../router/AppRouter";
 import { useLocation } from "react-router-dom";
@@ -14,11 +13,9 @@ function App() {
   }, [location]);
 
   return (
-    <>
-   {/*   <HeaderBg />*/}
+    <> 
       <Header />
-      <div className="container">
-      
+      <div className="container">      
         <AppRouter />
       </div>
       <Footer />
