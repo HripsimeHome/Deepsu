@@ -1,10 +1,7 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.header {
-  position: relative;
-  margin-bottom: 100px;
-  padding-top: 70px;
+.header {   
   min-height: 100vh;
   @include bgWebp(
     "../assets/images/header/headerBg.png",
@@ -13,16 +10,31 @@
   background-repeat: no-repeat;
   background-position: top right;
   background-size: contain;
+  margin-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 108px;
 
-  @include mdScreenMedia {
-    margin-bottom: 50px;
+  @include mdScreenMedia {    
     background-position: bottom center;
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 50%;
   }
 
   @include smScreenMedia {
     margin-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 42%;
   }
 
+  
+  @include xsmScreenMedia{
+    margin-bottom: 15px;
+    padding-top: 20px;
+    padding-bottom: 19%;
+  }
+
+/*
   &__wrapper {
     padding-bottom: 200px;
 
@@ -30,7 +42,7 @@
       text-align: center;
     }
   }
-
+*/
   &__logoImg {
     max-width: 100%;
 
@@ -51,7 +63,7 @@
     }
   }
 
-  &__title {
+  &__title, &__titleGreen {
     @include setFont(88px, 300);
     line-height: 88px;
 
@@ -59,15 +71,15 @@
       @include setFont(62px, 300);
       line-height: 65px;
     }
+    @include smScreenMedia {
+      @include setFont(40px, 300);
+      line-height: 45px;
+    }
   }
 
-  &__titleGreen {
-    @include setFont(90px, 700, $color-green);
-
-    @include mdScreenMedia {
-      @include setFont(64px, 300, $color-green);
-      line-height: 65px;
-    }
+  &__titleGreen {    
+    font-weight: 700;
+    color: $color-green;     
   }
 
   &__suiBlock {
@@ -83,8 +95,7 @@
 
   &__suiPosition {
     @include flexCol(center, end);
-    flex-direction: column;
-    margin-left: 12px;
+    flex-direction: column;    
 
     a {
       display: inherit;
@@ -93,30 +104,42 @@
 
   &__suiImg {
     max-width: 150px;
+    margin-left: 12px;
 
     @include mdScreenMedia {
       max-width: 110px;
+      margin-left: 0px;
+    }
+
+    @include smScreenMedia {
+      max-width: 75px;
+      //margin-left: 6px;
     }
   }
 
   &__suiTitle {
     @include setFont(15px, 300);
     line-height: 5px;
+
+    @include smScreenMedia {
+      @include setFont(12px, 300);
+      line-height: 15px;
+    }
   }
 
   &__text {
     max-width: 600px;
     @include setFont(22px, 300);
     line-height: 32px;
-    margin-top: 40px;
+    margin-top: 40px;    
     margin-bottom: 55px;
 
     @include mdScreenMedia {
       //max-width:  350px;
       @include setFont(18px, 400);
       line-height: 22px;
-      margin-top: 20px;
-      margin-bottom: 35px;
+      margin-top: 20px;    
+      margin-bottom: 35px;   
     }
   }
 
@@ -140,6 +163,8 @@
     @include setFont(28px, 500);
     border-radius: 15px;
     box-shadow: 0px 6px 20px 0px $color-green;
+    white-space: nowrap;
+    padding: 0 5px;
 
     &:hover {
       background-color: #128a66;
@@ -154,7 +179,13 @@
       border-radius: 5px;
       margin-right: 10px;
     }
+
+    @include smScreenMedia {
+      font-size: 16px;
+    }
   }
+
+
 
   &__docPosition {
     @include flexCol();
@@ -203,12 +234,11 @@
     @include svg(40px, $color-white);
   }
 
-  &__aiAgent,
-  &__aiAgentMobile {
-    width: 30%;
+  &__aiAgent {
+    width: 30%;   
 
     @include mdScreenMedia {
-      width: 40%;     
+      width: 45%;   
     }
 
     &_img {
@@ -216,18 +246,35 @@
     }
   }
 
-  &__aiAgent {
+   &__aiAgent  {
+    width: 30%;    
+
     @include mdScreenMedia {
-      display: none;;
+      display: none;      
+     }
+
+    &_img {
+      width: 100%;      
     }
   }
 
   &__aiAgentMobile {
-     display: none;
+    display: none;    
 
     @include mdScreenMedia {      
       display: inline-block;
-      margin-bottom: 50px;
+      width: 30%;
+      margin: 30px 0 70px;      
     }
-  }
+
+    @include smScreenMedia {      
+      display: inline-block;
+      width: 30%;
+      margin: 20px 0 50px;        
+    }
+
+    &_img {
+      width: 100%;      
+    }
+  } 
 }
