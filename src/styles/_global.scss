@@ -9,9 +9,13 @@
   padding: 0;
 }
 
+#root { 
+  display: flex;
+  flex-direction: column; 
+  min-height: 100vh;
+}
+
 body {
-      width: 100%;
-    height: 800px;
   color: $color-white;
   background-color: #010c10;
   font-family: $font-family;
@@ -36,12 +40,12 @@ body {
 
   &::-webkit-scrollbar-track {
     background: #1c1b1b;
-    border-radius: 9px;
+    border-radius: 4px;
   }
 
   &::-webkit-scrollbar-thumb {
     background: $color-green;
-    border-radius: 9px;
+    border-radius: 4px;
   }
 
   &::-moz-scrollbar {
@@ -68,12 +72,6 @@ a:focus-visible {
 
 a {
   text-decoration: none;
-}
-
-#root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
 .container {

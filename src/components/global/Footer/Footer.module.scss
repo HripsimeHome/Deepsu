@@ -2,17 +2,22 @@
 @import "../../../styles/vars";
 
 .footer {
+
   width: 100%;
   background: linear-gradient(
     176deg,
     rgba(25, 198, 144, 0) 19.42%,
     rgba(25, 198, 144, 0.37) 80.58%
   );
-  margin-top: 100px;
+  margin-top: auto;
+  
+  &__wrapper {
+    margin-top: 100px;   
 
-  @include mdScreenMedia {
-    margin-top: 20px;
-  }
+    @include mdScreenMedia {
+      margin-top: 20px;
+     }
+  } 
 
   &__container {
     @include flexCol(space-between, center);
