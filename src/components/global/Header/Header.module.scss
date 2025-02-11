@@ -10,7 +10,7 @@
   background-repeat: no-repeat;
   background-position: top right;
   background-size: contain;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   padding-top: 50px;
   padding-bottom: 108px;
 
@@ -26,7 +26,6 @@
     padding-top: 40px;
     padding-bottom: 42%;
   }
-
   
   @include xsmScreenMedia{
     margin-bottom: 15px;
@@ -34,15 +33,6 @@
     padding-bottom: 19%;
   }
 
-/*
-  &__wrapper {
-    padding-bottom: 200px;
-
-    @include mdScreenMedia {
-      text-align: center;
-    }
-  }
-*/
   &__logoImg {
     max-width: 100%;
 
@@ -64,6 +54,7 @@
   }
 
   &__title, &__titleGreen {
+
     @include setFont(88px, 300);
     line-height: 88px;
 
@@ -71,6 +62,7 @@
       @include setFont(62px, 300);
       line-height: 65px;
     }
+
     @include smScreenMedia {
       @include setFont(40px, 300);
       line-height: 45px;
@@ -112,8 +104,7 @@
     }
 
     @include smScreenMedia {
-      max-width: 75px;
-      //margin-left: 6px;
+      max-width: 75px;      
     }
   }
 
@@ -134,8 +125,7 @@
     margin-top: 40px;    
     margin-bottom: 55px;
 
-    @include mdScreenMedia {
-      //max-width:  350px;
+    @include mdScreenMedia {      
       @include setFont(18px, 400);
       line-height: 22px;
       margin-top: 20px;    
@@ -184,8 +174,6 @@
       font-size: 16px;
     }
   }
-
-
 
   &__docPosition {
     @include flexCol();
@@ -269,7 +257,7 @@
 
     @include smScreenMedia {      
       display: inline-block;
-      width: 30%;
+      width: 40%;
       margin: 20px 0 50px;        
     }
 
