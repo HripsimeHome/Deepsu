@@ -69,10 +69,9 @@
     align-items: center;
   }
 
-  &__cardTextWrapper {
-    // min-height: 190px;
-    padding: 30px;
+  &__cardTextWrapper {     
     z-index: 1;
+    padding: 30px;
 
     @include mdScreenMedia {
       padding: 20px 15px;
@@ -149,10 +148,13 @@
     display: flex;
 
     @include smScreenMedia {
-      margin-right: auto;
-      margin-left: auto;
       max-width: 70%;
+      margin-right: auto;
+      margin-left: auto;      
       margin-bottom: -30px;
     }
+  }
+  @media screen and (min-width: 577px) and (max-width: 1024px) {
+    margin-left: 0;
   }
 }

@@ -41,7 +41,9 @@ const HomeAdvantages = () => {
             />
 
             <div
-              className={`${styles.homeAdvantages__cardTextWrapper} ${styles.homeAdvantages__cardInsightsTextWrapper}`}
+              className={`
+                ${styles.homeAdvantages__cardTextWrapper} 
+                ${styles.homeAdvantages__cardInsightsTextWrapper}`}
             >
               <h4 className={styles.homeAdvantages__cardTitle}>AI Insights</h4>
               <p className={styles.homeAdvantages__cardDescription}>
@@ -67,22 +69,25 @@ const HomeAdvantages = () => {
             className={styles.homeAdvantages__cardRowWrapper}
           >
             <div
-              className={`${styles.homeAdvantages__cardRow} ${styles.homeAdvantages__instantActionCardRow}`}
+              className={`
+                ${styles.homeAdvantages__cardRow} 
+                ${styles.homeAdvantages__instantActionCardRow}`}
             >
               <ImageWebp
                 src={instantActionImage}
                 srcSet={instantActionWebpImage}
                 alt="Instant Action"
                 className={`
-                ${styles.homeAdvantages__actionsImg}
-                ${styles.homeAdvantages__cardImg}
+                  ${styles.homeAdvantages__actionsImg}
+                  ${styles.homeAdvantages__cardImg}
                 `}
                 pictureClass={styles.homeAdvantages__actionPicture}
               />
 
               <div
-                className={`${styles.homeAdvantages__cardTextWrapper}
-              ${styles.homeAdvantages__actionPosition}`}
+                className={`
+                  ${styles.homeAdvantages__cardTextWrapper}
+                   ${styles.homeAdvantages__actionPosition}`}
               >
                 <h4 className={styles.homeAdvantages__cardTitle}>
                   Instant Action
@@ -99,18 +104,22 @@ const HomeAdvantages = () => {
           <TransitionProvider
             inProp={isInView}
             style={TransitionStyleTypes.zoomIn}
-            delay={900}
+            delay={1000}
             className={styles.homeAdvantages__cardRowWrapper}
           >
             <div
-              className={`${styles.homeAdvantages__card} ${styles.homeAdvantages__portfolioCard}`}
+              className={`
+                ${styles.homeAdvantages__card} 
+                ${styles.homeAdvantages__portfolioCard}`}
             >
               <ImageWebp
                 src={portfolioOptimizationImage}
                 srcSet={portfolioOptimizationWebpImage}
                 alt="Automated Portfolio"
                 pictureClass={styles.homeAdvantages__portfolioCardPicture}
-                className={`${styles.homeAdvantages__cardImg} ${styles.homeAdvantages__cardImg_portfolio}`}
+                className={`
+                  ${styles.homeAdvantages__cardImg} 
+                  ${styles.homeAdvantages__cardImg_portfolio}`}
               />
               <div className={styles.homeAdvantages__cardTextWrapper}>
                 <h4 className={styles.homeAdvantages__cardTitle}>
