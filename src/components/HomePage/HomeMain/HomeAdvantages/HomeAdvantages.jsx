@@ -26,7 +26,7 @@ const HomeAdvantages = () => {
         <TransitionProvider
           inProp={isInView}
           style={TransitionStyleTypes.zoomIn}
-          delay={100}
+          delay={300}
           className={styles.homeAdvantages__animationContainer}
         >
           <div className={styles.homeAdvantages__card}>
@@ -44,7 +44,6 @@ const HomeAdvantages = () => {
               className={`${styles.homeAdvantages__cardTextWrapper} ${styles.homeAdvantages__cardInsightsTextWrapper}`}
             >
               <h4 className={styles.homeAdvantages__cardTitle}>AI Insights</h4>
-
               <p className={styles.homeAdvantages__cardDescription}>
                 DeepsuAI uses advanced artificial intelligence to deliver
                 real-time analytics, deep token analysis, and anti-scam tools.
@@ -64,7 +63,7 @@ const HomeAdvantages = () => {
           <TransitionProvider
             inProp={isInView}
             style={TransitionStyleTypes.zoomIn}
-            delay={300}
+            delay={600}
             className={styles.homeAdvantages__cardRowWrapper}
           >
             <div
@@ -100,7 +99,7 @@ const HomeAdvantages = () => {
           <TransitionProvider
             inProp={isInView}
             style={TransitionStyleTypes.zoomIn}
-            delay={800}
+            delay={900}
             className={styles.homeAdvantages__cardRowWrapper}
           >
             <div

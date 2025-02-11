@@ -44,8 +44,7 @@ const Header = () => {
           </TransitionProvider>
 
           <div className={styles.header__container}>
-            {/* First block */}           
-            
+            {/* First block */}            
             <div className={styles.header__orderContainer}>
               <TransitionProvider
                 inProp={isInView}
@@ -55,7 +54,6 @@ const Header = () => {
                 <h1 className={styles.header__title}>
                   <div className={styles.header__suiBlock}>
                     <span>Next</span>
-
                     <div className={styles.header__suiPosition}>
                       <a href="https://sui.io" target="_blank" rel="noreferrer">
                         <img
@@ -81,10 +79,10 @@ const Header = () => {
                 delay={1500}
               >
                 <div className={styles.header__text}>
-                    DeFi token management platform on Sui blockchain. Use AI and
-                    data analytics to simplify crypto operations, optimize
-                    portfolios, and secure assets.
-                  </div>
+                  DeFi token management platform on Sui blockchain. Use AI and
+                  data analytics to simplify crypto operations, optimize
+                  portfolios, and secure assets.
+                </div>
               </TransitionProvider>
 
               <TransitionProvider
@@ -92,8 +90,7 @@ const Header = () => {
                 style={TransitionStyleTypes.left}              
                 delay={2000}
                 className={styles.header__btnPosition}
-              >    
-                 
+              >
                 <button className={styles.header__btn}>Launch App</button>
                 <div className={styles.header__docPosition}>
                   <a
@@ -112,43 +109,32 @@ const Header = () => {
                 style={TransitionStyleTypes.left}              
                 delay={2500}   
                 className={styles.header__socIconsPosition}               
-              >  
-                              
-                  <a target="_blank" rel="noreferrer" href={telegramUrl}>
+              > 
+                <a target="_blank" rel="noreferrer" href={telegramUrl}>
                     <Svg id={telegramIcon} className={styles.header__socIcon} />
-                  </a>
-                  <a target="_blank" rel="noreferrer" href={twitterUrl}>
-                    <Svg id={twitterIcon} className={styles.header__socIcon} />
-                  </a>               
-                  
+                </a>
+                <a target="_blank" rel="noreferrer" href={twitterUrl}>
+                  <Svg id={twitterIcon} className={styles.header__socIcon} />
+                </a>    
               </TransitionProvider>            
             </div>
             
-              {/* /First block */}
+            {/* /First block */}
 
-              {/* Second block */}
-              <TransitionProvider
-                  inProp={isInView}
-                  style={TransitionStyleTypes.top}              
-                  delay={1000}
-                  className={styles.header__aiAgent}
-                >    
-                
-                  <img
-                    src={aiAgentImage}
-                    alt="AI Agent"
-                    className={styles.header__aiAgent_img}
-                  />
-           
-              </TransitionProvider>
-
-
-
-
-</div>
-
-
-         
+            {/* Second block */}
+            <TransitionProvider
+                inProp={isInView}
+                style={TransitionStyleTypes.right}              
+                delay={2300}
+                className={styles.header__aiAgent}
+              >   
+               <img
+                  src={aiAgentImage}
+                  alt="AI Agent"
+                  className={styles.header__aiAgent_img}
+                />           
+            </TransitionProvider>
+          </div>         
         </div>
       </header>
     </>
