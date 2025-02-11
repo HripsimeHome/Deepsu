@@ -60,6 +60,8 @@
   &__cardTitle {
     @include setFont(30px, 700);
     line-height: 35px;
+     
+    
 
     @include setFont(24px, 700);
     line-height: 28px;

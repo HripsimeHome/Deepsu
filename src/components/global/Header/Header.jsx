@@ -45,7 +45,7 @@ const Header = () => {
 
           <div className={styles.header__container}>
             {/* First block */}            
-            <div className={styles.header__orderContainer}>
+            <div>
               <TransitionProvider
                 inProp={isInView}
                 style={TransitionStyleTypes.left}              
@@ -83,6 +83,13 @@ const Header = () => {
                   data analytics to simplify crypto operations, optimize
                   portfolios, and secure assets.
                 </div>
+                <div className={styles.header__aiAgentMobile}>   
+                  <img
+                    src={aiAgentImage}
+                    alt="AI Agent"
+                    className={styles.header__aiAgent_img}
+                  />           
+                </div>
               </TransitionProvider>
 
               <TransitionProvider
@@ -106,12 +113,12 @@ const Header = () => {
 
               <TransitionProvider
                 inProp={isInView}
-                style={TransitionStyleTypes.left}              
-                delay={2500}   
+                style={TransitionStyleTypes.bottom}              
+                delay={2300}   
                 className={styles.header__socIconsPosition}               
               > 
                 <a target="_blank" rel="noreferrer" href={telegramUrl}>
-                    <Svg id={telegramIcon} className={styles.header__socIcon} />
+                  <Svg id={telegramIcon} className={styles.header__socIcon} />
                 </a>
                 <a target="_blank" rel="noreferrer" href={twitterUrl}>
                   <Svg id={twitterIcon} className={styles.header__socIcon} />
@@ -124,8 +131,8 @@ const Header = () => {
             {/* Second block */}
             <TransitionProvider
                 inProp={isInView}
-                style={TransitionStyleTypes.right}              
-                delay={2300}
+                style={TransitionStyleTypes.top}              
+                delay={2000}
                 className={styles.header__aiAgent}
               >   
                <img
