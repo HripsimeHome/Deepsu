@@ -10,6 +10,8 @@
 }
 
 body {
+      width: 100%;
+    height: 800px;
   color: $color-white;
   background-color: #010c10;
   font-family: $font-family;
@@ -95,5 +97,37 @@ a {
 
   .texGreen {
     color: $color-green;
+  }
+
+
+  .bgContainer {
+    @include bgWebp(
+      "../assets/images/header/headerBg.png",
+      "../assets/images/header/headerBg.webp"
+    );
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;   
+    padding-top: 70px;  
+    width: 800px;;
+    background-color: green;;
+    width: 100%;
+    height: 800px;
+
+     @include mdScreenMedia {
+     text-align: center;    
+    // background-position: bottom center;
+    background-position: top 400px right;   
+    // padding-top: 100px;
+    height: 1100px;
+    }  
+
+    @include smScreenMedia {     
+      min-height: 950px;  
+     }
+     
+     @include xsmScreenMedia {     
+       //min-height: 750px;      
+     }
   }
 }

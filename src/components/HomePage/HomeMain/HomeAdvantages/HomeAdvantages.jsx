@@ -26,7 +26,7 @@ const HomeAdvantages = () => {
         <TransitionProvider
           inProp={isInView}
           style={TransitionStyleTypes.zoomIn}
-          delay={4000}
+          delay={100}
           className={styles.homeAdvantages__animationContainer}
         >
           <div className={styles.homeAdvantages__card}>
@@ -40,7 +40,9 @@ const HomeAdvantages = () => {
               `}
             />
 
-            <div className={styles.homeAdvantages__cardTextWrapper}>
+            <div
+              className={`${styles.homeAdvantages__cardTextWrapper} ${styles.homeAdvantages__cardInsightsTextWrapper}`}
+            >
               <h4 className={styles.homeAdvantages__cardTitle}>AI Insights</h4>
 
               <p className={styles.homeAdvantages__cardDescription}>
@@ -62,15 +64,17 @@ const HomeAdvantages = () => {
           <TransitionProvider
             inProp={isInView}
             style={TransitionStyleTypes.zoomIn}
-            delay={4200}
+            delay={300}
+            className={styles.homeAdvantages__cardRowWrapper}
           >
-            <div className={styles.homeAdvantages__cardRow}>
+            <div
+              className={`${styles.homeAdvantages__cardRow} ${styles.homeAdvantages__instantActionCardRow}`}
+            >
               <ImageWebp
                 src={instantActionImage}
                 srcSet={instantActionWebpImage}
-                alt="Instant Action"               
-
-               className={`
+                alt="Instant Action"
+                className={`
                 ${styles.homeAdvantages__actionsImg}
                 ${styles.homeAdvantages__cardImg}
                 `}
@@ -96,21 +100,20 @@ const HomeAdvantages = () => {
           <TransitionProvider
             inProp={isInView}
             style={TransitionStyleTypes.zoomIn}
-            delay={4400}
+            delay={800}
+            className={styles.homeAdvantages__cardRowWrapper}
           >
-            <div className={styles.homeAdvantages__card}>
+            <div
+              className={`${styles.homeAdvantages__card} ${styles.homeAdvantages__portfolioCard}`}
+            >
               <ImageWebp
                 src={portfolioOptimizationImage}
                 srcSet={portfolioOptimizationWebpImage}
-                alt="Automated Portfolio"          
-                className={`
-                  ${styles.homeAdvantages__portfolioPosition}
-                  ${styles.homeAdvantages__cardImg}
-                  `}
+                alt="Automated Portfolio"
+                pictureClass={styles.homeAdvantages__portfolioCardPicture}
+                className={`${styles.homeAdvantages__cardImg} ${styles.homeAdvantages__cardImg_portfolio}`}
               />
-              <div
-                className={styles.homeAdvantages__cardTextWrapper}
-              >
+              <div className={styles.homeAdvantages__cardTextWrapper}>
                 <h4 className={styles.homeAdvantages__cardTitle}>
                   Automated Portfolio
                 </h4>

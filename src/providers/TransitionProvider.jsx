@@ -52,7 +52,6 @@ const TransitionProvider = ({
       leave: { opacity: 0, scale: "0" },
     },
   };
-  console.log(styles[style],style);
 
   const transition = useTransition(inProp, {
     ...styles[style],

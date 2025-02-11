@@ -50,52 +50,49 @@ const impactCard = [
 ];
 
 const HomeImpact = () => {
-  const { isInView, ref } = useLazy(0.8);
+  const { isInView: isInView1, ref: ref1 } = useLazy(0.8);
+  const { isInView: isInView2, ref: ref2 } = useLazy(0.4);
 
   return (
     <section className={styles.homeImpact}>
       <h2 className="titleh2">Impact</h2>
-      <div className={styles.homeImpact__cardContainer} ref={ref}>
+      <div className={styles.homeImpact__cardContainer} ref={ref1}>
         {impactCard.map(
-        ({ image, webpImage, title, text, transitiontype }, index) => (
-          <TransitionProvider
-            inProp={isInView}
-            style={transitiontype}
-            key={index}
-            // delay={index*3500}
-            delay={6400}
-          >
-            <div className={styles.homeImpact__card}>                            
-              <div className={styles.homeImpact__cardImgWrapper}>
-                <ImageWebp
-                  src={image}
-                  srcSet={webpImage}
-                  alt={"Impact"}
-                  className={styles.homeImpact__cardImg}
-                />                  
+          ({ image, webpImage, title, text, transitiontype }, index) => (
+            <TransitionProvider
+              inProp={isInView1}
+              style={transitiontype}
+              key={index}
+              delay={index * 500}
+            >
+              <div className={styles.homeImpact__card}>
+                <div className={styles.homeImpact__cardImgWrapper}>
+                  <ImageWebp
+                    src={image}
+                    srcSet={webpImage}
+                    alt={"Impact"}
+                    className={styles.homeImpact__cardImg}
+                  />
+                </div>
+                <div className={styles.homeImpact__cardTextWrapper}>
+                  <h4 className={styles.homeImpact__cardTitle}>{title}</h4>
+                  <p className={styles.homeImpact__cardDescription}>{text}</p>
+                </div>
               </div>
-              <div className={styles.homeImpact__cardTextWrapper}>
-                <h4 className={styles.homeImpact__cardTitle}>{title}</h4>
-                <p className={styles.homeImpact__cardDescription}>{text}</p>
-              </div>
-            </div>
-          </TransitionProvider>
-        )
+            </TransitionProvider>
+          )
         )}
       </div>
-
-      <TransitionProvider
-        inProp={isInView}
-        style={TransitionStyleTypes.top}
-        delay={8100}
-      >
-        <h2 className={styles.homeImpact__title}>
-          <span className="textlightGreen">start </span>
-          your smart journey to
-          <span className="textlightGreen"> profitable defi </span>
-          decisions today
-        </h2>
-      </TransitionProvider>
+      <div ref={ref2}>
+        <TransitionProvider inProp={isInView2} style={TransitionStyleTypes.top}>
+          <h2 className={styles.homeImpact__title}>
+            <span className="textlightGreen">start </span>
+            your smart journey to
+            <span className="textlightGreen"> profitable defi </span>
+            decisions today
+          </h2>
+        </TransitionProvider>
+      </div>
     </section>
   );
 };
