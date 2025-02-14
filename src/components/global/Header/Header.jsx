@@ -1,4 +1,6 @@
 import styles from "./Header.module.scss";
+import { Link } from "react-router-dom"
+
 import Svg from "../../layout/Svg/Svg";
 
 import TransitionProvider, {
@@ -23,6 +25,10 @@ import {
   telegramUrl,
   documentation,
 } from "../../../constants/contacts";
+
+import {
+  chatPagePath
+} from "../../../router/path"
 
 const Header = () => {
   const { isInView, ref } = useLazy(0.8)
@@ -98,7 +104,9 @@ const Header = () => {
                 delay={2000}
                 className={styles.header__btnPosition}
               >
-                <button className={styles.header__btn}>Launch App</button>
+                <Link to={chatPagePath} 
+                  className={styles.header__btnLaunch}>Launch App
+                </Link>
                 <div className={styles.header__docPosition}>
                   <a
                     href={documentation}

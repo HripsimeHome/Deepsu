@@ -1,0 +1,45 @@
+@import "../../../styles/mixins";
+@import "../../../styles/vars";
+
+.chatSidebar {  
+ 
+  max-width:  300px; 
+  width: 100%;
+  @include bgWebp (
+    "../../../assets/images/chat/SidebarBg.png",
+    "../../../assets/images/chat/SidebarBg.webp"
+  );
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding: 20px;;
+ 
+  &__deskWallet {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-darkBlue;
+    border-radius: 20px;
+    padding: 20px 15px;
+  }
+
+  &__btnWallet {
+    width: inherit;
+    @include setFont(14px, 500,  $color-darkBlue);
+    background-color:  $color-lightBlue;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 10px 0;
+    &:hover {
+      background-color: #49AEFF;
+    }
+  }
+
+  &__logoImg {
+    display: flex;
+    max-width: 50%;
+    margin-top: auto;
+  }
+
+ 
+}
