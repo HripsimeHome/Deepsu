@@ -144,7 +144,8 @@
     }
   }
 
-  &__btn {
+  &__btnLaunch {
+    @include flexCol();
     width: 100%;
     max-width: 285px;
     height: 65px;

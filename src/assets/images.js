@@ -32,7 +32,10 @@ import drivingEfficiencyWebpImage from "./images/home/drivingEfficiency.webp"
 import enhancingTransparencyImage from "./images/home/enhancingTransparency.png" 
 import enhancingTransparencyWebpImage from "./images/home/enhancingTransparency.webp"
  
+// App
 
+import getUsImage from "./images/chat/getUs.png"
+ 
 export {
 
   // Header
@@ -68,4 +71,7 @@ export {
 
   //Footer
   logoWhiteImage,
+
+  //App
+  getUsImage,
 };
