@@ -6,7 +6,6 @@ import {
   arrowTopIcon
 } from "../../../assets/svg";
 
-
 const panelTexts = [
   "What is Sui Blockchain?",
   "What are the top tokens on Sui?",
@@ -14,8 +13,6 @@ const panelTexts = [
   "Explain the SUI tokenomics.",
   "Which wallets support Sui tokens?",
 ];
-
-
 
 function ChatMain() {
   return (
@@ -37,7 +34,6 @@ function ChatMain() {
         )}
         </div>
 
-
         <div className={styles.chatMain__panelTextarea}>
           <textarea
             className={styles.chatMain__chatTextarea}
@@ -45,22 +41,26 @@ function ChatMain() {
           >
           </textarea>
 
-          <div className={styles.chatMain__actionContainer}>
-            <Svg 
-              id={attachmentIcon}
-              className={styles.chatMain__attachIcon}        
-            />
+          <div className={styles.chatMain__actionContainer}>           
+            <label>
+              <input
+                type="file" 
+                hidden 
+              />
+              <Svg 
+                id={attachmentIcon}
+                className={styles.chatMain__attachIcon}        
+              />
+            </label>           
 
-            <span className={styles.chatMain__send}>
+            <button className={styles.chatMain__btnSend}>
               <Svg 
                 id={arrowTopIcon}
-                className={styles.chatMain__send_icon}        
+                className={styles.chatMain__btnSend_icon}        
                 />     
-            </span>
+            </button>
           </div>
         </div>
-
-
       </div>
     </section>
   )
