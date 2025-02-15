@@ -6,4 +6,5 @@ export const twitterIcon = "twitter";
 
 //Application
 
-export const attachmentIcon = " attachment"; 
+export const attachmentIcon = "attachment"; 
+export const arrowTopIcon = "arrowTop"
