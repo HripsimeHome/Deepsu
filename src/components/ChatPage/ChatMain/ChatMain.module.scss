@@ -24,6 +24,7 @@
     @include setFont(50px, 300,  $color-black);
     line-height: 60px;
     text-align: center;
+    margin-bottom: 20px;
 
     span {
       color: $color-green;
@@ -31,6 +32,20 @@
     }   
   }
 
+&__suiBock {
+  @include flexCol();  
+
+  &_img {
+    width: 60px;
+    height: 30px;  
+  }
+}
+
+&__suiBockText {
+  @include setFont(14px, 400,  $color-black);
+  margin-right: 5px;
+}
+ 
 
   &__panelContainer {
     @include flexCol();
@@ -68,9 +83,9 @@
   }
 
   &__attachIcon {   
-   // @include svg(28px, $color-white);      
-    width: 30px;
-    height: 27px;  
+    @include svg(25px, $color-white);      
+   // width: 30px;
+   // height: 27px;  
     cursor: pointer;      
   } 
 

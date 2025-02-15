@@ -19,8 +19,9 @@ function App() {
 
   return (   
     <> 
-       {isChatPage ? <HeaderMenu /> : <Header />}
-      <div className="container">      
+      {isHomePage ? <Header /> : <HeaderMenu />}            
+     
+      <div className={`container ${isChatPage ? "" : "containerPadding"}`}>       
         <AppRouter />
       </div>
       <Footer />
@@ -28,4 +29,4 @@ function App() {
   );
 }
 
-export default App;
+export default App; 
