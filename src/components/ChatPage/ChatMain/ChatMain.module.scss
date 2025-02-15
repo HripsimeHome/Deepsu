@@ -55,7 +55,7 @@
 
   &__chatTextarea {
     width: 100%;   
-     @include setFont(18px, 400); 
+    @include setFont(18px, 400); 
     background-color: $color-darkBlue;  
     resize: none;  
     outline: 0;
@@ -67,8 +67,29 @@
     }
   }
 
-  &__attachIcon {
-   
-    @include svg(28px, $color-white);   
+  &__attachIcon {   
+   // @include svg(28px, $color-white);      
+    width: 30px;
+    height: 27px;   
+     
   } 
+
+  &__send{
+    @include flexCol();
+    width: 42px;
+    height: 40px;
+    background-color: $color-green;
+    border-radius: 50px;   
+    &_icon {   
+      @include svg(20px, $color-white);   
+       
+    } 
+  }
+
+ 
+
+
+  &__actionContainer {
+    @include flexCol(space-between, center);
+  }
 }
