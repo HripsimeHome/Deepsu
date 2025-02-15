@@ -21,7 +21,7 @@
   &__container {
     @include flexCol(space-between, center);
     width: 100%;
-    padding: 50px 0;
+    padding: 50px 30px;
 
     @include mdScreenMedia {
       @include flexCol();
@@ -78,6 +78,7 @@
 
       a {
         @include setFont(18px, 300);
+        
         &:hover {
           color: #19c690;
           cursor: pointer;

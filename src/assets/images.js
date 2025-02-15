@@ -8,6 +8,8 @@ import logoWhiteImage from "./images/logos/logoWhite.png"
 import aIInsightsImage from "./images/home/aIInsights.png"
 import aIInsightsWebpImage from "./images/home/aIInsights.webp"
 
+import logoGreenImage from "./images/logos/logoGreen.png"
+
 // Home Advantages
 import headerBgImage from "./images/header/headerBg.png"
 import headerBgWebpImage from "./images/header/headerBg.webp"
@@ -31,11 +33,13 @@ import drivingEfficiencyWebpImage from "./images/home/drivingEfficiency.webp"
 
 import enhancingTransparencyImage from "./images/home/enhancingTransparency.png" 
 import enhancingTransparencyWebpImage from "./images/home/enhancingTransparency.webp"
+
  
-// App
+// Application
 
 import getUsImage from "./images/chat/getUs.png"
- 
+import suiBlueImage from "./images/chat/suiBlue.svg"
+
 export {
 
   // Header
@@ -44,6 +48,7 @@ export {
   suiImage,
   headerBgImage,
   headerBgWebpImage,
+  logoGreenImage,
   
   // Home Impact 
 
@@ -72,6 +77,7 @@ export {
   //Footer
   logoWhiteImage,
 
-  //App
+  //Application
   getUsImage,
+  suiBlueImage,
 };

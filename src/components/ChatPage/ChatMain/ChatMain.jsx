@@ -1,7 +1,13 @@
 import styles from "./ChatMain.module.scss"
 import Svg from "../../layout/Svg/Svg";
 
+/*
 import {
+  suiBlueImage
+} from "../../../assets/images"
+*/
+import {  
+  suiBlueIcon,
   attachmentIcon,
   arrowTopIcon
 } from "../../../assets/svg";
@@ -25,6 +31,23 @@ function ChatMain() {
           <span>&nbsp;exploring</span>&nbsp;Sui?
         </h1>
 
+        <div className={styles.chatMain__suiBock}> 
+          <span className={styles.chatMain__suiBockText}>build on
+          </span>      
+          <a 
+          href="https://sui.io/"
+          target="_blank"
+          >
+            <Svg 
+              id={suiBlueIcon} 
+              className={styles.chatMain__suiBock_img}        
+            />
+         </a>
+        </div>
+       
+
+
+<div>
         <div className={styles.chatMain__panelContainer}>
           {panelTexts.map((text, index) => (
           <div className={styles.chatMain__panel} key={index}>
@@ -33,6 +56,8 @@ function ChatMain() {
           )
         )}
         </div>
+
+</div>
 
         <div className={styles.chatMain__panelTextarea}>
           <textarea

@@ -77,23 +77,39 @@ a {
 .container {
   max-width: 1170px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto;  
+}
+
+.containerPadding {
   padding-right: 30px;
   padding-left: 30px;
- 
-  .titleh2 {
-    @include setFont(55px, 300);
+}
 
-    @include mdScreenMedia {
-      @include setFont(40px, 300);
-    }
+.titleh2 {
+  @include setFont(55px, 300);
+
+  @include mdScreenMedia {
+    @include setFont(40px, 300);
   }
+}
 
-  .textlightGreen {
-    color: $color-lightGreen;
-  }
+.textlightGreen {
+  color: $color-lightGreen;
+}
 
-  .texGreen {
-    color: $color-green;
+.texGreen {
+  color: $color-green;
+} 
+
+.btnPrimary {
+  color: $color-white;
+  background-color: $color-green;
+  border-radius: 15px;
+  box-shadow: 0px 6px 20px 0px $color-green;
+  white-space: nowrap;
+
+  &:hover {
+    background-color: #128a66;
+    cursor: pointer;
   }
 }

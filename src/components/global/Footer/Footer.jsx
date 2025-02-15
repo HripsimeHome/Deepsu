@@ -1,47 +1,16 @@
 import styles from "./Footer.module.scss";
 import { Link, NavLink } from "react-router-dom";
+import { footerMenuItems } from "../../../constants/menuItems"
 import { logoWhiteImage } from "../../../assets/images";
 
 import { 
   homePagePath 
 } from "../../../router/path";
 
-import {
-  twitterUrl,
-  telegramUrl,
+import {  
   emailAddress,
-  documentation,
+  
 } from "../../../constants/contacts";
-
-const menuItems = [
-  {
-    title: "Resources",
-    items: [
-      {
-        text: "Documentation",
-        link: documentation,
-      },
-      { text: "Terms of use", link: "#" },
-      { text: "Disclaimer", link: "#" },
-    ],
-  },
-  {
-    title: "Social Media",
-    items: [
-      { text: "Twitter", link: twitterUrl },
-      { text: "Telegram", link: telegramUrl },
-    ],
-  },
-  {
-    title: "Contact",
-    items: [
-      {
-        text:  emailAddress,
-        link: `mailto:${emailAddress}`,
-      },
-    ],
-  },
-];
 
 const Footer = () => {
   return (
@@ -64,16 +33,18 @@ const Footer = () => {
           </div>
 
           <div className={styles.footer__menuContainer}>
-            {menuItems.map((menu, index) => (
+            {footerMenuItems.map((menu, index) => (
               <div key={index}>
                 <h3 className={styles.footer__menuTitle}>{menu.title}</h3>
                 <ul className={styles.footer__menuList}>
                   {menu.items.map((item, i) => (
                     <li key={i}>
                       <a
-                        href={item.link}
-                        target="_blank"
-                        rel="noreferrer"                     
+                        href={item.link}   
+                        target={item.target ? item.target 
+                          : "_self"}                    
+                          rel={item.target === "_blank" ? "noreferrer"
+                          : undefined}                     
                       >
                         {item.text}
                       </a>
