@@ -2,18 +2,31 @@
 @import "../../../styles/vars";
 @import "../../../styles/global";
 
-.headerMenu {    
- background: linear-gradient(0deg, #030303, #030303),
-  linear-gradient(147.36deg, rgba(25, 198, 144, 0) 19.42%, rgba(25, 198, 144, 0.37) 80.58%);  
+.headerMenu {   
+  position: sticky;
+  top: 0;
+  left: 0;  
+  z-index: 1;  
+    background: linear-gradient(     
+    rgba(25, 198, 144, 0) 19.42%,
+    rgba(25, 198, 144, 0.37) 80.58%
+  );
+  background-color: $color-lightBlack;
+  transition: $transition; 
 
    &__container {
     @include flexCol(space-between);
-    padding: 60px 30px;
+    padding: 20px 30px;
   }
 
   &__logoImg {
     max-width: 54%;
     //margin-right: 50px;
+
+    
+    @include mdScreenMedia {
+      max-width: 100%;
+    }
   }
 
   &__menuList {  
@@ -24,7 +37,7 @@
       margin-right: 40px;
 
       a {
-        @include setFont(18px, 400);
+        @include setFont(16px, 400);
 
         &:hover {
           color: #19c690;
@@ -43,7 +56,7 @@
   &__rightblock {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap:20px;
      
     a {
       color: $color-white;
@@ -55,13 +68,17 @@
   }
 
   &__socIcon {
-    @include svg(30px, $color-white);
+    @include svg(25px, $color-white);
   }
 
   &__btnConnect {      
     @include setFont(18px, 560);
     @extend .btnPrimary;
     margin-left: 30px;
-    padding: 10px 25px;  
+    padding: 10px 25px;   
+
+    @include mdScreenMedia {
+      display: none;
+    }
   }
 }

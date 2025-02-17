@@ -9,15 +9,15 @@
   padding: 0;
 }
 
-#root { 
+#root {
   display: flex;
-  flex-direction: column; 
-  min-height: 100vh;
+  flex-direction: column;
+  // min-height: 100vh;
 }
 
 body {
   color: $color-white;
-  background-color: #010c10;
+  background-color: $color-lightBlack;
   font-family: $font-family;
   @include bgWebp(
     "../assets/images/bodyBg.png",
@@ -25,12 +25,11 @@ body {
   );
   background-repeat: no-repeat;
   background-position: top center;
-  max-width: 2000px;
   margin: 0 auto;
 
   @include mdScreenMedia {
     background-image: none;
-   }
+  }
 
   // Body Scrollbar
 
@@ -77,7 +76,7 @@ a {
 .container {
   max-width: 1170px;
   width: 100%;
-  margin: 0 auto;  
+  margin: 0 auto;
 }
 
 .containerPadding {
@@ -99,7 +98,7 @@ a {
 
 .texGreen {
   color: $color-green;
-} 
+}
 
 .btnPrimary {
   color: $color-white;
@@ -109,7 +108,10 @@ a {
   white-space: nowrap;
 
   &:hover {
-    background-color: #128a66;
+    background-color: $color-darkGreen;
     cursor: pointer;
+  }
+  &:active {
+    transform: translateY(1px);
   }
 }

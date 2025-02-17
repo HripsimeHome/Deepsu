@@ -4,7 +4,7 @@ import ChatMain from "../ChatMain/ChatMain"
 
 function ChatWrapper() {
   return (                           
-    <div className={styles.chatWrapper}>
+    <div className={`${styles.chatWrapper} container`}>
       <ChatSidebar />
       <ChatMain />
     </div>    

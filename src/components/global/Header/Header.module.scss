@@ -12,6 +12,7 @@
   background-position: top right;
   background-size: contain;
   margin-bottom: 50px;
+  
  
   /*
   padding-top: 50px;
@@ -51,6 +52,7 @@
   &__container {
     @include flexCol(space-between);
     gap: 80px;
+    
 
     @include mdScreenMedia {
       flex-wrap: wrap;
@@ -158,7 +160,7 @@
     height: 65px;   
     @include setFont(28px, 500);
     @extend .btnPrimary;
-    padding: 0 5px;
+    padding: 0 5px;   
 
     @include mdScreenMedia {
       max-width: 163px;

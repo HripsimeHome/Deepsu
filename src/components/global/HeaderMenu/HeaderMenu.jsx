@@ -4,7 +4,6 @@ import { headerMenuItems } from "../../../constants/menuItems"
 import Svg from "../../layout/Svg/Svg";
 import { twitterUrl, telegramUrl } from "../../../constants/contacts";
 
-
 import {
   logoGreenImage
 } from "../../../assets/images";
@@ -15,13 +14,15 @@ import {
 } from "../../../assets/svg";
 
 import {
-   homePagePath 
+  chatPagePath,
+  homePagePath 
 } from "../../../router/path";
  
 
-const HeaderMenu = () => {
+const HeaderMenu = () => {  
   return (    
-    <div className={styles.headerMenu}>    
+        
+    <div className={styles.headerMenu}>
       <div className={`${styles.headerMenu__container} container`}>
         <div>
           <div className={styles.headerMenu__leftBlock}>
@@ -71,12 +72,13 @@ const HeaderMenu = () => {
               />
             </a>    
 
-            <button className={styles.headerMenu__btnConnect}>
+            <Link
+             to={chatPagePath}
+             className={styles.headerMenu__btnConnect}>
             Connect Wallet
-            </button>
+            </Link>
           </div>        
         </div> {/* Right block */ }
-
       </div>    
     </div>    
   );

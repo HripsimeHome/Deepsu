@@ -39,6 +39,7 @@ import enhancingTransparencyWebpImage from "./images/home/enhancingTransparency.
 
 import getUsImage from "./images/chat/getUs.png"
 import suiBlueImage from "./images/chat/suiBlue.svg"
+import widgetImage from "./images/widget.png"
 
 export {
 
@@ -80,4 +81,5 @@ export {
   //Application
   getUsImage,
   suiBlueImage,
+  widgetImage
 };
