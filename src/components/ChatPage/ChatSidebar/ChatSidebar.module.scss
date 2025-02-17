@@ -4,13 +4,14 @@
 .chatSidebar {
   max-width: 400px;
   width: 100%;
+  @include flexCol(center, flex-start);  
   @include bgWebp(
     "../../../assets/images/chat/SidebarBg.png",
     "../../../assets/images/chat/SidebarBg.webp"
   );
   background-repeat: no-repeat;
   background-position: top left;
-  padding: 20px;
+  padding: 30px;
 
   @include mdScreenMedia {
     max-width: 1170px;
@@ -18,13 +19,7 @@
   }
 
   &__deskWallet {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: $color-darkBlue;
-    border-radius: 20px;
-    padding: 20px 15px;
+    width: inherit; 
   }
 
   &__btnWallet {

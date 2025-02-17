@@ -35,8 +35,9 @@ const Header = () => {
 
   return (
     <>
-      <header className={styles.header} ref={ref}>       
-        <div className="container">   
+      <header className={styles.header} ref={ref}>   
+         {/*} <div className={`${styles.header__wrapper} container`}>  */}    
+        <div className="container">     
           <TransitionProvider
             inProp={isInView}
             style={TransitionStyleTypes.left}              
