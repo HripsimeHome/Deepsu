@@ -41,6 +41,7 @@ import aiImage from "./images/AI.jpg"
 
 import getUsImage from "./images/chat/getUs.png"
 import suiBlueImage from "./images/chat/suiBlue.svg"
+//import suiBlueImage from "./images/chat/suiBlue.png"
 import widgetImage from "./images/widget.png"
 
 export {
