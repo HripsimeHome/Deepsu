@@ -2,7 +2,7 @@
 @import "../../../styles/vars";
 
 .chatSidebar {
-  max-width: 400px;
+  max-width: 305px;
   width: 100%;
   @include flexCol(center, flex-start);  
   @include bgWebp(
@@ -11,7 +11,7 @@
   );
   background-repeat: no-repeat;
   background-position: top left;
-  padding: 30px;
+  padding: 15px;
 
   @include mdScreenMedia {
     max-width: 1170px;

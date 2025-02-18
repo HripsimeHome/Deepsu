@@ -2,7 +2,7 @@
 @import "../../../styles/vars";
 
 .chatMain {  
-  max-width:  710px; 
+  max-width:  805px; 
   width: 100%;
   display: flex;
   //min-height: 70vh;
@@ -20,8 +20,9 @@
   //  max-width:  617px; 
 
    // min-height: 70vh;
-    margin: 0 20px;
-    padding: 20px 50px;
+   // margin: 0 20px;
+    //padding: 20px;
+    padding-bottom: 20px;
   }
 
   &__title {
@@ -73,11 +74,14 @@
 
   &__panelTextarea {    
     width: 100%;  
+    max-width: 750px;
     border-radius: 20px;
     background-color: $color-darkBlue;   
     min-height: 10px;;
     margin-top: auto;
     padding: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
 
