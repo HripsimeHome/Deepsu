@@ -1,5 +1,5 @@
 import styles from "./HeaderMenu.module.scss";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { headerMenuItems } from "../../../constants/menuItems"
 import Svg from "../../layout/Svg/Svg";
 import { twitterUrl, telegramUrl } from "../../../constants/contacts";
@@ -10,7 +10,9 @@ import {
 
 import { 
   twitterIcon, 
-  telegramIcon 
+  telegramIcon, 
+  burgerIcon, 
+  crossIcon
 } from "../../../assets/svg";
 
 import {
@@ -33,19 +35,21 @@ const HeaderMenu = () => {
                 className={styles.headerMenu__logoImg}
               />
             </Link>
-           
-            {headerMenuItems.map(({ text, link }, index) => (
-            <ul className={styles.headerMenu__menuList}>  
-              <li>
-                <Link 
-                  to={link}
-                  key={index}
+            <nav className={styles.headerMenu__menu}>  
+              {headerMenuItems.map(({ text, link }, index) => (  
+              <NavLink 
+                to={link}
+                key={index}
+                className={({ isActive }) =>
+                 isActive
+                      ? `${styles.headerMenu__menuLink} ${styles.headerMenu__menuLink_active}`
+                      : styles.headerMenu__menuLink
+                  }
                 >
                 {text}
-                </Link>
-                </li>                          
-              </ul>
-            ))}
+              </NavLink> 
+             ))}
+            </nav>
           </div>
         </div>
          
@@ -71,6 +75,19 @@ const HeaderMenu = () => {
                 className={styles.headerMenu__socIcon} 
               />
             </a>    
+
+
+
+          <button>
+            <Svg 
+              id={burgerIcon} 
+              className={styles.headerMenu__burgerIcon}
+              />
+          </button>
+
+
+
+
 
             <Link
              to={chatPagePath}

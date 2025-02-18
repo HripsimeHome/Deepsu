@@ -29,21 +29,27 @@
     }
   }
 
-  &__menuList {  
+  &__menu {  
     
-    li {
-      list-style-type: none;
-      margin-top: 10px;
-      margin-right: 40px;
 
-      a {
-        @include setFont(16px, 400);
+  }
 
-        &:hover {
-          color: #19c690;
-          cursor: pointer;
-        }
-      }
+  &__menuLink {    
+    margin-top: 10px;
+    margin-right: 40px;
+    @include setFont(16px, 400); 
+
+    &:hover {
+      color: $color-green;
+      cursor: pointer;
+    }
+    
+    &_active {
+      color: $color-green; 
+
+      &:hover {       
+        cursor: default;
+      }  
     }
   }
  
@@ -80,5 +86,13 @@
     @include mdScreenMedia {
       display: none;
     }
+  }
+
+
+
+
+
+  &__burgerIcon {
+    @include svg(25px, inherit, 18px);
   }
 }
