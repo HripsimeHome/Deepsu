@@ -2,7 +2,7 @@
 @import "../../../styles/vars";
 
 .chatSidebar {
-  max-width: 305px;
+  max-width: 300px;
   width: 100%;
   @include flexCol(center, flex-start);  
   @include bgWebp(
