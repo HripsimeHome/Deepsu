@@ -2,9 +2,9 @@
 @import "../../../styles/vars";
 
 .chatMain {  
-  max-width:  805px; 
+  max-width:  810px; 
   width: 100%;
-  display: flex;
+  //display: flex;
   //min-height: 70vh;
   @include bgWebp (
     "../../../assets/images/chat/ChatBg.png",
@@ -21,8 +21,8 @@
 
    // min-height: 70vh;
    // margin: 0 20px;
-    //padding: 20px;
-    padding-bottom: 20px;
+    padding: 20px 15px;
+   
   }
 
   &__title {
@@ -59,12 +59,16 @@
 &__panelContainer {
   @include flexCol();
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 4px;  
+
+  @include smScreenMedia {
+    flex-direction: column; 
+  }
 }
 
 &__panel {
   max-width: 352px;
-  @include setFont(16px, 400,  $color-black);
+  @include setFont(14px, 400,  $color-black);
   background-color: $color-white;
   border-radius: 60px;
  // margin-bottom: 10px;
@@ -73,15 +77,14 @@
 }
 
   &__panelTextarea {    
-    width: 100%;  
-    max-width: 750px;
+    width: 100%;     
     border-radius: 20px;
     background-color: $color-darkBlue;   
     min-height: 10px;;
     margin-top: auto;
     padding: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+   // margin-left: 20px;
+   // margin-right: 20px;
   }
 
 
