@@ -1,4 +1,5 @@
 import styles from "./HeaderMenu.module.scss";
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { headerMenuItems } from "../../../constants/menuItems"
 import Svg from "../../layout/Svg/Svg";
@@ -22,6 +23,14 @@ import {
  
 
 const HeaderMenu = () => {  
+ const [isMenuOpen, setIsMenuOpen] = useState(false);
+ 
+ const toggleMenu = () => {
+  setIsMenuOpen(!isMenuOpen);
+
+ };
+
+
   return (    
         
     <div className={styles.headerMenu}>
@@ -35,7 +44,9 @@ const HeaderMenu = () => {
                 className={styles.headerMenu__logoImg}
               />
             </Link>
-            <nav className={styles.headerMenu__menu}>  
+             
+             <nav className={`${styles.headerMenu__menu} ${isMenuOpen ? styles.headerMenu__menu_open : ""}`}>
+         
               {headerMenuItems.map(({ text, link }, index) => (  
               <NavLink 
                 to={link}
@@ -45,6 +56,7 @@ const HeaderMenu = () => {
                       ? `${styles.headerMenu__menuLink} ${styles.headerMenu__menuLink_active}`
                       : styles.headerMenu__menuLink
                   }
+                  onClick={() => setIsMenuOpen(false)}
                 >
                 {text}
               </NavLink> 
@@ -52,6 +64,9 @@ const HeaderMenu = () => {
             </nav>
           </div>
         </div>
+         
+
+
          
         <div> 
           <div className={styles.headerMenu__rightblock}>
@@ -78,9 +93,11 @@ const HeaderMenu = () => {
 
 
 
-          <button>
+          <button 
+          onClick={toggleMenu}
+          >
             <Svg 
-              id={burgerIcon} 
+              id={isMenuOpen ? crossIcon : burgerIcon}               
               className={styles.headerMenu__burgerIcon}
               />
           </button>
@@ -96,7 +113,10 @@ const HeaderMenu = () => {
             </Link>
           </div>        
         </div> {/* Right block */ }
-      </div>    
+      </div>  
+      {isMenuOpen && <div className={styles.headerMenu__overlay} onClick={toggleMenu}></div>}
+
+         
     </div>    
   );
 };
