@@ -4,7 +4,7 @@
 .chatMain {  
   max-width:  810px; 
   width: 100%;
-  //display: flex;
+  display: flex;
   //min-height: 70vh;
   @include bgWebp (
     "../../../assets/images/chat/ChatBg.png",
@@ -18,11 +18,9 @@
     @include flexCol(flex-start, center);
     flex-direction: column;   
   //  max-width:  617px; 
-
    // min-height: 70vh;
    // margin: 0 20px;
-    padding: 20px 15px;
-   
+    padding: 20px 15px;   
   }
 
   &__title {
@@ -48,6 +46,7 @@
   &_img {
     width: 60px;
     height: 30px;  
+    
   }
 }
 
@@ -112,9 +111,12 @@
     }
   }
 
-  &__attachIcon {   
-    @include svg(25px, $color-white);       
-   
+  &__actionContainer {
+    @include flexCol(space-between, center);
+  }
+
+  &__attachmentIcon {   
+    @include svg(23px, $color-white);
     cursor: pointer;      
   } 
 
@@ -124,22 +126,18 @@
     height: 40px;
     background-color: $color-green;
     border-radius: 50px;  
-    cursor: pointer;   
-    
+    cursor: pointer;  
+        
     &:active {
       transform: translateY(1px);
     }
 
-    &_icon {   
-      @include svg(20px, $color-white);  
-      fill: #fff;
+    &_arrowTopIcon {   
+      @include svg(23px, $color-white);      
     } 
   }
 
- 
-
-
-  &__actionContainer {
-    @include flexCol(space-between, center);
-  }
+  &__arrowTopIcon {   
+    @include svg(23px, $color-white);      
+  }  
 }
