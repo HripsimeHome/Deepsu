@@ -108,7 +108,8 @@ a {
   white-space: nowrap;
 
   &:hover {
-    background-color: $color-white;
+    color: $color-white;
+    background-color: $color-darkGreen;
     cursor: pointer;
   }
   &:active {
