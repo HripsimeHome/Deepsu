@@ -8,6 +8,5 @@ export const twitterIcon = "twitter";
 
 export const attachmentIcon = "attachment"; 
 export const arrowTopIcon = "arrowTop"
-export const suiBlueIcon = "suiBlue"
 export const burgerIcon = "burger"
 export const crossIcon = "cross"

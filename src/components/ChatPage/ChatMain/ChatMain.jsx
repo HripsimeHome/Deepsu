@@ -1,11 +1,11 @@
 import styles from "./ChatMain.module.scss"
 import Svg from "../../layout/Svg/Svg";
 
-/*
+
 import {
   suiBlueImage
 } from "../../../assets/images"
-*/
+
 import {  
   suiBlueIcon,
   attachmentIcon,
@@ -38,8 +38,8 @@ function ChatMain() {
           href="https://sui.io/"
           target="_blank"
           >
-            <Svg 
-              id={suiBlueIcon} 
+            <img 
+              src={suiBlueImage} 
               className={styles.chatMain__suiBock_img}        
             />
          </a>
@@ -74,14 +74,14 @@ function ChatMain() {
               />
               <Svg 
                 id={attachmentIcon}
-                className={styles.chatMain__attachIcon}        
+                className={styles.chatMain__attachmentIcon}        
               />
             </label>           
 
             <button className={styles.chatMain__btnSend}>
               <Svg 
                 id={arrowTopIcon}
-                className={styles.chatMain__btnSend_icon}        
+                className={styles.chatMain__btnSend_arrowTopIcon}        
                 />     
             </button>
           </div>
