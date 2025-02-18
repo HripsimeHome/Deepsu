@@ -9,15 +9,6 @@
     rgba(25, 198, 144, 0) 19.42%,
     rgba(25, 198, 144, 0.37) 80.58%    
   ); 
- 
-
-  &__wrapper {
-   // margin-top: 100px;   
-
-    @include mdScreenMedia {
-      margin-top: 20px;
-     }
-  } 
 
   &__container {
     @include flexCol(space-between, center);
@@ -69,22 +60,26 @@
     @include setFont(22px, 600);
   }
 
-  &__menuList {
+  &__menu {
     display: flex;
     flex-direction: column;
+  }
 
-    li {
-      list-style-type: none;
-      margin-top: 10px;
+  &__menuLink {      
+    @include setFont(16px, 300);
+    margin-top: 10px;
 
-      a {
-        @include setFont(16px, 300);
-        
-        &:hover {
-          color: #19c690;
-          cursor: pointer;
-        }
-      }
+    &:hover {
+      color: $color-green;
+      cursor: pointer;
+    }
+    
+    &_active {
+      color: $color-green; 
+
+      &:hover {       
+        cursor: default;
+      }  
     }
   }
 }

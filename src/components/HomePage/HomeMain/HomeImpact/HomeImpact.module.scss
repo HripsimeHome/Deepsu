@@ -91,6 +91,7 @@
     text-transform: uppercase;
     text-align: center;
     line-height: 85px;
+    margin-bottom: 100px;
 
     @include lgScreenMedia {
       max-width: 600px;
@@ -102,6 +103,7 @@
       max-width: 400px;
       @include setFont(30px, 500);
       line-height: 45px;
+      margin-bottom:200px;
     }
   }
 }
