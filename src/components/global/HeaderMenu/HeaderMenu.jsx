@@ -45,8 +45,7 @@ const HeaderMenu = () => {
               />
             </Link>
              
-             <nav className={`${styles.headerMenu__menu} ${isMenuOpen ? styles.headerMenu__menu_open : ""}`}>
-         
+             <nav className={`${styles.headerMenu__menu} ${isMenuOpen ? styles.headerMenu__menu_open : ""}`}>         
               {headerMenuItems.map(({ text, link }, index) => (  
               <NavLink 
                 to={link}

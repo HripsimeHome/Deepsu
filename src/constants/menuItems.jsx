@@ -43,7 +43,8 @@ export const footerMenuItems = [
         link: termsPagePath
       },
       { text: "Disclaimer", 
-        link: "#" 
+        link: "https://usercentrics.com/guides/website-disclaimers/ai-disclaimer/", 
+        target: "_blank"
       },
     ],
   },
