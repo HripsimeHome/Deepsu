@@ -8,8 +8,7 @@ import {
 } from "../../../router/path";
 
 import {  
-  emailAddress,
-  
+  emailAddress  
 } from "../../../constants/contacts";
 
 const Footer = () => {
@@ -42,15 +41,16 @@ const Footer = () => {
                   <NavLink 
                     key={i}                      
                     to={item.link}   
-                    target={item.target ? item.target 
+                    target={item.target 
+                      ? item.target 
                       : "_self"}                    
-                      rel={item.target === "_blank" ? "noreferrer"
+                    rel={item.target === "_blank" ? "noreferrer"
                       : undefined}   
-                      className={({ isActive }) =>
-                        isActive
-                             ? `${styles.footer__menuLink} ${styles.footer__menuLink_active}`
-                             : styles.footer__menuLink
-                         }                  
+                    className={({ isActive }) =>
+                      isActive
+                      ? `${styles.footer__menuLink} ${styles.footer__menuLink_active}`
+                      : styles.footer__menuLink
+                      }                  
                     >
                     {item.text}                 
                   </NavLink>

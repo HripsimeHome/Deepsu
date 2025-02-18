@@ -1,9 +1,17 @@
 import styles from "./AboutMain.module.scss";
 
+import {
+  aiImage
+} from "../../../assets/images"
+
 export default function AboutMain() {
   return (
     <section className={styles.aboutMain}>
       <h1>About us</h1>
+      <img 
+        src={aiImage}
+        widt="300" 
+        height="300" />
 
       <h2>Components of an About Us page
       </h2>

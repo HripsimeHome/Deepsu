@@ -34,6 +34,8 @@ import drivingEfficiencyWebpImage from "./images/home/drivingEfficiency.webp"
 import enhancingTransparencyImage from "./images/home/enhancingTransparency.png" 
 import enhancingTransparencyWebpImage from "./images/home/enhancingTransparency.webp"
 
+import aiImage from "./images/AI.jpg"
+ 
  
 // Application
 
@@ -49,8 +51,19 @@ export {
   suiImage,
   headerBgImage,
   headerBgWebpImage,
-  logoGreenImage,
+  logoGreenImage,  
   
+// Home Advantages
+
+  aIInsightsImage,
+  aIInsightsWebpImage,
+
+  instantActionImage,
+  instantActionWebpImage,
+
+  portfolioOptimizationImage,
+  portfolioOptimizationWebpImage,
+
   // Home Impact 
 
   empoweringEveryoneImage, 
@@ -65,15 +78,7 @@ export {
   enhancingTransparencyImage,
   enhancingTransparencyWebpImage,
 
-// Home Advantages
-  aIInsightsImage,
-  aIInsightsWebpImage,
-
-  instantActionImage,
-  instantActionWebpImage,
-
-  portfolioOptimizationImage,
-  portfolioOptimizationWebpImage,
+  aiImage,
 
   //Footer
   logoWhiteImage,
