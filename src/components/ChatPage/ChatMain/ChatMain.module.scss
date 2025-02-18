@@ -113,10 +113,8 @@
   }
 
   &__attachIcon {   
-    @include svg(25px, $color-white);  
-    fill: #fff;    
-   // width: 30px;
-   // height: 27px;  
+    @include svg(25px, $color-white);       
+   
     cursor: pointer;      
   } 
 

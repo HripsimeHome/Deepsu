@@ -22,19 +22,17 @@
   &__logoImg {
     max-width: 54%;
     //margin-right: 50px;
-
     
     @include mdScreenMedia {
       max-width: 100%;
     }
   }
+
   &__leftBlock {
     display: flex;
     align-items: center;
     gap: 10px;
   }
-
-
 
  // Menu
 
@@ -112,13 +110,6 @@
     }
   }
 
-
-
- 
-
-
- 
-
   &__rightblock {
     display: flex;
     align-items: center;
@@ -141,19 +132,10 @@
     @include setFont(18px, 560);
     @extend .btnPrimary;
     margin-left: 30px;
-    padding: 10px 25px;  
-     
+    padding: 10px 25px;      
 
     @include mdScreenMedia {
       display: none;
     }
   }
-
-
-
-
-
-
-
-
 }
