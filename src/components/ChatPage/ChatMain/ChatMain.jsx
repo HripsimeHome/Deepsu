@@ -1,13 +1,11 @@
 import styles from "./ChatMain.module.scss"
 import Svg from "../../layout/Svg/Svg";
 
-
 import {
   suiBlueImage
 } from "../../../assets/images"
 
-import {  
-  suiBlueIcon,
+import {    
   attachmentIcon,
   arrowTopIcon
 } from "../../../assets/svg";
@@ -47,17 +45,16 @@ function ChatMain() {
        
 
 
-<div>
+        <div>
         <div className={styles.chatMain__panelContainer}>
-          {panelTexts.map((text, index) => (
+          {panelTexts.map(( text, index ) => (
           <input 
             type="text"
             placeholder={text}  
             key={index} 
             className={styles.chatMain__panel} 
-
             />         
-                  )
+          )
         )}
         </div>
 
