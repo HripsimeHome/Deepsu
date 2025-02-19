@@ -2,7 +2,7 @@ import styles from "./TermsMain.module.scss";
 
 const TermsMain = () => {
   return (    
-    <section className={styles.termsMain}>
+    <section className={`${styles.termsMain} containerInside`}>
       <h1> Terms of use</h1>
 
       <h2>Why You Need a Terms of Use for Your Website or App</h2>

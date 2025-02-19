@@ -21,7 +21,8 @@ function App() {
     <> 
       {isHomePage ? <Header /> : <HeaderMenu />}            
      
-      <div className={`container ${isChatPage ? "" : "containerPadding"}`}>       
+      <div className={`container ${isHomePage ?  "containerPadding" : ""}`}>    
+           
         <AppRouter />
       </div>
       <Footer />

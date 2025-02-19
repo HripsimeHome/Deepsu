@@ -11,8 +11,7 @@
 
 #root {
   display: flex;
-  flex-direction: column;
-  // min-height: 100vh;
+  flex-direction: column;  
 }
 
 body {
@@ -84,6 +83,12 @@ a {
   padding-left: 30px;
 }
 
+.containerInside {
+  color: $color-black;
+  background-color: $color-white;   
+  padding: 30px;  
+}
+
 .titleh2 {
   @include setFont(55px, 300);
 
@@ -113,6 +118,7 @@ a {
     transition: $transition;
     cursor: pointer;
   }
+  
   &:active {
     transform: translateY(1px);
   }

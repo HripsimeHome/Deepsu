@@ -5,8 +5,8 @@ import {
 } from "../../../assets/images"
 
 export default function AboutMain() {
-  return (
-    <section className={styles.aboutMain}>
+  return ( 
+    <section className={`${styles.aboutMain} containerInside`}>
       <h1>About us</h1>
       <img 
         src={aiImage}
