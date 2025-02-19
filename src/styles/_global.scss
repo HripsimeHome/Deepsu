@@ -110,6 +110,7 @@ a {
   &:hover {
     color: $color-white;
     background-color: $color-darkGreen;
+    transition: $transition;
     cursor: pointer;
   }
   &:active {
