@@ -52,6 +52,7 @@
     &:hover {
       color: $color-green;
       cursor: pointer;
+      transition: $transition;
     }
     
     &_active {
@@ -120,6 +121,7 @@
 
       &:hover {
         color: $color-green;
+        transition: $transition
       }
     }
   }

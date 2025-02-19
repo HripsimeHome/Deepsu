@@ -10,8 +10,8 @@ export default function AboutMain() {
       <h1>About us</h1>
       <img 
         src={aiImage}
-        widt="200" 
-        height="200" />
+        widt="100" 
+        height="100" />
 
       <h2>Components of an About Us page
       </h2>

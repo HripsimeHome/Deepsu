@@ -50,10 +50,14 @@ function ChatMain() {
 <div>
         <div className={styles.chatMain__panelContainer}>
           {panelTexts.map((text, index) => (
-          <div className={styles.chatMain__panel} key={index}>
-          {text}
-          </div>
-          )
+          <input 
+            type="text"
+            placeholder={text}  
+            key={index} 
+            className={styles.chatMain__panel} 
+
+            />         
+                  )
         )}
         </div>
 
