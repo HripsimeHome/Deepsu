@@ -2,16 +2,17 @@
 @import "../../../styles/vars";
 
 .chatSidebar {
-  max-width: 300px;
+  max-width: 330px;
   width: 100%;
   @include flexCol(center, flex-start);  
   @include bgWebp(
     "../../../assets/images/chat/SidebarBg.png",
     "../../../assets/images/chat/SidebarBg.webp"
   );
-  background-repeat: no-repeat;
+  background: #17AA7D;
   background-position: top left;
-  padding: 15px;
+  background-repeat: no-repeat; 
+  padding: 50px 30px;  
 
   @include mdScreenMedia {
     max-width: 1170px;

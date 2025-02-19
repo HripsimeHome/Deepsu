@@ -3,6 +3,8 @@
 @import "../../../styles/global";
 
 .headerMenu {   
+  //@extend .containerPadding;
+
   position: sticky;
   top: 0;
   left: 0;  
@@ -16,7 +18,7 @@
 
    &__container {
     @include flexCol(space-between);
-    padding: 20px 30px;
+    padding: 20px 30px;   
   }
 
   &__logoImg {

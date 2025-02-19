@@ -12,14 +12,6 @@
   background-position: top right;
   background-size: contain;
   margin-bottom: 50px;
-  
- 
-  /*
-  padding-top: 50px;
-  padding-bottom: 108px;
-  padding-right: 30px;
-  padding-left: 30px;
-*/
   padding: 50px 30px 108px 30px;
 
   @include mdScreenMedia {    
@@ -41,6 +33,10 @@
     padding-bottom: 19%;
   }
 
+  &__container {
+    
+  }
+
   &__logoImg {
     max-width: 100%;
 
@@ -51,8 +47,7 @@
 
   &__container {
     @include flexCol(space-between);
-    gap: 80px;
-    
+    gap: 80px;    
 
     @include mdScreenMedia {
       flex-wrap: wrap;
