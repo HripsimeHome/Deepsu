@@ -2,7 +2,7 @@
 @import "../../../styles/vars";
 
 .chatMain {  
-  max-width:  810px; 
+  max-width:  840px; 
   width: 100%;
   display: flex;
   //min-height: 70vh;
@@ -12,6 +12,7 @@
   );
   background-repeat: no-repeat;
   background-position: top center;
+  background-color: $color-white;
  // padding: 50px;
 
   &__container {

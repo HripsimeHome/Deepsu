@@ -19,11 +19,10 @@ function App() {
 
   return (   
     <> 
-      {isHomePage ? <Header /> : <HeaderMenu />}            
-     
-      <div className={`container ${isHomePage ?  "containerPadding" : ""}`}>    
-           
-        <AppRouter />
+      { isHomePage ? <Header /> : <HeaderMenu /> }   
+
+      <div className="container">   
+       <AppRouter />
       </div>
       <Footer />
     </>

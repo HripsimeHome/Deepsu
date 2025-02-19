@@ -21,18 +21,14 @@ import {
   homePagePath 
 } from "../../../router/path";
  
-
 const HeaderMenu = () => {  
- const [isMenuOpen, setIsMenuOpen] = useState(false);
+const [isMenuOpen, setIsMenuOpen] = useState(false);
  
  const toggleMenu = () => {
   setIsMenuOpen(!isMenuOpen);
-
  };
 
-
-  return (    
-        
+  return (            
     <div className={styles.headerMenu}>
       <div className={`${styles.headerMenu__container} container`}>
         <div>

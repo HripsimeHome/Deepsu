@@ -1,12 +1,15 @@
 @import "../../../../styles/mixins";
 @import "../../../../styles/vars";
+@import "../../../../styles/global";
 
 .homeAdvantages {
+  @extend .containerPadding;
+  
   &__cardContainer {
     display: flex;
     width: 100%;
     gap: 70px;
-    margin: 30px 0 100px;
+    margin: 30px 0 100px;   
 
     @include smScreenMedia {
       flex-wrap: wrap;

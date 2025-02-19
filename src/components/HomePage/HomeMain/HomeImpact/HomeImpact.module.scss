@@ -1,7 +1,10 @@
 @import "../../../../styles/mixins";
 @import "../../../../styles/vars";
+@import "../../../../styles/global";
 
 .homeImpact {
+  @extend .containerPadding;
+
   &__cardContainer {
     display: grid;
     width: 100%;
