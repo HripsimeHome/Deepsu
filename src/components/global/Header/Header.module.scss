@@ -36,10 +36,11 @@
   &__logoImg {
    // width: 100%;
     max-width: 267px;
-    margin: 0 auto;;
+    
 
     @include mdScreenMedia {
       //max-width: 70%;
+      margin: 0 auto;
     }
   }
 
