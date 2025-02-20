@@ -20,6 +20,11 @@
 
   &__logoImg {
     //max-width: 54%;
+    //width: 100%;
+   // aspect-ratio: 3/1;
+   width: 212px;
+   height: 70px;
+   margin-right: 50px;
 
     @include mdScreenMedia {
      // max-width: 100%;
@@ -35,8 +40,7 @@
   // Desktop & Mobile Menu  
   &__menu {
     display: flex;
-    gap: 40px;   
-    margin-left: 50px;
+    gap: 40px;       
 
     @include mdScreenMedia {
       display: none;
@@ -171,7 +175,7 @@
   // "Connect Wallet" button inside mobile menu
   &__btnConnect_mobile {
     display: none;
-    @extend .btnPrimary;
+   // @extend .btnPrimary;
 
     @include mdScreenMedia {
       display: block;  
