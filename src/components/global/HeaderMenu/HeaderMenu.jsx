@@ -24,14 +24,22 @@ const HeaderMenu = () => {
             <img src={logoGreenImage} alt="DeepsuAI" className={styles.headerMenu__logoImg} />
           </Link>
 
-          {/* Hamburger Button */}
+          {/* Hamburger Button  */}
           <button className={styles.headerMenu__burger} onClick={toggleMenu}>
             <Svg id={burgerIcon} className={styles.headerMenu__burgerIcon} />
           </button>
         </div>
 
-        {/* Desktop Navigation Menu */}
-        <nav className={styles.headerMenu__menu}>
+        {/* Navigation Menu */}
+        <nav className={`${styles.headerMenu__menu} ${isMenuOpen ? styles.headerMenu__menu_open : ""}`}>
+          {/* Close Button for Mobile */}
+          {isMenuOpen && (
+            <button className={styles.headerMenu__close} onClick={toggleMenu}>
+              <Svg id={crossIcon} className={styles.headerMenu__crossIcon} />
+            </button>
+          )}
+
+          {/* Menu Items */}
           {headerMenuItems.map(({ text, link }, index) => (
             <NavLink
               to={link}
@@ -41,6 +49,7 @@ const HeaderMenu = () => {
                   ? `${styles.headerMenu__menuLink} ${styles.headerMenu__menuLink_active}`
                   : styles.headerMenu__menuLink
               }
+              onClick={() => isMenuOpen && setIsMenuOpen(false)}
             >
               {text}
             </NavLink>
@@ -61,35 +70,8 @@ const HeaderMenu = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Modal */}
-      {isMenuOpen && (
-        <>
-          <nav className={styles.headerMenu__menu_open}>
-            {/* Close Button */}
-            <button className={styles.headerMenu__close} onClick={toggleMenu}>
-              <Svg id={crossIcon} className={styles.headerMenu__crossIcon} />
-            </button>
-
-            {headerMenuItems.map(({ text, link }, index) => (
-              <NavLink
-                to={link}
-                key={index}
-                className={({ isActive }) =>
-                  isActive
-                    ? `${styles.headerMenu__menuLink} ${styles.headerMenu__menuLink_active}`
-                    : styles.headerMenu__menuLink
-                }
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {text}
-              </NavLink>
-            ))}
-          </nav>
-
-          {/* Overlay */}
-          <div className={styles.headerMenu__overlay} onClick={toggleMenu}></div>
-        </>
-      )}
+      {/* Overlay for Mobile Menu */}
+      {isMenuOpen && <div className={styles.headerMenu__overlay} onClick={toggleMenu}></div>}
     </div>
   );
 };
