@@ -1,15 +1,17 @@
 import styles from "./Header.module.scss";
 import { Link } from "react-router-dom"
-
+import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import Svg from "../../layout/Svg/Svg";
 
 import TransitionProvider, {
   TransitionStyleTypes,
 } from "../../../providers/TransitionProvider";
+
 import { useLazy } from "../../../hooks/useLazy";
 
 import {
   logoTextImage,
+  logoTextWebpImage,
   aiAgentImage,
   suiImage
 } from "../../../assets/images";
@@ -43,8 +45,9 @@ const Header = () => {
             style={TransitionStyleTypes.left}              
             delay={500}
           >     
-            <img
+            <ImageWebp
               src={logoTextImage}
+              srcSet={logoTextWebpImage}
               alt="Logo"
               className={styles.header__logoImg}
             />

@@ -1,7 +1,13 @@
 import styles from "./Footer.module.scss";
 import { Link, NavLink } from "react-router-dom";
 import { footerMenuItems } from "../../../constants/menuItems"
-import { logoWhiteImage } from "../../../assets/images";
+import ImageWebp from "../../layout/ImageWebp/ImageWebp";
+
+import {
+  logoWhiteImage,
+  logoWhiteWebpImage
+
+} from "../../../assets/images";
 
 import { 
   homePagePath 
@@ -19,10 +25,11 @@ const Footer = () => {
           <Link 
             to={homePagePath}              
             >
-            <img 
-            src={logoWhiteImage} 
-            alt="Logo" 
-            className={styles.footer__logoImg}/>
+            <ImageWebp  
+              src={logoWhiteImage}
+              srcSet={logoWhiteWebpImage}
+              alt="Logo" 
+              className={styles.footer__logoImg}/>
           </Link>
           <p className={styles.footer__copyright}>
             &copy; {new Date().getFullYear()} Deepsu.ai. All rights reserved.

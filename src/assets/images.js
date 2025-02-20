@@ -1,14 +1,19 @@
  // Header
 
 import logoTextImage from "./images/logos/logoText.png"
+import logoTextWebpImage from "./images/logos/logoText.webp"
+
 import suiImage from "./images/header/sui.png"
 import aiAgentImage from "./images/header/aiAgent.png"
+
 import logoWhiteImage from "./images/logos/logoWhite.png"
+import logoWhiteWebpImage from "./images/logos/logoWhite.webp"
 
 import aIInsightsImage from "./images/home/aIInsights.png"
 import aIInsightsWebpImage from "./images/home/aIInsights.webp"
 
 import logoGreenImage from "./images/logos/logoGreen.png"
+import logoGreenWebpImage from "./images/logos/logoGreen.webp"
 
 // Home Advantages
 import headerBgImage from "./images/header/headerBg.png"
@@ -34,25 +39,28 @@ import drivingEfficiencyWebpImage from "./images/home/drivingEfficiency.webp"
 import enhancingTransparencyImage from "./images/home/enhancingTransparency.png" 
 import enhancingTransparencyWebpImage from "./images/home/enhancingTransparency.webp"
 
-import aiImage from "./images/AI.jpg"
+import aiImage from "./images/about/AI.jpg"
  
  
 // Application
 
 import getUsImage from "./images/chat/getUs.png"
-import suiBlueImage from "./images/chat/suiBlue.svg"
-//import suiBlueImage from "./images/chat/suiBlue.png"
+//import suiBlueImage from "./images/chat/suiBlue.svg"
+import suiBlueImage from "./images/chat/suiBlue.png"
 import widgetImage from "./images/widget.png"
 
 export {
 
   // Header
   logoTextImage,
+  logoTextWebpImage,
+
   aiAgentImage,
   suiImage,
   headerBgImage,
   headerBgWebpImage,
-  logoGreenImage,  
+  logoGreenImage, 
+  logoGreenWebpImage, 
   
 // Home Advantages
 
@@ -83,6 +91,7 @@ export {
 
   //Footer
   logoWhiteImage,
+  logoWhiteWebpImage,
 
   //Application
   getUsImage,
