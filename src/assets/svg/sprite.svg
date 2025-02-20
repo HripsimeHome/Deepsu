@@ -47,9 +47,9 @@
     <path d="M2 18H26C26.825 18 27.5 17.325 27.5 16.5C27.5 15.675 26.825 15 26 15H2C1.175 15 0.5 15.675 0.5 16.5C0.5 17.325 1.175 18 2 18ZM2 10.5H26C26.825 10.5 27.5 9.825 27.5 9C27.5 8.175 26.825 7.5 26 7.5H2C1.175 7.5 0.5 8.175 0.5 9C0.5 9.825 1.175 10.5 2 10.5ZM0.5 1.5C0.5 2.325 1.175 3 2 3H26C26.825 3 27.5 2.325 27.5 1.5C27.5 0.675 26.825 0 26 0H2C1.175 0 0.5 0.675 0.5 1.5Z" ></path>
   </symbol>  
   
-  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 0 25 25" id="cross">
-    <path d="M3 21.32L21 3.32001" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-    <path d="M3 3.32001L21 21.32" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+  <symbol fill="#fff" xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 0 25 25" id="cross">
+    <path d="M3 21.32L21 3.32001" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    <path d="M3 3.32001L21 21.32" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
   </symbol> 
  
 </svg>
