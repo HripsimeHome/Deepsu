@@ -22,41 +22,42 @@ const HeaderMenu = () => {
         <div className={styles.headerMenu__leftBlock}>
           <Link to={homePagePath}>
             <img src={logoGreenImage} alt="DeepsuAI" className={styles.headerMenu__logoImg} />
-          </Link>
+          </Link>    
 
-          {/* Hamburger Button  */}
-          <button className={styles.headerMenu__burger} onClick={toggleMenu}>
-            <Svg id={burgerIcon} className={styles.headerMenu__burgerIcon} />
-          </button>
+          <nav className={`${styles.headerMenu__menu} ${isMenuOpen ? styles.headerMenu__menu_open : ""}`}>
+            {isMenuOpen && (
+              <button className={styles.headerMenu__btnClose} onClick={toggleMenu}>
+                <Svg id={crossIcon} className={styles.headerMenu__crossIcon} />
+              </button>         
+            )}
+
+            {headerMenuItems.map(({ text, link }, index) => (
+              <NavLink
+                to={link}
+                key={index}
+                className={({ isActive }) =>
+                  isActive
+                    ? `${styles.headerMenu__menuLink} ${styles.headerMenu__menuLink_active}`
+                    : styles.headerMenu__menuLink
+                }
+                onClick={() => isMenuOpen && setIsMenuOpen(false)}
+              >
+                {text}
+              </NavLink>
+            ))}
+
+            {/* "Connect Wallet" button inside the modal menu for mobile */}
+            {isMenuOpen && (
+              <div className={styles.headerMenu__btnConnect_mobile}>
+                <Link to={chatPagePath} className={styles.headerMenu__btnConnect}>
+                  Connect Wallet
+                </Link>
+              </div>
+            )}
+          </nav>
         </div>
 
-        {/* Navigation Menu */}
-        <nav className={`${styles.headerMenu__menu} ${isMenuOpen ? styles.headerMenu__menu_open : ""}`}>
-          {/* Close Button for Mobile */}
-          {isMenuOpen && (
-            <button className={styles.headerMenu__close} onClick={toggleMenu}>
-              <Svg id={crossIcon} className={styles.headerMenu__crossIcon} />
-            </button>
-          )}
-
-          {/* Menu Items */}
-          {headerMenuItems.map(({ text, link }, index) => (
-            <NavLink
-              to={link}
-              key={index}
-              className={({ isActive }) =>
-                isActive
-                  ? `${styles.headerMenu__menuLink} ${styles.headerMenu__menuLink_active}`
-                  : styles.headerMenu__menuLink
-              }
-              onClick={() => isMenuOpen && setIsMenuOpen(false)}
-            >
-              {text}
-            </NavLink>
-          ))}
-        </nav>
-
-        {/* Right Block (Social Icons & Connect Wallet) */}
+        {/* Right Block */}
         <div className={styles.headerMenu__rightBlock}>
           <a href={telegramUrl} target="_blank" rel="noreferrer">
             <Svg id={telegramIcon} className={styles.headerMenu__socIcon} />
@@ -64,14 +65,20 @@ const HeaderMenu = () => {
           <a href={twitterUrl} target="_blank" rel="noreferrer">
             <Svg id={twitterIcon} className={styles.headerMenu__socIcon} />
           </a>
+
+          {/* "Connect Wallet" button for large screens */}
           <Link to={chatPagePath} className={styles.headerMenu__btnConnect}>
             Connect Wallet
           </Link>
-        </div>
+
+          <button className={styles.headerMenu__btnBurger} onClick={toggleMenu}>
+            <Svg id={burgerIcon} className={styles.headerMenu__burgerIcon} />
+          </button>
+        </div>       
       </div>
 
       {/* Overlay for Mobile Menu */}
-      {isMenuOpen && <div className={styles.headerMenu__overlay} onClick={toggleMenu}></div>}
+      {isMenuOpen && <div className={styles.headerMenu__overlay} onClick={toggleMenu} />}
     </div>
   );
 };
