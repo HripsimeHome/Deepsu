@@ -24,13 +24,19 @@ const HeaderMenu = () => {
             <img src={logoGreenImage} alt="DeepsuAI" className={styles.headerMenu__logoImg} />
           </Link>    
 
-          <nav className={`${styles.headerMenu__menu} ${isMenuOpen ? styles.headerMenu__menu_open : ""}`}>
-            {isMenuOpen && (
-              <button className={styles.headerMenu__btnClose} onClick={toggleMenu}>
-                <Svg id={crossIcon} className={styles.headerMenu__crossIcon} />
-              </button>         
-            )}
+          <nav className={`${styles.headerMenu__menu}
+           ${isMenuOpen ? styles.headerMenu__menu_open : ""}`}>
+           {isMenuOpen && (
+              <>
+                <Link to={homePagePath}>
+                  <img src={logoGreenImage} alt="DeepsuAI" className={styles.headerMenu__logoImg} />
+                </Link>
 
+                <button className={styles.headerMenu__btnClose} onClick={toggleMenu}>
+                  <Svg id={crossIcon} className={styles.headerMenu__crossIcon} />
+                </button>
+              </>
+            )}
             {headerMenuItems.map(({ text, link }, index) => (
               <NavLink
                 to={link}
@@ -46,19 +52,18 @@ const HeaderMenu = () => {
               </NavLink>
             ))}
 
-            {/* "Connect Wallet" button inside the modal menu for mobile */}
-            {isMenuOpen && (
-              <div className={styles.headerMenu__btnConnect_mobile}>
-                <Link to={chatPagePath} className={styles.headerMenu__btnConnect}>
-                  Connect Wallet
-                </Link>
-              </div>
-            )}
+            {/* "Connect Wallet" button inside the menu for mobile */}
+            <div className={styles.headerMenu__btnConnectMobile}>
+              <Link onClick={toggleMenu} to={chatPagePath} className={styles.headerMenu__btnConnect}>
+                Connect Wallet
+              </Link>
+            </div>
           </nav>
         </div>
 
         {/* Right Block */}
         <div className={styles.headerMenu__rightBlock}>
+        <div className={styles.headerMenu__socIconsPosition}>
           <a href={telegramUrl} target="_blank" rel="noreferrer">
             <Svg id={telegramIcon} className={styles.headerMenu__socIcon} />
           </a>
@@ -66,6 +71,7 @@ const HeaderMenu = () => {
             <Svg id={twitterIcon} className={styles.headerMenu__socIcon} />
           </a>
 
+          </div>
           {/* "Connect Wallet" button for large screens */}
           <Link to={chatPagePath} className={styles.headerMenu__btnConnect}>
             Connect Wallet

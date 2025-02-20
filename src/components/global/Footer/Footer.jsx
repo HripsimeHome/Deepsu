@@ -19,7 +19,10 @@ const Footer = () => {
           <Link 
             to={homePagePath}              
             >
-            <img src={logoWhiteImage} alt="Logo" />
+            <img 
+            src={logoWhiteImage} 
+            alt="Logo" 
+            className={styles.footer__logoImg}/>
           </Link>
           <p className={styles.footer__copyright}>
             &copy; {new Date().getFullYear()} Deepsu.ai. All rights reserved.
