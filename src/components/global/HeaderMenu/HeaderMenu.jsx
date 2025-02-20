@@ -24,13 +24,30 @@ const HeaderMenu = () => {
             <img src={logoGreenImage} alt="DeepsuAI" className={styles.headerMenu__logoImg} />
           </Link>
 
-          {/* Burger Icon to Open Menu */}
+          {/* Hamburger Button */}
           <button className={styles.headerMenu__burger} onClick={toggleMenu}>
-            <Svg id={burgerIcon} className={styles.headerMenu__icon} />
+            <Svg id={burgerIcon} className={styles.headerMenu__burgerIcon} />
           </button>
         </div>
 
-        {/* Right Block */}
+        {/* Desktop Navigation Menu */}
+        <nav className={styles.headerMenu__menu}>
+          {headerMenuItems.map(({ text, link }, index) => (
+            <NavLink
+              to={link}
+              key={index}
+              className={({ isActive }) =>
+                isActive
+                  ? `${styles.headerMenu__menuLink} ${styles.headerMenu__menuLink_active}`
+                  : styles.headerMenu__menuLink
+              }
+            >
+              {text}
+            </NavLink>
+          ))}
+        </nav>
+
+        {/* Right Block (Social Icons & Connect Wallet) */}
         <div className={styles.headerMenu__rightBlock}>
           <a href={telegramUrl} target="_blank" rel="noreferrer">
             <Svg id={telegramIcon} className={styles.headerMenu__socIcon} />
@@ -38,20 +55,19 @@ const HeaderMenu = () => {
           <a href={twitterUrl} target="_blank" rel="noreferrer">
             <Svg id={twitterIcon} className={styles.headerMenu__socIcon} />
           </a>
-
           <Link to={chatPagePath} className={styles.headerMenu__btnConnect}>
             Connect Wallet
           </Link>
         </div>
       </div>
 
-      {/* Navigation Menu Modal */}
+      {/* Mobile Menu Modal */}
       {isMenuOpen && (
         <>
-          <nav className={styles.headerMenu__menu}>
-            {/* Close Button Inside Modal */}
+          <nav className={styles.headerMenu__menu_open}>
+            {/* Close Button */}
             <button className={styles.headerMenu__close} onClick={toggleMenu}>
-              <Svg id={crossIcon} className={styles.headerMenu__closeIcon} />
+              <Svg id={crossIcon} className={styles.headerMenu__crossIcon} />
             </button>
 
             {headerMenuItems.map(({ text, link }, index) => (
@@ -70,7 +86,7 @@ const HeaderMenu = () => {
             ))}
           </nav>
 
-          {/* Overlay to Close Menu When Clicking Outside */}
+          {/* Overlay */}
           <div className={styles.headerMenu__overlay} onClick={toggleMenu}></div>
         </>
       )}
