@@ -2,26 +2,25 @@
 @import "../../../styles/vars";
 @import "../../../styles/global";
 
-.headerMenu {   
+.headerMenu {
   position: sticky;
   top: 0;
-  left: 0;  
-  z-index: 10;  
-  background: linear-gradient(     
-    rgba(25, 198, 144, 0) 19.42%,
-    rgba(25, 198, 144, 0.37) 80.58%
-  );
+  left: 0;
+  z-index: 10;
+  background: linear-gradient(rgba(25, 198, 144, 0) 19.42%, rgba(25, 198, 144, 0.37) 80.58%);
   background-color: $color-lightBlack;
-  transition: $transition; 
+  transition: $transition;
 
   &__container {
     @include flexCol(space-between);
-    padding: 20px 30px;   
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
   }
 
   &__logoImg {
     max-width: 54%;
-    
+
     @include mdScreenMedia {
       max-width: 100%;
     }
@@ -33,66 +32,55 @@
     gap: 10px;
   }
 
-  // Burger Icon Button
-  &__burger {
-    background: none;
-    border: none;
-    cursor: pointer;
+  // Desktop Menu
+  &__menu {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 40px;
+    color: white;
 
     @include mdScreenMedia {
-      display: block;
+      display: none;
     }
   }
 
-  &__icon {
-    width: 30px;
-    height: 30px;
-    fill: white;
+  &__menuLink {
+    @include setFont(18px, 400);
 
     &:hover {
-      fill: $color-green;
+      color: $color-green;
+      cursor: pointer;
+      transition: $transition;
+    }
+
+    &_active {
+      color: $color-green;
+
+      &:hover {
+        cursor: default;
+      }
     }
   }
 
-  // Menu Modal
-  &__menu {  
+  // Mobile Menu Modal
+  &__menu_open {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: fixed;
     top: 50%;
     left: 50%;
-    z-index: 100;
+    z-index: 3;
     max-width: 400px;
-    width: 100%;     
-    background-color: $color-lightBlack;          
+    width: 100%;
+    background-color: $color-lightBlack;
     transform: translate(-50%, -50%);
-    padding: 40px;  
-    border-radius: 10px;
+    padding: 40px;
 
     @include mdScreenMedia {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-    }
-  }
-
-  &__menuLink {  
-    @include setFont(18px, 400);
-    margin-bottom: 15px; 
-
-    &:hover {
-      color: $color-green;
-      transition: $transition;
-    }
-    
-    &_active {
-      color: $color-green; 
-
-      &:hover {       
-        cursor: default;
-      }  
     }
   }
 
@@ -107,9 +95,31 @@
     z-index: 9999;
   }
 
-  &__closeIcon {
+  &__crossIcon {
     width: 24px;
     height: 24px;
+    fill: white;
+
+    &:hover {
+      fill: $color-green;
+    }
+  }
+
+  // Hamburger Button
+  &__burger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+
+    @include mdScreenMedia {
+      display: block;
+    }
+  }
+
+  &__burgerIcon {
+    width: 30px;
+    height: 30px;
     fill: white;
 
     &:hover {
@@ -124,15 +134,15 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.8);     
-    z-index: 99;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 2;
   }
 
   &__rightBlock {
     display: flex;
     align-items: center;
     gap: 20px;
-     
+
     a {
       color: $color-white;
 
@@ -147,11 +157,11 @@
     @include svg(25px, $color-white);
   }
 
-  &__btnConnect {      
+  &__btnConnect {
     @include setFont(18px, 560);
     @extend .btnPrimary;
     margin-left: 30px;
-    padding: 10px 25px;      
+    padding: 10px 25px;
 
     @include mdScreenMedia {
       display: none;
