@@ -3,27 +3,24 @@
 @import "../../../styles/global";
 
 .headerMenu {   
-  //@extend .containerPadding;
-
   position: sticky;
   top: 0;
   left: 0;  
-  z-index: 1;  
-    background: linear-gradient(     
+  z-index: 10;  
+  background: linear-gradient(     
     rgba(25, 198, 144, 0) 19.42%,
     rgba(25, 198, 144, 0.37) 80.58%
   );
   background-color: $color-lightBlack;
   transition: $transition; 
 
-   &__container {
+  &__container {
     @include flexCol(space-between);
     padding: 20px 30px;   
   }
 
   &__logoImg {
     max-width: 54%;
-    //margin-right: 50px;
     
     @include mdScreenMedia {
       max-width: 100%;
@@ -36,24 +33,57 @@
     gap: 10px;
   }
 
- // Menu
-
-  &__menu {  
+  // Burger Icon Button
+  &__burger {
+    background: none;
+    border: none;
+    cursor: pointer;
     display: flex;
-    gap: 40px;
+    align-items: center;
+    justify-content: center;
 
     @include mdScreenMedia {
-      display: none;  
-      gap: 15px;
+      display: block;
+    }
+  }
+
+  &__icon {
+    width: 30px;
+    height: 30px;
+    fill: white;
+
+    &:hover {
+      fill: $color-green;
+    }
+  }
+
+  // Menu Modal
+  &__menu {  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    max-width: 400px;
+    width: 100%;     
+    background-color: $color-lightBlack;          
+    transform: translate(-50%, -50%);
+    padding: 40px;  
+    border-radius: 10px;
+
+    @include mdScreenMedia {
+      text-align: center;
     }
   }
 
   &__menuLink {  
-    @include setFont(18px, 400); 
+    @include setFont(18px, 400);
+    margin-bottom: 15px; 
 
     &:hover {
       color: $color-green;
-      cursor: pointer;
       transition: $transition;
     }
     
@@ -66,64 +96,49 @@
     }
   }
 
-  // Mobile
-
-  &__menu_open {
-    @include flexCol();
-    flex-direction: column;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    max-width: 500px;
-    width: 100%;    
-    transform: translate(-50%,-50%);
-    background-color: $color-lightBlack;
-    box-shadow: -5px 0 10px rgba(0, 0, 0, 0.5);
-    padding: 30px;       
-    z-index: 2;
+  // Close Button Inside Modal
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 9999;
   }
 
-  &__burgerIcon {
-    @include svg(18px, inherit, 15px);
-    width: 22px;
-   // height: 22px;
-    display: none;
+  &__closeIcon {
+    width: 24px;
+    height: 24px;
+    fill: white;
 
-    @include mdScreenMedia {
-      display: block;
-      
-      &:hover {
-        cursor: pointer
-      }
+    &:hover {
+      fill: $color-green;
     }
   }
 
+  // Overlay Effect
   &__overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-    display: block;
-
-    @include mdScreenMedia {
-      display: block;
-    }
+    background: rgba(0, 0, 0, 0.8);     
+    z-index: 99;
   }
 
-  &__rightblock {
+  &__rightBlock {
     display: flex;
     align-items: center;
-    gap:20px;
+    gap: 20px;
      
     a {
       color: $color-white;
 
       &:hover {
         color: $color-green;
-        transition: $transition
+        transition: $transition;
       }
     }
   }
