@@ -29,7 +29,9 @@ const Footer = () => {
               src={logoWhiteImage}
               srcSet={logoWhiteWebpImage}
               alt="Logo" 
-              className={styles.footer__logoImg}/>
+              className={styles.footer__logoImg}
+              pictureClass={styles.footer__logoImgPosition}
+              />
           </Link>
           <p className={styles.footer__copyright}>
             &copy; {new Date().getFullYear()} Deepsu.ai. All rights reserved.
