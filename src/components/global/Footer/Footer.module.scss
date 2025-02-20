@@ -24,17 +24,21 @@
   &__logoBlock {
     @include mdScreenMedia {
       text-align: center;
+      
     }    
   }
 
-  &__logoImg {
-    max-width: 178px;   
-  }
-  
-  @include mdScreenMedia {   
-    margin: 0 auto;
+  &__logoImgPosition {   
+
+    @include mdScreenMedia {
+      justify-content: center;
+    }
   }
 
+  &__logoImg {
+    max-width: 178px;  
+   }
+  
   &__emailAddress {
     display: none;
 
