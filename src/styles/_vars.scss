@@ -10,8 +10,9 @@ $hylg-screen: 1650px;
 // font
 $font-family: "Poppins", serif;
 
-// Transition
-$transition: all 0.3s ease-out 0s;        
+// Transition 
+$transition: all 0.3s; 
+$transitionEaseOut: all 0.3s ease-out 0s;     
 
 // Colors
 $color-white: #ffffff;
