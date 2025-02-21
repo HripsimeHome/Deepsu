@@ -7,8 +7,8 @@ import Svg from "../../layout/Svg/Svg";
 import TransitionProvider, {
   TransitionStyleTypes,
 } from "../../../providers/TransitionProvider";
-import { useLazy } from "../../../hooks/useLazy";
 
+import { useLazy } from "../../../hooks/useLazy";
 
 import { 
   headerMenuItems
@@ -36,7 +36,6 @@ import {
   homePagePath 
 } from "../../../router/path";
 
-
 const HeaderMenu = () => {
 
   const { isInView, ref } = useLazy(0.8);
@@ -49,19 +48,16 @@ const HeaderMenu = () => {
   return (
     <div className={styles.headerMenu}>
       <div className={`${styles.headerMenu__container} container`}>
-        {/* Left Block */}
-        
-        <div className={styles.headerMenu__leftBlock}>
-        
+        {/* Left Block */}        
+        <div className={styles.headerMenu__leftBlock}>        
           <Link 
-            to={homePagePath}>
-            <ImageWebp 
-              src={logoGreenImage} 
-              srcSet={logoGreenWebpImage}
-              alt="DeepsuAI" 
-              className={styles.headerMenu__logoImg} />
-          </Link> 
-           
+            to={homePagePath}>            
+              <ImageWebp 
+                src={logoGreenImage} 
+                srcSet={logoGreenWebpImage}
+                alt="DeepsuAI"                 
+                className={styles.headerMenu__logoImg} />             
+          </Link>           
                    
           <nav ref={ref} className={`
             ${styles.headerMenu__menu}
@@ -79,10 +75,12 @@ const HeaderMenu = () => {
                     src={logoGreenImage} 
                     srcSet={logoGreenWebpImage}
                     alt="DeepsuAI" 
-                    className={styles.headerMenu__logoImg} />
+                    className={styles.headerMenu__logoImgMenuOpen} />
                 </Link>   
 
-                <button className={styles.headerMenu__btnClose} onClick={toggleMenu}>
+                <button 
+                  className={styles.headerMenu__btnClose} 
+                  onClick={toggleMenu}>
                   <Svg 
                     id={crossIcon} 
                     className={styles.headerMenu__crossIcon} />
@@ -112,13 +110,13 @@ const HeaderMenu = () => {
               </TransitionProvider>
             ))}
            
-            <div className={styles.headerMenu__btnConnectMobile}>
+            <div className={styles.headerMenu__btnConnectMobileDisplay}>
               <Link              
                 to={chatPagePath}
                 onClick={toggleMenu} 
-                className={styles.headerMenu__btnConnect}>
+                className={styles.headerMenu__btnConnectMobile}>
                 Connect Wallet
-              </Link>
+              </Link>              
             </div>            
           </nav>         
         </div>
@@ -144,7 +142,9 @@ const HeaderMenu = () => {
             </a>
           </div>
          
-          <Link to={chatPagePath} className={styles.headerMenu__btnConnect}>
+          <Link 
+            to={chatPagePath} 
+            className={styles.headerMenu__btnConnect}>
             Connect Wallet
           </Link>
 
