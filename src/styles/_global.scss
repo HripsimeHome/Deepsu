@@ -87,6 +87,10 @@ a {
   color: $color-black;
   background-color: $color-white;   
   padding: 30px;    
+
+  @include lgScreenMedia {
+    padding: 30px 20px;  
+  }
 }
 
 .titleh2 {
