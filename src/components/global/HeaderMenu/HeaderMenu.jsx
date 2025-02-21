@@ -66,7 +66,7 @@ const HeaderMenu = () => {
               <TransitionProvider
                 inProp={isInView}
                 style={TransitionStyleTypes.zoomIn}
-                delay={300}              
+                delay={200}              
               >
                <>             
                 <Link 
