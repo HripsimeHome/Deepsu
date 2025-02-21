@@ -22,12 +22,16 @@
     //max-width: 54%;
     //width: 100%;
    // aspect-ratio: 3/1;
-   width:  250px;
+   //width:  250px;
   /* width: 212px;
    height: 70px;*/
+  // max-width:  250px;
    margin-right: 60px;
-   transition: $transitionEaseOut;
 
+   width: 100%;
+   max-width: 250px;
+   height: auto; /* Сохранение пропорций */
+  
     @include lgScreenMedia {
      // max-width: 100%;
      margin-right: 20px;
@@ -64,9 +68,7 @@
     width: 100%;
     background-color: $color-lightBlack;  
     border-radius: 5px;  
-    padding: 50px 0;
-    transition: $transitionEaseOut;
-    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    padding: 50px 0;   
 
     @include smScreenMedia {
       max-width: 100%;
@@ -106,7 +108,7 @@
   }
 
   &__burgerIcon {
-    @include svg(30px, $color-white);   
+    @include svg(27px, $color-white);   
 
     &:hover {
       fill: $color-green;

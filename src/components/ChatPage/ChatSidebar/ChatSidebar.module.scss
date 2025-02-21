@@ -14,6 +14,11 @@
   background-repeat: no-repeat; 
   padding: 50px 30px;  
 
+  
+  @include lgScreenMedia {
+    padding: 30px;  
+  }
+
   @include mdScreenMedia {
     max-width: 1170px;
     background-size: cover;

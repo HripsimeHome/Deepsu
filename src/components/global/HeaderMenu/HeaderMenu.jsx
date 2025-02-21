@@ -50,7 +50,13 @@ const HeaderMenu = () => {
     <div className={styles.headerMenu}>
       <div className={`${styles.headerMenu__container} container`}>
         {/* Left Block */}
+        
         <div className={styles.headerMenu__leftBlock}>
+        <TransitionProvider
+                inProp={isInView}
+                style={TransitionStyleTypes.opacity}
+                delay={300}              
+              >
           <Link 
             to={homePagePath}>
             <ImageWebp 
@@ -58,7 +64,8 @@ const HeaderMenu = () => {
               srcSet={logoGreenWebpImage}
               alt="DeepsuAI" 
               className={styles.headerMenu__logoImg} />
-          </Link>  
+          </Link> 
+          </TransitionProvider> 
                    
           <nav ref={ref} className={`
             ${styles.headerMenu__menu}
