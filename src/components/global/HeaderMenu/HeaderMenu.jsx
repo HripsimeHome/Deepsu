@@ -57,7 +57,7 @@ const HeaderMenu = () => {
                 srcSet={logoGreenWebpImage}
                 alt="DeepsuAI"                 
                 className={styles.headerMenu__logoImg} />             
-          </Link>           
+          </Link>          
                    
           <nav ref={ref} className={`
             ${styles.headerMenu__menu}
