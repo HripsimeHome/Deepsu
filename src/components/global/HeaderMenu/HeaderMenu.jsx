@@ -4,6 +4,12 @@ import { Link, NavLink } from "react-router-dom";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import Svg from "../../layout/Svg/Svg";
 
+import TransitionProvider, {
+  TransitionStyleTypes,
+} from "../../../providers/TransitionProvider";
+import { useLazy } from "../../../hooks/useLazy";
+
+
 import { 
   headerMenuItems
  } from "../../../constants/menuItems";
@@ -32,6 +38,8 @@ import {
 
 
 const HeaderMenu = () => {
+
+  const { isInView, ref } = useLazy(0.8);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -50,28 +58,42 @@ const HeaderMenu = () => {
               srcSet={logoGreenWebpImage}
               alt="DeepsuAI" 
               className={styles.headerMenu__logoImg} />
-          </Link>    
-
-          <nav className={`
+          </Link>  
+                   
+          <nav ref={ref} className={`
             ${styles.headerMenu__menu}
             ${isMenuOpen ? styles.headerMenu__menu_open : ""}`}>
             {isMenuOpen && (
-              <>
-                <Link to={homePagePath}>
-                  <img 
+              <TransitionProvider
+                inProp={isInView}
+                style={TransitionStyleTypes.zoomIn}
+                delay={300}              
+              >
+               <>             
+                <Link 
+                  to={homePagePath}>
+                  <ImageWebp 
                     src={logoGreenImage} 
+                    srcSet={logoGreenWebpImage}
                     alt="DeepsuAI" 
                     className={styles.headerMenu__logoImg} />
-                </Link>
+                </Link>   
 
                 <button className={styles.headerMenu__btnClose} onClick={toggleMenu}>
                   <Svg 
                     id={crossIcon} 
                     className={styles.headerMenu__crossIcon} />
-                </button>
+                </button>                
               </>
+              </TransitionProvider>
             )}
+
             {headerMenuItems.map(({ text, link }, index) => (
+              <TransitionProvider
+                inProp={isInView}
+                style={TransitionStyleTypes.opacity}
+                delay={300}              
+              >
               <NavLink
                 to={link}
                 key={index}
@@ -84,6 +106,7 @@ const HeaderMenu = () => {
               >
                 {text}
               </NavLink>
+              </TransitionProvider>
             ))}
            
             <div className={styles.headerMenu__btnConnectMobile}>
@@ -93,8 +116,8 @@ const HeaderMenu = () => {
                 className={styles.headerMenu__btnConnect}>
                 Connect Wallet
               </Link>
-            </div>
-          </nav>
+            </div>            
+          </nav>         
         </div>
 
         {/* Right Block */}

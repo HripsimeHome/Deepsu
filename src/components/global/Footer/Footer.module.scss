@@ -83,7 +83,7 @@
 
     &:hover {
       color: $color-green;
-      transition:  $transition;
+      transition: $transitionEaseOut;
       cursor: pointer;
     }
     
