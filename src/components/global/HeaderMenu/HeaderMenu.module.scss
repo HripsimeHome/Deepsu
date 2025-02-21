@@ -16,6 +16,10 @@
     padding: 20px 30px;
     display: flex;
     align-items: center;
+
+    @include smScreenMedia {
+      padding: 20px 15px;
+     }
   }
 
   &__logoImg {
@@ -178,12 +182,12 @@
     margin-right: 30px;  
 
     @include lgScreenMedia {     
-      gap: 15px;  
+      gap: 17px;  
       margin-right: 15px;
     }
 
     @include mdScreenMedia {     
-      gap: 15px;  
+      gap: 16px;  
       margin: 5px 10px 0 5px;
     }
 
