@@ -4,7 +4,8 @@
 .chatMain {  
   max-width:  840px; 
   width: 100%;
-  display: flex;  
+  @include flexCol(flex-start, center);
+  flex-direction: column; 
   @include bgWebp (
     "../../../assets/images/chat/ChatBg.png",
     "../../../assets/images/chat/ChatBg.webp"
@@ -12,12 +13,7 @@
   background-repeat: no-repeat;
   background-position: top center;
   background-color: $color-white; 
-
-  &__container {
-    @include flexCol(flex-start, center);
-    flex-direction: column;    
-    padding: 20px 55px;   
-  }
+  padding: 20px 40px;      
 
   &__title {
     @include setFont(50px, 300,  $color-black);
@@ -48,8 +44,7 @@
 
   &_img {
     width: 60px;
-    height: 30px;  
-    
+    height: 30px;      
   }
 }
 
@@ -105,12 +100,14 @@
 }
 
   &__panelTextarea {    
-    width: 100%;   
+    width: inherit;   
     border-radius: 20px;
     background-color: $color-darkBlue;   
     min-height: 10px;
     margin-top: auto;
     padding: 20px;  
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   &__chatTextarea {

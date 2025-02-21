@@ -159,9 +159,10 @@ const HeaderMenu = () => {
       </div>
 
       {/* Overlay for Mobile Menu */}
-      {isMenuOpen && <div 
-        className={styles.headerMenu__overlay} 
-        onClick={toggleMenu} />}
+      {isMenuOpen && 
+        <div 
+          className={styles.headerMenu__overlay} 
+          onClick={toggleMenu} />}
     </div>
   );
 };
