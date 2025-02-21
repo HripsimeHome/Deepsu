@@ -108,7 +108,8 @@ const Header = () => {
                 delay={2000}
                 className={styles.header__btnPosition}
               >
-                <Link to={chatPagePath} 
+                <Link 
+                  to={chatPagePath} 
                   className={styles.header__btnLaunch}>Launch App
                 </Link>
                 <div className={styles.header__docPosition}>
@@ -117,7 +118,9 @@ const Header = () => {
                     target="_blank"
                     className={styles.header__docText}
                   >
-                    <Svg id={docIcon} className={styles.header__docIcon} />{" "}
+                    <Svg 
+                      id={docIcon} 
+                      className={styles.header__docIcon} />{" "}
                     Documentation
                   </a>
                 </div>                 
@@ -129,11 +132,21 @@ const Header = () => {
                 delay={2300}   
                 className={styles.header__socIconsPosition}               
               > 
-                <a target="_blank" rel="noreferrer" href={telegramUrl}>
-                  <Svg id={telegramIcon} className={styles.header__socIcon} />
+                <a 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  href={telegramUrl}>
+                  <Svg 
+                    id={telegramIcon} 
+                    className={styles.header__socIcon} />
                 </a>
-                <a target="_blank" rel="noreferrer" href={twitterUrl}>
-                  <Svg id={twitterIcon} className={styles.header__socIcon} />
+                <a 
+                  target="_blank" 
+                  rel="noreferrer" 
+                  href={twitterUrl}>
+                  <Svg 
+                    id={twitterIcon} 
+                    className={styles.header__socIcon} />
                 </a>    
               </TransitionProvider>            
             </div>
