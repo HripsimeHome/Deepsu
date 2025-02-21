@@ -52,11 +52,7 @@ const HeaderMenu = () => {
         {/* Left Block */}
         
         <div className={styles.headerMenu__leftBlock}>
-        <TransitionProvider
-                inProp={isInView}
-                style={TransitionStyleTypes.opacity}
-                delay={300}              
-              >
+        
           <Link 
             to={homePagePath}>
             <ImageWebp 
@@ -65,7 +61,7 @@ const HeaderMenu = () => {
               alt="DeepsuAI" 
               className={styles.headerMenu__logoImg} />
           </Link> 
-          </TransitionProvider> 
+           
                    
           <nav ref={ref} className={`
             ${styles.headerMenu__menu}
