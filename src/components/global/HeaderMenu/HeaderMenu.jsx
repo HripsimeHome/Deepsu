@@ -42,16 +42,9 @@ const HeaderMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen((prev) => {
-      if (prev) {
-        document.body.style.overflow = "auto";
-      } else {
-        document.body.style.overflow = "hidden"; 
-      }
-      return !prev;
-    });
+    setIsMenuOpen(!isMenuOpen);
   };
-  
+
   return (
     <div className={styles.headerMenu}>
       <div className={`${styles.headerMenu__container} container`}>
