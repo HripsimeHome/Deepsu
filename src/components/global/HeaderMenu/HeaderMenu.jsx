@@ -42,9 +42,16 @@ const HeaderMenu = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen((prev) => {
+      if (prev) {
+        document.body.style.overflow = "auto";
+      } else {
+        document.body.style.overflow = "hidden"; 
+      }
+      return !prev;
+    });
   };
-
+  
   return (
     <div className={styles.headerMenu}>
       <div className={`${styles.headerMenu__container} container`}>
@@ -66,7 +73,7 @@ const HeaderMenu = () => {
               <TransitionProvider
                 inProp={isInView}
                 style={TransitionStyleTypes.zoomIn}
-                delay={200}              
+                delay={150}              
               >
                <>             
                 <Link 
