@@ -124,11 +124,8 @@
 
     &::placeholder {
       @include setFont(16px, 400);
-      opacity: 0.9;      
-      
-      &:focus, &:active {     
-        color: $color-white;
-      }
+      opacity: 0.9;     
+ 
 
       @include mdScreenMedia {
         @include setFont(14px, 400);
@@ -153,6 +150,7 @@
     border-radius: 50px;
     cursor: pointer;
 
+    &:focus,
     &:active {
       transform: translateY(1px);
       border: 0;
