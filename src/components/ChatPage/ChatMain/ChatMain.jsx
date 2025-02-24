@@ -3,9 +3,15 @@ import { useState, useRef } from "react";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import Svg from "../../layout/Svg/Svg";
 
-import { suiBlueImage, suiBlueWebpImage } from "../../../assets/images";
+import { 
+  suiBlueImage, 
+  suiBlueWebpImage 
+} from "../../../assets/images";
 
-import { attachmentIcon, arrowTopIcon } from "../../../assets/svg";
+import { 
+  attachmentIcon, 
+  arrowTopIcon 
+} from "../../../assets/svg";
 
 const panelTexts = [
   "What is Sui Blockchain?",
@@ -17,17 +23,14 @@ const panelTexts = [
 
 function ChatMain() {
   const textareaRef = useRef(null);
-  const [textareaValue, setTextareaValue] = useState("");
-  //const [isTextareaDisabled, setIsTextareaDisabled] = useState(false);
+  const [textareaValue, setTextareaValue] = useState(""); 
 
   const handleTagButtonClick = (text) => {
     setTextareaValue(text);
-    textareaRef.current.focus();
-    // setIsTextareaDisabled(true);
+    textareaRef.current.focus();    
   };
 
-  const handleSendClick = async () => {
-    console.log(textareaValue);
+  const handleSendClick = async () => {   
     setTextareaValue("");
   };
 
@@ -40,7 +43,10 @@ function ChatMain() {
 
       <div className={styles.chatMain__suiBock}>
         <span className={styles.chatMain__suiBockText}>build on</span>
-        <a href="https://sui.io/" target="_blank">
+        <a
+          href="https://sui.io/"
+          target="_blank" 
+          rel="noreferrer">
           <ImageWebp
             src={suiBlueImage}
             srcSet={suiBlueWebpImage}
@@ -67,11 +73,11 @@ function ChatMain() {
         <textarea
           value={textareaValue}
           ref={textareaRef}
-          onChange={(e) => setTextareaValue(e.target.value)}
-          // disabled={isTextareaDisabled}
+          onChange={(e) => setTextareaValue(e.target.value)}         
           className={styles.chatMain__chatTextarea}
           placeholder="Hi! Tell me about $CETUS token on Sui Network?"
-        ></textarea>
+        >          
+        </textarea>
 
         <div className={styles.chatMain__actionContainer}>
           <label>
