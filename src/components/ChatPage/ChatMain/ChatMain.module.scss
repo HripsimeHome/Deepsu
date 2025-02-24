@@ -114,6 +114,7 @@
     @include setFont(16px, 400);
     background-color: $color-darkBlue;
     resize: none;
+    caret-color: $color-white;
     outline: 0;
     border: 0;
 
