@@ -123,7 +123,11 @@
 
     &::placeholder {
       @include setFont(16px, 400);
-      opacity: 0.7;
+      opacity: 0.9;      
+      
+      &:focus, &:active {     
+        color: $color-white;
+      }
 
       @include mdScreenMedia {
         @include setFont(14px, 400);
@@ -150,6 +154,8 @@
 
     &:active {
       transform: translateY(1px);
+      border: 0;
+      outline: 0;
     }
 
     &_arrowTopIcon {
