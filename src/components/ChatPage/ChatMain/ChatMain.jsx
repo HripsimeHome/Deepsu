@@ -1,4 +1,5 @@
 import styles from "./ChatMain.module.scss"
+import { useState, useRef } from "react";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import Svg from "../../layout/Svg/Svg";
 
@@ -21,6 +22,18 @@ const panelTexts = [
 ];
 
 function ChatMain() {
+  const textareaRef = useRef(null);
+  const [textareaValue, setTextareaValue] = useState("");
+  const [isTextareaDisabled, setIsTextareaDisabled] = useState(false); 
+
+  const handleTagButtonClick = (text) => {    
+    setTextareaValue(text);
+    textareaRef.current.focus();
+    setIsTextareaDisabled(true);
+  }
+
+  
+ 
   return (
     <section className={styles.chatMain}>  
       <h1 className={styles.chatMain__title}>
@@ -42,24 +55,28 @@ function ChatMain() {
             className={styles.chatMain__suiBock_img}        
           />
         </a>
-      </div>     
-
-      <div>
+      </div>   
+      
       <div className={styles.chatMain__panelContainer}>
         {panelTexts.map(( text, index ) => (
-        <input 
-          type="text"
-          placeholder={text}  
-          key={index} 
+        <button 
+          type="button"          
+          key={index}     
+          onClick={() => handleTagButtonClick(text)}
           className={styles.chatMain__panel} 
-          />         
-        )
-      )}
+          > 
+          {text} 
+          </button>     
+          )
+        )}      
       </div>
-    </div>
 
       <div className={styles.chatMain__panelTextarea}>
         <textarea
+          value={textareaValue} 
+          ref={textareaRef}           
+          onChange={(e) => setTextareaValue(e.targetr.value)}           
+          disabled={isTextareaDisabled}
           className={styles.chatMain__chatTextarea}
           placeholder="Hi! Tell me about $CETUS token on Sui Network?"
         >
@@ -77,7 +94,9 @@ function ChatMain() {
             />
           </label>           
 
-          <button className={styles.chatMain__btnSend}>
+          <button 
+           
+            className={styles.chatMain__btnSend}>
             <Svg 
               id={arrowTopIcon}
               className={styles.chatMain__btnSend_arrowTopIcon}        
