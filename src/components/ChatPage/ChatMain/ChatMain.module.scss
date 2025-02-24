@@ -1,20 +1,20 @@
 @import "../../../styles/mixins";
 @import "../../../styles/vars";
 
-.chatMain {  
-  max-width:  840px; 
+.chatMain {
+  max-width: 840px;
   width: 100%;
   @include flexCol(flex-start, center);
-  flex-direction: column; 
-  @include bgWebp (
+  flex-direction: column;
+  @include bgWebp(
     "../../../assets/images/chat/ChatBg.png",
     "../../../assets/images/chat/ChatBg.webp"
   );
   background-repeat: no-repeat;
   background-position: top center;
-  background-color: $color-white; 
-  padding: 20px 40px;     
-  
+  background-color: $color-white;
+  padding: 20px 40px;
+
   @include lgScreenMedia {
     padding: 20px 25px;
   }
@@ -24,7 +24,7 @@
   }
 
   &__title {
-    @include setFont(50px, 300,  $color-black);
+    @include setFont(50px, 300, $color-black);
     line-height: 55px;
     text-align: center;
     margin: 55px 0 15px;
@@ -32,105 +32,102 @@
     span {
       color: $color-green;
       font-weight: 700;
-    }   
+    }
 
     @include lgScreenMedia {
-      @include setFont(30px, 300,  $color-black);
+      @include setFont(30px, 300, $color-black);
       line-height: 35px;
       margin: 50px 0 13px;
     }
 
     @include smScreenMedia {
-      @include setFont(23px, 300,  $color-black);
+      @include setFont(23px, 300, $color-black);
       line-height: 30px;
       margin: 30px 0 10px;
-    }    
+    }
   }
 
-&__suiBock {
-  @include flexCol();  
+  &__suiBock {
+    @include flexCol();
 
-  &_img {
-    width: 60px;
-    height: 30px;      
-  }
-}
-
-&__suiBockText {
-  @include setFont(14px, 400,  $color-black);
-  margin-right: 5px;
-} 
-
-&__panelContainer {
-  @include flexCol();
-  flex-wrap: wrap;
-  gap: 4px;  
-  margin: 30px 0;
-
-  @include mdScreenMedia {    
-    margin: 25px 0;
-  } 
-
-  @include smScreenMedia {
-    flex-direction: column;     
-  } 
-}
-
-&__panel{
-  min-width: 250px;
-  @include setFont(14px, 400,  $color-black);  
-  background-color: $color-white;
-  border-radius: 60px;
-  border: 0;
-  text-align: center;
-  margin-bottom: 10px;  
-  padding: 10px;
-
-  &:hover {  
-   background-color:#e4f2ee; 
-   cursor: pointer;  
-   transition: $transitionEaseOut;
+    &_img {
+      width: 60px;
+      height: 30px;
+    }
   }
 
-   &:focus, &:active {      
-    &:active {
-      transform: translateY(1px);
-    }   
+  &__suiBockText {
+    @include setFont(14px, 400, $color-black);
+    margin-right: 5px;
   }
 
-  &:focus::placeholder {    
-    @include setFont(14px, 400,  rgba(0, 0, 0, 0.5))
-  }
-}
+  &__panelContainer {
+    @include flexCol();
+    flex-wrap: wrap;
+    gap: 4px;
+    margin: 30px 0;
 
-  &__panelTextarea {    
-    width: inherit;   
+    @include mdScreenMedia {
+      margin: 25px 0;
+    }
+
+    @include smScreenMedia {
+      flex-direction: column;
+    }
+  }
+
+  &__panel {
+    min-width: 250px;
+    @include setFont(14px, 400, $color-black);
+    background-color: $color-white;
+    border-radius: 60px;
+    border: 0;
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px;
+
+    &:not(:disabled) {
+      &:hover {
+        background-color: #e4f2ee;
+        cursor: pointer;
+        transition: $transition;
+      }
+
+      &:focus,
+      &:active {
+        transform: translateY(1px);
+      }
+    }
+  }
+
+  &__panelTextarea {
+    width: inherit;
     border-radius: 20px;
-    background-color: $color-darkBlue;   
+    background-color: $color-darkBlue;
     min-height: 10px;
     margin-top: auto;
-    padding: 20px;     
+    padding: 20px;
   }
 
   &__chatTextarea {
-    width: 100%;   
-    @include setFont(16px, 400); 
-    background-color: $color-darkBlue;  
-    resize: none;  
+    width: 100%;
+    @include setFont(16px, 400);
+    background-color: $color-darkBlue;
+    resize: none;
     outline: 0;
-    border: 0;     
+    border: 0;
 
     @include mdScreenMedia {
-      @include setFont(14px, 400); 
+      @include setFont(14px, 400);
     }
 
     &::placeholder {
       @include setFont(16px, 400);
-      opacity: 1;  
-        
+      opacity: 0.7;
+
       @include mdScreenMedia {
-        @include setFont(14px, 400); 
-      }  
+        @include setFont(14px, 400);
+      }
     }
   }
 
@@ -138,29 +135,29 @@
     @include flexCol(space-between, center);
   }
 
-  &__attachmentIcon {   
+  &__attachmentIcon {
     @include svg(23px, $color-white);
-    cursor: pointer;      
-  } 
+    cursor: pointer;
+  }
 
-  &__btnSend{
+  &__btnSend {
     @include flexCol();
     width: 42px;
     height: 40px;
     background-color: $color-green;
-    border-radius: 50px;  
-    cursor: pointer;  
-        
+    border-radius: 50px;
+    cursor: pointer;
+
     &:active {
       transform: translateY(1px);
     }
 
-    &_arrowTopIcon {   
-      @include svg(23px, $color-white);      
-    } 
+    &_arrowTopIcon {
+      @include svg(23px, $color-white);
+    }
   }
 
-  &__arrowTopIcon {   
-    @include svg(23px, $color-white);      
-  }  
+  &__arrowTopIcon {
+    @include svg(23px, $color-white);
+  }
 }
