@@ -1,16 +1,11 @@
-import styles from "./ChatMain.module.scss"
+import styles from "./ChatMain.module.scss";
+import { useState, useRef } from "react";
 import ImageWebp from "../../layout/ImageWebp/ImageWebp";
 import Svg from "../../layout/Svg/Svg";
 
-import {
-  suiBlueImage,
-  suiBlueWebpImage
-} from "../../../assets/images"
+import { suiBlueImage, suiBlueWebpImage } from "../../../assets/images";
 
-import {    
-  attachmentIcon,
-  arrowTopIcon
-} from "../../../assets/svg";
+import { attachmentIcon, arrowTopIcon } from "../../../assets/svg";
 
 const panelTexts = [
   "What is Sui Blockchain?",
@@ -21,72 +16,85 @@ const panelTexts = [
 ];
 
 function ChatMain() {
+  const textareaRef = useRef(null);
+  const [textareaValue, setTextareaValue] = useState("");
+  //const [isTextareaDisabled, setIsTextareaDisabled] = useState(false);
+
+  const handleTagButtonClick = (text) => {
+    setTextareaValue(text);
+    textareaRef.current.focus();
+    // setIsTextareaDisabled(true);
+  };
+
+  const handleSendClick = async () => {
+    console.log(textareaValue);
+    setTextareaValue("");
+  };
+
   return (
-    <section className={styles.chatMain}>  
+    <section className={styles.chatMain}>
       <h1 className={styles.chatMain__title}>
-        How can I  
-        <span>&nbsp;assist</span>&nbsp;you in 
+        How can I<span>&nbsp;assist</span>&nbsp;you in
         <span>&nbsp;exploring</span>&nbsp;Sui?
       </h1>
 
-      <div className={styles.chatMain__suiBock}> 
-        <span className={styles.chatMain__suiBockText}>build on
-        </span>      
-        <a 
-          href="https://sui.io/"
-          target="_blank"
-        >
-          <ImageWebp 
-            src={suiBlueImage} 
+      <div className={styles.chatMain__suiBock}>
+        <span className={styles.chatMain__suiBockText}>build on</span>
+        <a href="https://sui.io/" target="_blank">
+          <ImageWebp
+            src={suiBlueImage}
             srcSet={suiBlueWebpImage}
-            className={styles.chatMain__suiBock_img}        
+            className={styles.chatMain__suiBock_img}
           />
         </a>
-      </div>     
-
-      <div>
-      <div className={styles.chatMain__panelContainer}>
-        {panelTexts.map(( text, index ) => (
-        <input 
-          type="text"
-          placeholder={text}  
-          key={index} 
-          className={styles.chatMain__panel} 
-          />         
-        )
-      )}
       </div>
-    </div>
+
+      <div className={styles.chatMain__panelContainer}>
+        {panelTexts.map((text, index) => (
+          <button
+            type="button"
+            key={index}
+            disabled={text === textareaValue}
+            onClick={() => handleTagButtonClick(text)}
+            className={styles.chatMain__panel}
+          >
+            {text}
+          </button>
+        ))}
+      </div>
 
       <div className={styles.chatMain__panelTextarea}>
         <textarea
+          value={textareaValue}
+          ref={textareaRef}
+          onChange={(e) => setTextareaValue(e.target.value)}
+          // disabled={isTextareaDisabled}
           className={styles.chatMain__chatTextarea}
           placeholder="Hi! Tell me about $CETUS token on Sui Network?"
-        >
-        </textarea>
+        ></textarea>
 
-        <div className={styles.chatMain__actionContainer}>           
+        <div className={styles.chatMain__actionContainer}>
           <label>
-            <input
-              type="file" 
-              hidden 
-            />
-            <Svg 
+            <input type="file" hidden />
+            <Svg
               id={attachmentIcon}
-              className={styles.chatMain__attachmentIcon}        
+              className={styles.chatMain__attachmentIcon}
             />
-          </label>           
+          </label>
 
-          <button className={styles.chatMain__btnSend}>
-            <Svg 
+          <button
+            onClick={handleSendClick}
+            className={styles.chatMain__btnSend}
+          >
+            <Svg
               id={arrowTopIcon}
-              className={styles.chatMain__btnSend_arrowTopIcon}        
-              />     
+              className={styles.chatMain__btnSend_arrowTopIcon}
+            />
           </button>
         </div>
-      </div>     
+      </div>
     </section>
-  )
+  );
 }
 
-export default ChatMain
+export default ChatMain;
